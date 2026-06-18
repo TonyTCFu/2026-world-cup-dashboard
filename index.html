@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 强制浏览器每次检查最新版本，防止手机端 Web App 缓存旧页面 -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <title>🏆 2026年世界杯每日战报 Dashboard</title>
   <!-- 设置浏览器标签页的世界杯奖杯图标 (Favicon) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
@@ -12,8 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- 引入 FontAwesome 图标 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <!-- 引入自定义样式 -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- 引入自定义样式 (增加版本号用于防缓存) -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.3">
 </head>
 <body>
   <!-- 背景环境光源 (Aesthetic Glows) -->
@@ -202,9 +207,9 @@
     </div>
   </div>
 
-  <!-- 引入核心数据 -->
-  <script src="src/data.js"></script>
-  <!-- 引入逻辑脚本 -->
-  <script src="js/app.js"></script>
+  <!-- 引入核心数据 (增加版本号用于防缓存) -->
+  <script src="src/data.js?v=1.0.3"></script>
+  <!-- 引入逻辑脚本 (增加版本号用于防缓存) -->
+  <script src="js/app.js?v=1.0.3"></script>
 </body>
 </html>
