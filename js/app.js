@@ -51,12 +51,96 @@ document.addEventListener("DOMContentLoaded", () => {
     nextDateBtn: document.querySelector(".next-btn"),
   };
 
+  // 浏览器端实时数据更新 (0 延迟抓取 ESPN 官方实时比分)
+  async function fetchLiveScores() {
+    try {
+      const url = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260720";
+      const res = await fetch(url);
+      const data = await res.json();
+      if (!data.events || data.events.length === 0) return;
+
+      const TEAM_MAP = {
+        "ROM": "ROU",
+        "CGO": "COD",
+        "DRC": "COD",
+      };
+      const mapTeam = (abbr) => TEAM_MAP[abbr] || abbr;
+
+      let hasChanges = false;
+
+      data.events.forEach(event => {
+        const comp = event.competitions[0];
+        if (!comp) return;
+
+        const homeCompetitor = comp.competitors.find(c => c.homeAway === 'home');
+        const awayCompetitor = comp.competitors.find(c => c.homeAway === 'away');
+        if (!homeCompetitor || !awayCompetitor) return;
+
+        const homeAbbr = mapTeam(homeCompetitor.team.abbreviation);
+        const awayAbbr = mapTeam(awayCompetitor.team.abbreviation);
+
+        const homeScore = parseInt(homeCompetitor.score || "0");
+        const awayScore = parseInt(awayCompetitor.score || "0");
+        const isCompleted = comp.status.type.completed;
+        const detailStatus = comp.status.type.detail; // e.g. "FT", "Live 45'"
+        const state = comp.status.type.state; // "pre", "in", "post"
+
+        const match = WORLDCUP_DATA.matches.find(m => 
+          (m.home === homeAbbr && m.away === awayAbbr) ||
+          (m.home === awayAbbr && m.away === homeAbbr)
+        );
+
+        if (match) {
+          const isHome = match.home === homeAbbr;
+          const actualHomeScore = isHome ? homeScore : awayScore;
+          const actualAwayScore = isHome ? awayScore : homeScore;
+
+          if (isCompleted) {
+            // 如果已完赛，且本地比分和状态不同，临时更新
+            if (match.status !== "FT" || !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore) {
+              match.status = "FT";
+              match.score = { home: actualHomeScore, away: actualAwayScore };
+              hasChanges = true;
+            }
+          } else if (state === "in") {
+            // 如果进行中，且本地数据未更新比分或状态，临时更新
+            if (match.status !== detailStatus || !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore) {
+              match.status = detailStatus || "Live";
+              match.score = { home: actualHomeScore, away: actualAwayScore };
+              hasChanges = true;
+            }
+          } else if (state === "pre") {
+            // 如果未开始，且本地被错误标记为 FT
+            if (match.status !== "Scheduled") {
+              match.status = "Scheduled";
+              delete match.score;
+              hasChanges = true;
+            }
+          }
+        }
+      });
+
+      if (hasChanges) {
+        console.log("[实时数据] 浏览器端成功同步并渲染最新比分！");
+        // 重新渲染当前 Tab 和全球头部数据
+        renderGlobalHeader();
+        renderTabContent();
+      }
+    } catch (err) {
+      console.warn("[实时数据] 无法在浏览器端直接请求 ESPN 数据 (可能跨域或无网络):", err);
+    }
+  }
+
   // 初始化应用
   function init() {
     renderGlobalHeader();
     renderDateSlider();
     renderTabContent();
     setupEventListeners();
+    
+    // 首次加载立即执行一次浏览器端实时数据对齐，随后每 30 秒轮询一次
+    fetchLiveScores();
+    setInterval(fetchLiveScores, 30 * 1000);
   }
 
   // ==========================================
