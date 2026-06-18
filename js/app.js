@@ -2,9 +2,19 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // 全局状态管理
+  // 获取用户本地日期 (格式为 YYYY-MM-DD)
+  const today = new Date();
+  const offset = today.getTimezoneOffset();
+  const localDate = new Date(today.getTime() - (offset * 60 * 1000));
+  const localDateString = localDate.toISOString().split('T')[0];
+
+  // 检查本地日期是否在小组赛范围内 (2026-06-11 至 2026-06-27)
+  const isWithinWorldCup = localDateString >= "2026-06-11" && localDateString <= "2026-06-27";
+  const defaultDate = isWithinWorldCup ? localDateString : WORLDCUP_DATA.currentDate;
+
   const state = {
     currentDate: WORLDCUP_DATA.currentDate,
-    selectedDate: WORLDCUP_DATA.currentDate,
+    selectedDate: defaultDate,
     activeTab: "tab-schedule",
   };
 
