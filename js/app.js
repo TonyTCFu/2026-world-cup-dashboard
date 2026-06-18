@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const dayMatches = WORLDCUP_DATA.matches.filter(m => m.date === dateString);
       let statusDot = "";
       if (dayMatches.length > 0) {
-        const hasLive = dayMatches.some(m => m.status.startsWith("Live"));
+        const hasLive = dayMatches.some(m => m.status !== "Scheduled" && m.status !== "FT");
         const hasFT = dayMatches.some(m => m.status === "FT");
         if (hasLive) {
           statusDot = `<span class="date-status-dot" style="background: var(--color-live);"></span>`;
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
         statusClass = "ft";
         statusText = "已结束 FT";
-      } else if (match.status.startsWith("Live")) {
+      } else if (match.status !== "Scheduled") {
         scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
         statusClass = "live";
         statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let actionBtn = "";
       if (match.status === "FT") {
         actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-file-invoice-chart"></i> 详细战报</button>`;
-      } else if (match.status.startsWith("Live")) {
+      } else if (match.status !== "Scheduled") {
         actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wave-square"></i> 实时统计</button>`;
       } else {
         actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赛前预测</button>`;
@@ -750,7 +750,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const d = new Date(match.date);
     const zhDateString = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${match.time}`;
 
-    if (match.status === "FT" || match.status.startsWith("Live")) {
+    if (match.status !== "Scheduled") {
       // 已完赛或进行中的统计
       const possHome = match.stats ? match.stats.possession[0] : 50;
       const possAway = match.stats ? match.stats.possession[1] : 50;
