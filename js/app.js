@@ -598,11 +598,25 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <div class="prob-section">
-          <div class="prob-label"><i class="fa-solid fa-calculator"></i> AI 胜平负概率概率分布</div>
+          <div class="prob-label"><i class="fa-solid fa-calculator"></i> AI 胜平负概率分布</div>
+          <div class="prob-legend">
+            <div class="prob-legend-item">
+              <span class="legend-dot home"></span>
+              <span>${homeTeam.name}胜 ${probHome}%</span>
+            </div>
+            <div class="prob-legend-item">
+              <span class="legend-dot draw"></span>
+              <span>平局 ${probDraw}%</span>
+            </div>
+            <div class="prob-legend-item">
+              <span class="legend-dot away"></span>
+              <span>${awayTeam.name}胜 ${probAway}%</span>
+            </div>
+          </div>
           <div class="prob-bar-container">
-            <div class="prob-segment home" style="width: ${probHome}%;" title="主胜">${homeTeam.name}胜 ${probHome}%</div>
-            <div class="prob-segment draw" style="width: ${probDraw}%;" title="平局">平局 ${probDraw}%</div>
-            <div class="prob-segment away" style="width: ${probAway}%;" title="客胜">${awayTeam.name}胜 ${probAway}%</div>
+            <div class="prob-segment home" style="width: ${probHome}%;" title="${homeTeam.name}胜 ${probHome}%"></div>
+            <div class="prob-segment draw" style="width: ${probDraw}%;" title="平局 ${probDraw}%"></div>
+            <div class="prob-segment away" style="width: ${probAway}%;" title="${awayTeam.name}胜 ${probAway}%"></div>
           </div>
         </div>
 
@@ -780,10 +794,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="prob-section" style="margin-bottom: 2rem;">
           <div class="prob-label"><i class="fa-solid fa-calculator"></i> AI 胜平负概率预测</div>
+          <div class="prob-legend">
+            <div class="prob-legend-item">
+              <span class="legend-dot home"></span>
+              <span>${homeTeam.name}胜 ${probHome}%</span>
+            </div>
+            <div class="prob-legend-item">
+              <span class="legend-dot draw"></span>
+              <span>平局 ${probDraw}%</span>
+            </div>
+            <div class="prob-legend-item">
+              <span class="legend-dot away"></span>
+              <span>${awayTeam.name}胜 ${probAway}%</span>
+            </div>
+          </div>
           <div class="prob-bar-container">
-            <div class="prob-segment home" style="width: ${probHome}%;">${homeTeam.name}胜 ${probHome}%</div>
-            <div class="prob-segment draw" style="width: ${probDraw}%;">${probDraw}%</div>
-            <div class="prob-segment away" style="width: ${probAway}%;">${awayTeam.name}胜 ${probAway}%</div>
+            <div class="prob-segment home" style="width: ${probHome}%;" title="${homeTeam.name}胜 ${probHome}%"></div>
+            <div class="prob-segment draw" style="width: ${probDraw}%;" title="平局 ${probDraw}%"></div>
+            <div class="prob-segment away" style="width: ${probAway}%;" title="${awayTeam.name}胜 ${probAway}%"></div>
           </div>
         </div>
 
