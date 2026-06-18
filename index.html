@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年世界杯足球赛每日赛程快报及战况分析 Dashboard</title>
+  <!-- 引入 Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- 引入 FontAwesome 图标 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- 引入自定义样式 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 背景环境光源 (Aesthetic Glows) -->
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+
+  <div class="container">
+    <!-- 头部区域 (Header) -->
+    <header class="header card animate-fade-in">
+      <div class="header-main">
+        <div class="brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-trophy trophy-icon"></i>
+          </div>
+          <div class="brand-text">
+            <h1>2026 FIFA WORLD CUP</h1>
+            <p class="brand-subtitle">每日赛程快报 & 战况分析 Dashboard</p>
+          </div>
+        </div>
+        <div class="header-meta">
+          <div class="meta-item">
+            <span class="meta-label"><i class="fa-solid fa-calendar-day"></i> 当前进度</span>
+            <span class="meta-value text-gradient" id="header-matchday">第8比赛日 (小组赛)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label"><i class="fa-solid fa-clock"></i> 数据更新时间</span>
+            <span class="meta-value" id="header-update-time">2026-06-18 12:30</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 快捷全局赛事概览栏 (Quick Stats Banner) -->
+      <div class="quick-stats">
+        <div class="stat-box">
+          <span class="stat-num" id="stat-matches">15 / 104</span>
+          <span class="stat-desc">已赛场次</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-num" id="stat-goals">29</span>
+          <span class="stat-desc">总进球数</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-num" id="stat-avg-goals">1.93</span>
+          <span class="stat-desc">场均进球</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-num" id="stat-scorer">穆西亚拉 / 瓦伦西亚 (2球)</span>
+          <span class="stat-desc">射手榜首</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 导航标签页 (Tab controls) -->
+    <nav class="nav-tabs animate-fade-in">
+      <button class="tab-btn active" data-tab="tab-schedule">
+        <i class="fa-solid fa-calendar-days"></i> 今日赛程
+      </button>
+      <button class="tab-btn" data-tab="tab-analysis">
+        <i class="fa-solid fa-chart-line"></i> 战况快报
+      </button>
+      <button class="tab-btn" data-tab="tab-standings">
+        <i class="fa-solid fa-list-ol"></i> 小组积分 & 预测
+      </button>
+      <button class="tab-btn" data-tab="tab-predictions">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> 赛前预估
+      </button>
+    </nav>
+
+    <!-- 主要内容呈现区 (Main Content Panels) -->
+    <main class="main-content">
+      
+      <!-- Panel 1: 赛程日历 -->
+      <section id="tab-schedule" class="tab-panel active">
+        <!-- 日历日期选择滑动条 -->
+        <div class="date-slider-container card animate-fade-in">
+          <button class="slider-arrow prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="date-slider" id="date-slider">
+            <!-- 由 JS 动态填充日期卡片 -->
+          </div>
+          <button class="slider-arrow next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="panel-header animate-fade-in">
+          <h2><i class="fa-solid fa-calendar-day"></i> <span id="schedule-date-title">2026年6月18日</span> 赛程</h2>
+          <span class="match-count-badge" id="schedule-match-count">4 场比赛</span>
+        </div>
+
+        <div class="match-grid" id="match-schedule-list">
+          <!-- 由 JS 动态填充赛程卡片 -->
+        </div>
+      </section>
+
+      <!-- Panel 2: 战况快报 -->
+      <section id="tab-analysis" class="tab-panel">
+        <div class="analysis-layout">
+          <!-- 左侧：每日快报卡片 -->
+          <div class="analysis-left animate-slide-up">
+            <div class="card summary-card">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-newspaper text-gradient"></i> 每日战况快报</h3>
+                <span class="report-date" id="report-date">2026年6月18日</span>
+              </div>
+              <div class="card-body">
+                <h4 id="report-title">战况载入中...</h4>
+                <p id="report-content">暂无当日简报。</p>
+              </div>
+              <div class="report-extra" id="report-stat-of-day-container">
+                <i class="fa-solid fa-circle-info info-icon"></i>
+                <div class="stat-of-day-text">
+                  <strong>当日之最 (Stat of Day)：</strong>
+                  <span id="report-stat-of-day">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右侧：焦点战况与MVP -->
+          <div class="analysis-right animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="card mom-card" id="mom-card-container">
+              <div class="card-header">
+                <h3><i class="fa-solid fa-award text-gradient"></i> 当日 MVP (Man of the Match)</h3>
+              </div>
+              <div class="card-body mom-body" id="mom-detail-body">
+                <!-- MVP 详情由 JS 动态生成 -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-header animate-fade-in" style="margin-top: 2rem;">
+          <h2><i class="fa-solid fa-magnifying-glass-chart"></i> 已完赛详细战况与战术分析</h2>
+        </div>
+
+        <div class="completed-analysis-list" id="completed-analysis-list">
+          <!-- 详细的战况统计与分析卡片由 JS 填充 -->
+        </div>
+      </section>
+
+      <!-- Panel 3: 小组积分榜 & 预测 -->
+      <section id="tab-standings" class="tab-panel">
+        <div class="panel-header animate-fade-in">
+          <h2><i class="fa-solid fa-list-ol"></i> 小组积分表 & AI出线趋势预估</h2>
+          <div class="standings-legend">
+            <span><span class="legend-color legend-qualify"></span> 直接晋级 (前二)</span>
+            <span><span class="legend-color legend-qualify-3rd"></span> 潜在晋级 (最佳小组第三)</span>
+          </div>
+        </div>
+
+        <div class="groups-grid" id="groups-grid">
+          <!-- 12个小组积分卡片由 JS 动态填充 -->
+        </div>
+      </section>
+
+      <!-- Panel 4: 赛前预估与对决预测 -->
+      <section id="tab-predictions" class="tab-panel">
+        <div class="panel-header animate-fade-in">
+          <h2><i class="fa-solid fa-wand-magic-sparkles"></i> 焦点对决 AI 模拟预测与战术看点</h2>
+          <p class="panel-subtitle">结合历史战绩、近期状态、核心身价与攻防战术模型得出</p>
+        </div>
+
+        <div class="previews-list" id="previews-list">
+          <!-- 未来对局预测详情由 JS 动态填充 -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 底部版权信息 -->
+    <footer class="footer animate-fade-in">
+      <p>&copy; 2026 FIFA World Cup Daily Dashboard. Powered by Antigravity AI Engine.</p>
+      <p class="footer-note">数据基于实时网络搜索及世界杯赛程统计进行每日更新。</p>
+    </footer>
+  </div>
+
+  <!-- 详情弹窗 (Modal) 用于查看单场比赛详细战术分析或图表 -->
+  <div class="modal" id="match-detail-modal">
+    <div class="modal-content card">
+      <button class="modal-close" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-body-content">
+        <!-- 弹窗内容动态加载 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入核心数据 -->
+  <script src="src/data.js"></script>
+  <!-- 引入逻辑脚本 -->
+  <script src="js/app.js"></script>
+</body>
+</html>
