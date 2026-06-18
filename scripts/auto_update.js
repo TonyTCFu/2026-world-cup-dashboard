@@ -43,6 +43,7 @@ async function run() {
 
   let updatedCount = 0;
   let latestFinishedDate = "2026-06-11"; // 跟踪最新完赛的日期
+  const datesToRegenerate = new Set();
 
   // 3. 循环处理 ESPN 赛事
   data.events.forEach(event => {
@@ -81,40 +82,37 @@ async function run() {
 
       if (isCompleted) {
         // 更新为已完赛状态
-        if (match.status !== "FT") {
+        const scoreChanged = !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore;
+        
+        if (match.status !== "FT" || scoreChanged) {
           match.status = "FT";
           match.score = { home: actualHomeScore, away: actualAwayScore };
           
-          // 如果没有战术分析，生成一个基于模版的解析
-          if (!match.analysis || match.analysis.includes("pushing hard") || match.analysis.includes("dominating")) {
-            const homeName = WORLDCUP_DATA.teams[match.home].name;
-            const awayName = WORLDCUP_DATA.teams[match.away].name;
-            match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平的战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
-          }
+          // 重新生成战术分析
+          const homeName = WORLDCUP_DATA.teams[match.home].name;
+          const awayName = WORLDCUP_DATA.teams[match.away].name;
+          match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
 
-          // 自动填充基础统计数据（若没有）
-          if (!match.stats) {
-            match.stats = {
-              possession: [50, 50],
-              shots: [11, 9],
-              target: [5, 4],
-              fouls: [12, 11]
-            };
-          }
+          // 重新填充统计数据
+          match.stats = {
+            possession: [50, 50],
+            shots: [11, 9],
+            target: [5, 4],
+            fouls: [12, 11]
+          };
 
-          // 自动填充 MVP
-          if (!match.mvp) {
-            const winner = actualHomeScore > actualAwayScore ? match.home : (actualHomeScore < actualAwayScore ? match.away : null);
-            const mvpTeam = winner || match.home;
-            const mvpTeamName = WORLDCUP_DATA.teams[mvpTeam].name;
-            match.mvp = {
-              name: `核心球员 (${mvpTeamName})`,
-              team: mvpTeam,
-              rating: 8.2,
-              reason: "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-            };
-          }
+          // 重新填充 MVP
+          const winner = actualHomeScore > actualAwayScore ? match.home : (actualHomeScore < actualAwayScore ? match.away : null);
+          const mvpTeam = winner || match.home;
+          const mvpTeamName = WORLDCUP_DATA.teams[mvpTeam].name;
+          match.mvp = {
+            name: `核心球员 (${mvpTeamName})`,
+            team: mvpTeam,
+            rating: 8.2,
+            reason: "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+          };
           
+          datesToRegenerate.add(match.date);
           updatedCount++;
         }
         
@@ -128,13 +126,25 @@ async function run() {
         match.status = detailStatus || "Live";
         match.score = { home: actualHomeScore, away: actualAwayScore };
         updatedCount++;
+      } else if (comp.status.type.state === "pre") {
+        // 如果 ESPN 接口中比赛还未开始，且本地被错误地标记为已完赛或有比分，则重置为未开始状态
+        if (match.status !== "Scheduled") {
+          match.status = "Scheduled";
+          delete match.score;
+          delete match.stats;
+          delete match.mvp;
+          delete match.analysis;
+          datesToRegenerate.add(match.date);
+          updatedCount++;
+          console.log(`[重置] 比赛 ${match.id} (${match.home} vs ${match.away}) 还未开始，已重置为 Scheduled 状态。`);
+        }
       }
     }
   });
 
   // 4. 动态推算当前的比赛日日期与第几天
   // 将 currentDate 设为最新完赛的日期（如果当前时间尚未推进）
-  if (latestFinishedDate > WORLDCUP_DATA.currentDate) {
+  if (latestFinishedDate !== WORLDCUP_DATA.currentDate) {
     WORLDCUP_DATA.currentDate = latestFinishedDate;
     
     // 计算 currentMatchday (以 6月11日 为首日 1)
@@ -147,26 +157,43 @@ async function run() {
     console.log(`[同步] 当前系统日期变更为: ${latestFinishedDate} (第 ${diffDays} 比赛日)`);
   }
 
-  // 5. 生成每日总结快报 (若当天完赛但尚无简报，则动态生成一个总结)
-  const currentSummary = WORLDCUP_DATA.dailySummaries[WORLDCUP_DATA.currentDate];
-  if (!currentSummary) {
-    const finishedToday = WORLDCUP_DATA.matches.filter(m => m.date === WORLDCUP_DATA.currentDate && m.status === "FT");
-    if (finishedToday.length > 0) {
-      const summaryText = finishedToday.map(m => {
-        const homeName = WORLDCUP_DATA.teams[m.home].name;
-        const awayName = WORLDCUP_DATA.teams[m.away].name;
-        return `${homeName} ${m.score.home}-${m.score.away} ${awayName}`;
-      }).join("；");
+  // 5. 生成每日总结快报 (若当天完赛或比分发生变更，重新生成对应日期总结)
+  // 首先，清除发生了比分更新的日期的旧版总结
+  datesToRegenerate.forEach(d => {
+    delete WORLDCUP_DATA.dailySummaries[d];
+  });
 
-      WORLDCUP_DATA.dailySummaries[WORLDCUP_DATA.currentDate] = {
-        title: `第${WORLDCUP_DATA.currentMatchday}比赛日战况汇总`,
-        content: `在第${WORLDCUP_DATA.currentMatchday}比赛日中，完成了多场强强对话，具体赛果为：${summaryText}。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。`,
-        keyMatch: finishedToday[0].id,
-        statOfTheDay: `今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。`
-      };
-      console.log(`[自动生成] 录入了日期为 ${WORLDCUP_DATA.currentDate} 的每日简报。`);
+  // 确信要检查和生成的日期列表
+  const datesToCheck = new Set(datesToRegenerate);
+  datesToCheck.add(WORLDCUP_DATA.currentDate);
+
+  datesToCheck.forEach(d => {
+    const currentSummary = WORLDCUP_DATA.dailySummaries[d];
+    if (!currentSummary) {
+      const finishedToday = WORLDCUP_DATA.matches.filter(m => m.date === d && m.status === "FT");
+      if (finishedToday.length > 0) {
+        const summaryText = finishedToday.map(m => {
+          const homeName = WORLDCUP_DATA.teams[m.home].name;
+          const awayName = WORLDCUP_DATA.teams[m.away].name;
+          return `${homeName} ${m.score.home}-${m.score.away} ${awayName}`;
+        }).join("；");
+
+        // 计算该日期是第几个比赛日 (以 6月11日 为首日 1)
+        const start = new Date("2026-06-11");
+        const current = new Date(d);
+        const diffTime = Math.abs(current - start);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+
+        WORLDCUP_DATA.dailySummaries[d] = {
+          title: `第${diffDays}比赛日战况汇总`,
+          content: `在第${diffDays}比赛日中，完成了多场强强对话，具体赛果为：${summaryText}。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。`,
+          keyMatch: finishedToday[0].id,
+          statOfTheDay: `今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。`
+        };
+        console.log(`[自动生成] 录入/更新了日期为 ${d} 的每日简报。`);
+      }
     }
-  }
+  });
 
   // 6. 更新更新时间戳 (UTC -> 北京时间格式)
   const now = new Date();
