@@ -69,6 +69,12 @@ async function run() {
     );
 
     if (match) {
+      // 自动将赛事时间转换为北京时间 (UTC+8) 并更新赛程表
+      const utcDate = new Date(event.date);
+      const bjDate = new Date(utcDate.getTime() + 8 * 60 * 60 * 1000);
+      match.date = bjDate.toISOString().slice(0, 10);
+      match.time = bjDate.toISOString().slice(11, 16);
+
       const isHome = match.home === homeAbbr;
       const actualHomeScore = isHome ? homeScore : awayScore;
       const actualAwayScore = isHome ? awayScore : homeScore;
