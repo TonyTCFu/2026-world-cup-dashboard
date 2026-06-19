@@ -900,10 +900,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
-        <div class="tactical-review-box" style="margin-bottom: 1.5rem;">
-          <strong>战术解析:</strong>
-          <p>${match.analysis || "比赛战术讨论正在整理中。"}</p>
-        </div>
+        ${(match.analysis && match.analysis.trim() !== "" && !match.analysis.includes("正在整理中")) ? `
+          <div class="tactical-review-box" style="margin-bottom: 1.5rem;">
+            <strong>战术解析:</strong>
+            <p>${match.analysis}</p>
+          </div>
+        ` : ""}
 
         ${match.mvp ? `
           <div class="report-extra" style="background: rgba(255,215,0,0.04); border-color: rgba(255,215,0,0.15);">
