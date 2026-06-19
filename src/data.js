@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 01:45:26
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 03:20:22
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-20 01:45:26",
+  "lastUpdated": "2026-06-20 03:20:22",
   "currentDate": "2026-06-19",
   "currentMatchday": 9,
   "teams": {
@@ -919,7 +919,7 @@ const WORLDCUP_DATA = {
       "group": "D",
       "home": "USA",
       "away": "AUS",
-      "status": "Scheduled",
+      "status": "18'",
       "stadium": "流明球场 (西雅图)",
       "preview": {
         "wdl": [
@@ -933,6 +933,28 @@ const WORLDCUP_DATA = {
           "home": "中场主力麦肯尼 (首战红牌罚下，本轮停赛)",
           "away": "主力边锋博伊尔 (腹股沟拉伤，缺席本场比赛)"
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          69,
+          31
+        ],
+        "shots": [
+          4,
+          2
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "fouls": [
+          4,
+          3
+        ]
       }
     },
     {
