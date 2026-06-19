@@ -13,6 +13,44 @@ const TEAM_MAP = {
 };
 const mapTeam = (abbr) => TEAM_MAP[abbr] || abbr;
 
+// 提取 ESPN 数据统计指标并对其进行主客场排列调整
+function extractLiveStats(homeComp, awayComp, isHome) {
+  if (!homeComp.statistics || !awayComp.statistics) return null;
+
+  const findStat = (comp, name) => {
+    const stat = comp.statistics.find(s => s.name === name);
+    return stat ? Math.round(parseFloat(stat.displayValue)) : 0;
+  };
+
+  const rawHomePoss = findStat(homeComp, "possessionPct") || 50;
+  const rawAwayPoss = 100 - rawHomePoss;
+
+  const homePoss = isHome ? rawHomePoss : rawAwayPoss;
+  const awayPoss = isHome ? rawAwayPoss : rawHomePoss;
+
+  const rawHomeShots = findStat(homeComp, "totalShots");
+  const rawAwayShots = findStat(awayComp, "totalShots");
+  const homeShots = isHome ? rawHomeShots : rawAwayShots;
+  const awayShots = isHome ? rawAwayShots : rawHomeShots;
+
+  const rawHomeTarget = findStat(homeComp, "shotsOnTarget");
+  const rawAwayTarget = findStat(awayComp, "shotsOnTarget");
+  const homeTarget = isHome ? rawHomeTarget : rawAwayTarget;
+  const awayTarget = isHome ? rawAwayTarget : rawHomeTarget;
+
+  const rawHomeFouls = findStat(homeComp, "foulsCommitted");
+  const rawAwayFouls = findStat(awayComp, "foulsCommitted");
+  const homeFouls = isHome ? rawHomeFouls : rawAwayFouls;
+  const awayFouls = isHome ? rawAwayFouls : rawHomeFouls;
+
+  return {
+    possession: [homePoss, awayPoss],
+    shots: [homeShots, awayShots],
+    target: [homeTarget, awayTarget],
+    fouls: [homeFouls, awayFouls]
+  };
+}
+
 async function run() {
   // 1. 导入本地现有数据
   let WORLDCUP_DATA;
@@ -93,13 +131,18 @@ async function run() {
           const awayName = WORLDCUP_DATA.teams[match.away].name;
           match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
 
-          // 重新填充统计数据
-          match.stats = {
-            possession: [50, 50],
-            shots: [11, 9],
-            target: [5, 4],
-            fouls: [12, 11]
-          };
+          // 重新填充统计数据 (使用真实统计，没有则降级为默认估算值)
+          const liveStats = extractLiveStats(homeCompetitor, awayCompetitor, isHome);
+          if (liveStats) {
+            match.stats = liveStats;
+          } else {
+            match.stats = {
+              possession: [50, 50],
+              shots: [11, 9],
+              target: [5, 4],
+              fouls: [12, 11]
+            };
+          }
 
           // 重新填充 MVP
           const winner = actualHomeScore > actualAwayScore ? match.home : (actualHomeScore < actualAwayScore ? match.away : null);
@@ -125,6 +168,12 @@ async function run() {
         // 更新为进行中状态
         match.status = detailStatus || "Live";
         match.score = { home: actualHomeScore, away: actualAwayScore };
+        
+        // 进行中状态同步真实的实时统计数据
+        const liveStats = extractLiveStats(homeCompetitor, awayCompetitor, isHome);
+        if (liveStats) {
+          match.stats = liveStats;
+        }
         updatedCount++;
       } else if (comp.status.type.state === "pre") {
         // 如果 ESPN 接口中比赛还未开始，且本地被错误地标记为已完赛或有比分，则重置为未开始状态

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentDate: WORLDCUP_DATA.currentDate,
     selectedDate: defaultDate,
     activeTab: "tab-schedule",
+    activeMatchDetailId: null, // 跟踪当前打开的详情弹窗比赛 ID
   };
 
   // DOM 节点缓存
@@ -50,6 +51,44 @@ document.addEventListener("DOMContentLoaded", () => {
     prevDateBtn: document.querySelector(".prev-btn"),
     nextDateBtn: document.querySelector(".next-btn"),
   };
+
+  // 提取 ESPN 数据统计指标并对其进行主客场排列调整
+  function extractLiveStats(homeComp, awayComp, isHome) {
+    if (!homeComp.statistics || !awayComp.statistics) return null;
+
+    const findStat = (comp, name) => {
+      const stat = comp.statistics.find(s => s.name === name);
+      return stat ? Math.round(parseFloat(stat.displayValue)) : 0;
+    };
+
+    const rawHomePoss = findStat(homeComp, "possessionPct") || 50;
+    const rawAwayPoss = 100 - rawHomePoss;
+
+    const homePoss = isHome ? rawHomePoss : rawAwayPoss;
+    const awayPoss = isHome ? rawAwayPoss : rawHomePoss;
+
+    const rawHomeShots = findStat(homeComp, "totalShots");
+    const rawAwayShots = findStat(awayComp, "totalShots");
+    const homeShots = isHome ? rawHomeShots : rawAwayShots;
+    const awayShots = isHome ? rawAwayShots : rawHomeShots;
+
+    const rawHomeTarget = findStat(homeComp, "shotsOnTarget");
+    const rawAwayTarget = findStat(awayComp, "shotsOnTarget");
+    const homeTarget = isHome ? rawHomeTarget : rawAwayTarget;
+    const awayTarget = isHome ? rawAwayTarget : rawHomeTarget;
+
+    const rawHomeFouls = findStat(homeComp, "foulsCommitted");
+    const rawAwayFouls = findStat(awayComp, "foulsCommitted");
+    const homeFouls = isHome ? rawHomeFouls : rawAwayFouls;
+    const awayFouls = isHome ? rawAwayFouls : rawHomeFouls;
+
+    return {
+      possession: [homePoss, awayPoss],
+      shots: [homeShots, awayShots],
+      target: [homeTarget, awayTarget],
+      fouls: [homeFouls, awayFouls]
+    };
+  }
 
   // 浏览器端实时数据更新 (0 延迟抓取 ESPN 官方实时比分)
   async function fetchLiveScores() {
@@ -94,12 +133,17 @@ document.addEventListener("DOMContentLoaded", () => {
           const isHome = match.home === homeAbbr;
           const actualHomeScore = isHome ? homeScore : awayScore;
           const actualAwayScore = isHome ? awayScore : homeScore;
+          const liveStats = extractLiveStats(homeCompetitor, awayCompetitor, isHome);
 
           if (isCompleted) {
             // 如果已完赛，且本地比分和状态不同，临时更新
             if (match.status !== "FT" || !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore) {
               match.status = "FT";
               match.score = { home: actualHomeScore, away: actualAwayScore };
+              hasChanges = true;
+            }
+            if (liveStats && (!match.stats || JSON.stringify(match.stats) !== JSON.stringify(liveStats))) {
+              match.stats = liveStats;
               hasChanges = true;
             }
           } else if (state === "in") {
@@ -109,11 +153,16 @@ document.addEventListener("DOMContentLoaded", () => {
               match.score = { home: actualHomeScore, away: actualAwayScore };
               hasChanges = true;
             }
+            if (liveStats && (!match.stats || JSON.stringify(match.stats) !== JSON.stringify(liveStats))) {
+              match.stats = liveStats;
+              hasChanges = true;
+            }
           } else if (state === "pre") {
             // 如果未开始，且本地被错误标记为 FT
             if (match.status !== "Scheduled") {
               match.status = "Scheduled";
               delete match.score;
+              delete match.stats;
               hasChanges = true;
             }
           }
@@ -121,10 +170,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (hasChanges) {
-        console.log("[实时数据] 浏览器端成功同步并渲染最新比分！");
+        console.log("[实时数据] 浏览器端成功同步并渲染最新比分与技术统计！");
         // 重新渲染当前 Tab 和全球头部数据
         renderGlobalHeader();
         renderTabContent();
+
+        // 如果当前有打开的详情弹窗，且该比赛的数据发生了更新，则重新渲染弹窗内容
+        if (state.activeMatchDetailId) {
+          window.viewMatchDetails(state.activeMatchDetailId);
+        }
       }
     } catch (err) {
       console.warn("[实时数据] 无法在浏览器端直接请求 ESPN 数据 (可能跨域或无网络):", err);
@@ -739,6 +793,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 7. 单场比赛详情弹窗展示 (Modal details)
   // ==========================================
   window.viewMatchDetails = function(matchId) {
+    state.activeMatchDetailId = matchId; // 记录激活 ID
     const match = WORLDCUP_DATA.matches.find(m => m.id === matchId);
     if (!match) return;
 
@@ -965,10 +1020,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // 模态弹窗关闭
     dom.modalCloseBtn.addEventListener("click", () => {
       dom.modal.classList.remove("active");
+      state.activeMatchDetailId = null; // 重置激活 ID
     });
     dom.modal.addEventListener("click", (e) => {
       if (e.target === dom.modal) {
         dom.modal.classList.remove("active");
+        state.activeMatchDetailId = null; // 重置激活 ID
       }
     });
 

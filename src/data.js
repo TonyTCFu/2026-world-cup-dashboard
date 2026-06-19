@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-19 04:34:12
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-19 09:58:52
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-19 04:34:12",
+  "lastUpdated": "2026-06-19 09:58:52",
   "currentDate": "2026-06-19",
   "currentMatchday": 9,
   "teams": {
@@ -763,7 +763,7 @@ const WORLDCUP_DATA = {
       "group": "B",
       "home": "SUI",
       "away": "BIH",
-      "status": "9'",
+      "status": "FT",
       "stadium": "玫瑰碗球场 (洛杉矶)",
       "preview": {
         "wdl": [
@@ -779,8 +779,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 4,
+        "away": 1
+      },
+      "analysis": "在本场 B 组的激烈较量中，瑞士 与 波黑 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          62,
+          38
+        ],
+        "shots": [
+          13,
+          5
+        ],
+        "target": [
+          7,
+          3
+        ],
+        "fouls": [
+          7,
+          18
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (瑞士)",
+        "team": "SUI",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -790,7 +815,7 @@ const WORLDCUP_DATA = {
       "group": "B",
       "home": "CAN",
       "away": "QAT",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "卑诗体育馆 (温哥华)",
       "preview": {
         "wdl": [
@@ -804,6 +829,35 @@ const WORLDCUP_DATA = {
           "home": "全员健康，无主力伤病",
           "away": "中场核心布迪亚夫 (脚踝扭伤，确认战)"
         }
+      },
+      "score": {
+        "home": 6,
+        "away": 0
+      },
+      "analysis": "在本场 B 组的激烈较量中，加拿大 与 卡塔尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 6 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          79,
+          21
+        ],
+        "shots": [
+          32,
+          2
+        ],
+        "target": [
+          10,
+          0
+        ],
+        "fouls": [
+          9,
+          10
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (加拿大)",
+        "team": "CAN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -813,7 +867,7 @@ const WORLDCUP_DATA = {
       "group": "A",
       "home": "MEX",
       "away": "KOR",
-      "status": "Scheduled",
+      "status": "HT",
       "stadium": "阿克伦体育场 (瓜达拉哈拉)",
       "preview": {
         "wdl": [
@@ -827,6 +881,28 @@ const WORLDCUP_DATA = {
           "home": "主力门将奥乔亚 (大腿轻微拉伤，出战成疑)",
           "away": "中场李刚仁 (首轮有些许抽筋，已恢复正常合练)"
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          47,
+          53
+        ],
+        "shots": [
+          3,
+          2
+        ],
+        "target": [
+          1,
+          0
+        ],
+        "fouls": [
+          4,
+          4
+        ]
       }
     },
     {
@@ -990,7 +1066,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-19": {
       "title": "第9比赛日战况汇总",
-      "content": "在第9比赛日中，完成了多场强强对话，具体赛果为：捷克 1-1 南非。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第9比赛日中，完成了多场强强对话，具体赛果为：捷克 1-1 南非；瑞士 4-1 波黑；加拿大 6-0 卡塔尔。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 16,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
