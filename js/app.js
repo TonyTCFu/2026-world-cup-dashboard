@@ -692,8 +692,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderPredictionsTab() {
     dom.previewsList.innerHTML = "";
     
-    // 筛选出今日及之后未开赛的所有比赛 (或者是带有 preview 字段的比赛)
-    const upcomingMatches = WORLDCUP_DATA.matches.filter(m => m.preview);
+    // 筛选出尚未开始且有预估数据的所有比赛 (过滤掉已开赛或已结束的比赛)
+    const upcomingMatches = WORLDCUP_DATA.matches.filter(m => m.preview && m.status === "Scheduled");
     
     if (upcomingMatches.length === 0) {
       dom.previewsList.innerHTML = `
