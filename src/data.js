@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 05:56:34
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 06:44:03
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-20 05:56:34",
-  "currentDate": "2026-06-19",
-  "currentMatchday": 9,
+  "lastUpdated": "2026-06-20 06:44:03",
+  "currentDate": "2026-06-20",
+  "currentMatchday": 10,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -411,8 +411,30 @@ const WORLDCUP_DATA = {
       "group": "C",
       "home": "MAR",
       "away": "SCO",
-      "status": "Scheduled",
-      "stadium": "朗威体育场 (夏洛特)"
+      "status": "42'",
+      "stadium": "朗威体育场 (夏洛特)",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          67,
+          33
+        ],
+        "shots": [
+          5,
+          0
+        ],
+        "target": [
+          1,
+          0
+        ],
+        "fouls": [
+          3,
+          4
+        ]
+      }
     },
     {
       "id": 6,
@@ -919,7 +941,7 @@ const WORLDCUP_DATA = {
       "group": "D",
       "home": "USA",
       "away": "AUS",
-      "status": "84'",
+      "status": "FT",
       "stadium": "流明球场 (西雅图)",
       "preview": {
         "wdl": [
@@ -940,21 +962,28 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          63,
-          37
+          62,
+          38
         ],
         "shots": [
           10,
-          4
+          5
         ],
         "target": [
           2,
           2
         ],
         "fouls": [
-          10,
-          13
+          12,
+          16
         ]
+      },
+      "analysis": "在本场 D 组的激烈较量中，美国 与 澳大利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (美国)",
+        "team": "USA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -1097,6 +1126,12 @@ const WORLDCUP_DATA = {
       "title": "第9比赛日战况汇总",
       "content": "在第9比赛日中，完成了多场强强对话，具体赛果为：捷克 1-1 南非；瑞士 4-1 波黑；加拿大 6-0 卡塔尔；墨西哥 1-0 韩国。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 16,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-20": {
+      "title": "第10比赛日战况汇总",
+      "content": "在第10比赛日中，完成了多场强强对话，具体赛果为：美国 2-0 澳大利亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 20,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
