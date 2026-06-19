@@ -2,8 +2,8 @@ name: Auto Update World Cup 2026 Dashboard
 
 on:
   schedule:
-# 在每小时的整点和半点自动触发数据抓取与发布
-- cron: '0,30 * * * *'
+    # 在每小时的整点和半点自动触发数据抓取与发布
+    - cron: '0,30 * * * *'
   workflow_dispatch: # 允许用户在 GitHub 仓库 Actions 页面上手动点击一键运行
 
 # 设定推送和部署所需的写权限
