@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-19 09:58:52
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-19 10:19:26
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-19 09:58:52",
+  "lastUpdated": "2026-06-19 10:19:26",
   "currentDate": "2026-06-19",
   "currentMatchday": 9,
   "teams": {
@@ -815,7 +815,7 @@ const WORLDCUP_DATA = {
       "group": "B",
       "home": "CAN",
       "away": "QAT",
-      "status": "FT",
+      "status": "33'",
       "stadium": "卑诗体育馆 (温哥华)",
       "preview": {
         "wdl": [
@@ -831,26 +831,26 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 6,
+        "home": 2,
         "away": 0
       },
       "analysis": "在本场 B 组的激烈较量中，加拿大 与 卡塔尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 6 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          79,
-          21
+          66,
+          34
         ],
         "shots": [
-          32,
+          7,
           2
         ],
         "target": [
-          10,
+          4,
           0
         ],
         "fouls": [
-          9,
-          10
+          2,
+          5
         ]
       },
       "mvp": {
@@ -867,7 +867,7 @@ const WORLDCUP_DATA = {
       "group": "A",
       "home": "MEX",
       "away": "KOR",
-      "status": "HT",
+      "status": "Scheduled",
       "stadium": "阿克伦体育场 (瓜达拉哈拉)",
       "preview": {
         "wdl": [
@@ -881,28 +881,6 @@ const WORLDCUP_DATA = {
           "home": "主力门将奥乔亚 (大腿轻微拉伤，出战成疑)",
           "away": "中场李刚仁 (首轮有些许抽筋，已恢复正常合练)"
         }
-      },
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "stats": {
-        "possession": [
-          47,
-          53
-        ],
-        "shots": [
-          3,
-          2
-        ],
-        "target": [
-          1,
-          0
-        ],
-        "fouls": [
-          4,
-          4
-        ]
       }
     },
     {
@@ -1066,7 +1044,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-19": {
       "title": "第9比赛日战况汇总",
-      "content": "在第9比赛日中，完成了多场强强对话，具体赛果为：捷克 1-1 南非；瑞士 4-1 波黑；加拿大 6-0 卡塔尔。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第9比赛日中，完成了多场强强对话，具体赛果为：捷克 1-1 南非；瑞士 4-1 波黑。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 16,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
