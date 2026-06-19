@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 06:44:03
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 07:55:31
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-20 06:44:03",
+  "lastUpdated": "2026-06-20 07:55:31",
   "currentDate": "2026-06-20",
   "currentMatchday": 10,
   "teams": {
@@ -411,30 +411,8 @@ const WORLDCUP_DATA = {
       "group": "C",
       "home": "MAR",
       "away": "SCO",
-      "status": "42'",
-      "stadium": "朗威体育场 (夏洛特)",
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "stats": {
-        "possession": [
-          67,
-          33
-        ],
-        "shots": [
-          5,
-          0
-        ],
-        "target": [
-          1,
-          0
-        ],
-        "fouls": [
-          3,
-          4
-        ]
-      }
+      "status": "Scheduled",
+      "stadium": "朗威体育场 (夏洛特)"
     },
     {
       "id": 6,
