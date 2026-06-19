@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 03:20:22
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-20 04:50:35
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-20 03:20:22",
+  "lastUpdated": "2026-06-20 04:50:35",
   "currentDate": "2026-06-19",
   "currentMatchday": 9,
   "teams": {
@@ -919,7 +919,7 @@ const WORLDCUP_DATA = {
       "group": "D",
       "home": "USA",
       "away": "AUS",
-      "status": "18'",
+      "status": "32'",
       "stadium": "流明球场 (西雅图)",
       "preview": {
         "wdl": [
@@ -940,11 +940,11 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          69,
-          31
+          67,
+          33
         ],
         "shots": [
-          4,
+          5,
           2
         ],
         "target": [
@@ -953,7 +953,7 @@ const WORLDCUP_DATA = {
         ],
         "fouls": [
           4,
-          3
+          4
         ]
       }
     },
