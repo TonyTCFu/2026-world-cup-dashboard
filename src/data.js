@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 00:57:32
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 02:06:37
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 00:57:32",
+  "lastUpdated": "2026-06-21 02:06:37",
   "currentDate": "2026-06-20",
   "currentMatchday": 10,
   "teams": {
@@ -1075,7 +1075,7 @@ const WORLDCUP_DATA = {
       "group": "F",
       "home": "NED",
       "away": "SWE",
-      "status": "Scheduled",
+      "status": "43'",
       "stadium": "丰田体育场 (休斯敦)",
       "preview": {
         "wdl": [
@@ -1089,6 +1089,28 @@ const WORLDCUP_DATA = {
           "home": "德容 (韧带微伤未痊愈，仍在进行恢复性训练)；德利赫特 (感冒成疑)",
           "away": "老将前锋福斯贝里 (小腿拉伤，大概率缺席本场比赛)"
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          5,
+          6
+        ],
+        "target": [
+          4,
+          2
+        ],
+        "fouls": [
+          2,
+          4
+        ]
       }
     },
     {
