@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 04:00:24
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 05:44:12
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 04:00:24",
-  "currentDate": "2026-06-20",
-  "currentMatchday": 10,
+  "lastUpdated": "2026-06-21 05:44:12",
+  "currentDate": "2026-06-21",
+  "currentMatchday": 11,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -1075,7 +1075,7 @@ const WORLDCUP_DATA = {
       "group": "F",
       "home": "NED",
       "away": "SWE",
-      "status": "HT",
+      "status": "FT",
       "stadium": "丰田体育场 (休斯敦)",
       "preview": {
         "wdl": [
@@ -1091,26 +1091,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 2,
-        "away": 0
+        "home": 5,
+        "away": 1
       },
       "stats": {
         "possession": [
-          59,
-          41
+          51,
+          49
         ],
         "shots": [
-          5,
-          9
+          10,
+          16
         ],
         "target": [
-          4,
-          4
+          7,
+          8
         ],
         "fouls": [
-          5,
-          4
+          9,
+          12
         ]
+      },
+      "analysis": "在本场 F 组的激烈较量中，荷兰 与 瑞典 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 5 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (荷兰)",
+        "team": "NED",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -1190,6 +1197,12 @@ const WORLDCUP_DATA = {
       "title": "第10比赛日战况汇总",
       "content": "在第10比赛日中，完成了多场强强对话，具体赛果为：摩洛哥 1-0 苏格兰；美国 2-0 澳大利亚；罗马尼亚 0-1 巴拉圭；巴西 3-0 海地。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 5,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-21": {
+      "title": "第11比赛日战况汇总",
+      "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 23,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
