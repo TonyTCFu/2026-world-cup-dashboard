@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 05:44:12
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 06:55:12
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 05:44:12",
+  "lastUpdated": "2026-06-21 06:55:12",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
@@ -1127,7 +1127,7 @@ const WORLDCUP_DATA = {
       "group": "E",
       "home": "GER",
       "away": "CIV",
-      "status": "Scheduled",
+      "status": "81'",
       "stadium": "BMO球场 (多伦多)",
       "preview": {
         "wdl": [
@@ -1141,6 +1141,28 @@ const WORLDCUP_DATA = {
           "home": "全员健康，中场及前锋人员齐整",
           "away": "前锋阿莱 (踝关节酸痛，主教练透露本场极难首发)"
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          12,
+          8
+        ],
+        "target": [
+          3,
+          2
+        ],
+        "fouls": [
+          4,
+          5
+        ]
       }
     }
   ],
