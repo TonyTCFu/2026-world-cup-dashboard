@@ -10,6 +10,9 @@ const TEAM_MAP = {
   "ROM": "ROU", // 罗马尼亚
   "CGO": "COD", // 刚果(金)
   "DRC": "COD",
+  "TUR": "ROU", // 土耳其 (ESPN) -> 罗马尼亚 (本地)
+  "CUW": "CUR", // 库拉索 (ESPN: CUW -> 本地: CUR)
+  "IRQ": "HON", // 伊拉克 (ESPN) -> 洪都拉斯 (本地)
 };
 const mapTeam = (abbr) => TEAM_MAP[abbr] || abbr;
 

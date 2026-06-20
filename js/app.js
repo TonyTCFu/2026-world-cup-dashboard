@@ -102,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "ROM": "ROU",
         "CGO": "COD",
         "DRC": "COD",
+        "TUR": "ROU",
+        "CUW": "CUR",
+        "IRQ": "HON",
       };
       const mapTeam = (abbr) => TEAM_MAP[abbr] || abbr;
 
