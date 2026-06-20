@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 02:06:37
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 04:00:24
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 02:06:37",
+  "lastUpdated": "2026-06-21 04:00:24",
   "currentDate": "2026-06-20",
   "currentMatchday": 10,
   "teams": {
@@ -1075,7 +1075,7 @@ const WORLDCUP_DATA = {
       "group": "F",
       "home": "NED",
       "away": "SWE",
-      "status": "43'",
+      "status": "HT",
       "stadium": "丰田体育场 (休斯敦)",
       "preview": {
         "wdl": [
@@ -1096,19 +1096,19 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          60,
-          40
+          59,
+          41
         ],
         "shots": [
           5,
-          6
+          9
         ],
         "target": [
           4,
-          2
+          4
         ],
         "fouls": [
-          2,
+          5,
           4
         ]
       }
