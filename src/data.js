@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 23:10:46
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 00:58:47
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 23:10:46",
+  "lastUpdated": "2026-06-22 00:58:47",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
@@ -1803,8 +1803,30 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "ESP",
       "away": "KSA",
-      "status": "Scheduled",
-      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+      "status": "11'",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          86,
+          14
+        ],
+        "shots": [
+          5,
+          0
+        ],
+        "target": [
+          1,
+          0
+        ],
+        "fouls": [
+          0,
+          1
+        ]
+      }
     },
     {
       "id": 760451,
