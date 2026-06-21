@@ -105,10 +105,46 @@ async function run() {
     const detailStatus = comp.status.type.detail; // e.g. "FT", "Live 45'"
 
     // 在本地赛程表中查找对应的比赛
-    const match = WORLDCUP_DATA.matches.find(m => 
+    let match = WORLDCUP_DATA.matches.find(m => 
       (m.home === homeAbbr && m.away === awayAbbr) ||
       (m.home === awayAbbr && m.away === homeAbbr)
     );
+
+    if (!match) {
+      // 如果本地没有这场比赛，则动态添加它！
+      const newId = parseInt(event.id);
+      
+      // 自动转换时间为北京时间
+      const utcDate = new Date(event.date);
+      const bjDate = new Date(utcDate.getTime() + 8 * 60 * 60 * 1000);
+      const matchDate = bjDate.toISOString().slice(0, 10);
+      const matchTime = bjDate.toISOString().slice(11, 16);
+
+      // 查询组别
+      let group = "淘汰赛";
+      if (WORLDCUP_DATA.teams[homeAbbr] && WORLDCUP_DATA.teams[homeAbbr].group) {
+        group = WORLDCUP_DATA.teams[homeAbbr].group;
+      } else if (WORLDCUP_DATA.teams[awayAbbr] && WORLDCUP_DATA.teams[awayAbbr].group) {
+        group = WORLDCUP_DATA.teams[awayAbbr].group;
+      }
+
+      // 获取球场信息
+      const stadium = comp.venue ? `${comp.venue.fullName}${comp.venue.address && comp.venue.address.city ? ' (' + comp.venue.address.city + ')' : ''}` : "世界级球场";
+
+      match = {
+        id: newId,
+        date: matchDate,
+        time: matchTime,
+        group: group,
+        home: homeAbbr,
+        away: awayAbbr,
+        status: "Scheduled",
+        stadium: stadium
+      };
+      
+      WORLDCUP_DATA.matches.push(match);
+      console.log(`[动态新增] 发现全新比赛: ID ${newId} (${homeAbbr} vs ${awayAbbr})`);
+    }
 
     if (match) {
       // 自动将赛事时间转换为北京时间 (UTC+8) 并更新赛程表
@@ -130,8 +166,8 @@ async function run() {
           match.score = { home: actualHomeScore, away: actualAwayScore };
           
           // 重新生成战术分析
-          const homeName = WORLDCUP_DATA.teams[match.home].name;
-          const awayName = WORLDCUP_DATA.teams[match.away].name;
+          const homeName = WORLDCUP_DATA.teams[match.home] ? WORLDCUP_DATA.teams[match.home].name : match.home;
+          const awayName = WORLDCUP_DATA.teams[match.away] ? WORLDCUP_DATA.teams[match.away].name : match.away;
           match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
 
           // 重新填充统计数据 (使用真实统计，没有则降级为默认估算值)
@@ -150,7 +186,7 @@ async function run() {
           // 重新填充 MVP
           const winner = actualHomeScore > actualAwayScore ? match.home : (actualHomeScore < actualAwayScore ? match.away : null);
           const mvpTeam = winner || match.home;
-          const mvpTeamName = WORLDCUP_DATA.teams[mvpTeam].name;
+          const mvpTeamName = WORLDCUP_DATA.teams[mvpTeam] ? WORLDCUP_DATA.teams[mvpTeam].name : mvpTeam;
           match.mvp = {
             name: `核心球员 (${mvpTeamName})`,
             team: mvpTeam,
@@ -225,8 +261,8 @@ async function run() {
       const finishedToday = WORLDCUP_DATA.matches.filter(m => m.date === d && m.status === "FT");
       if (finishedToday.length > 0) {
         const summaryText = finishedToday.map(m => {
-          const homeName = WORLDCUP_DATA.teams[m.home].name;
-          const awayName = WORLDCUP_DATA.teams[m.away].name;
+          const homeName = WORLDCUP_DATA.teams[m.home] ? WORLDCUP_DATA.teams[m.home].name : m.home;
+          const awayName = WORLDCUP_DATA.teams[m.away] ? WORLDCUP_DATA.teams[m.away].name : m.away;
           return `${homeName} ${m.score.home}-${m.score.away} ${awayName}`;
         }).join("；");
 

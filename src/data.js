@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 07:56:21
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 08:12:10
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 07:56:21",
+  "lastUpdated": "2026-06-21 08:12:10",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
@@ -1171,6 +1171,1124 @@ const WORLDCUP_DATA = {
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
+    },
+    {
+      "id": 760417,
+      "date": "2026-06-13",
+      "time": "09:00",
+      "group": "D",
+      "home": "USA",
+      "away": "PAR",
+      "status": "FT",
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "analysis": "在本场 D 组的激烈较量中，美国 与 巴拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          65,
+          35
+        ],
+        "shots": [
+          16,
+          9
+        ],
+        "target": [
+          6,
+          1
+        ],
+        "fouls": [
+          13,
+          17
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (美国)",
+        "team": "USA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760419,
+      "date": "2026-06-14",
+      "time": "06:00",
+      "group": "C",
+      "home": "BRA",
+      "away": "MAR",
+      "status": "FT",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "analysis": "在本场 C 组的激烈较量中，巴西 与 摩洛哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          51,
+          49
+        ],
+        "shots": [
+          12,
+          14
+        ],
+        "target": [
+          5,
+          3
+        ],
+        "fouls": [
+          16,
+          14
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (巴西)",
+        "team": "BRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760418,
+      "date": "2026-06-14",
+      "time": "09:00",
+      "group": "C",
+      "home": "HAI",
+      "away": "SCO",
+      "status": "FT",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "analysis": "在本场 C 组的激烈较量中，海地 与 苏格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          15,
+          9
+        ],
+        "target": [
+          2,
+          2
+        ],
+        "fouls": [
+          23,
+          21
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (苏格兰)",
+        "team": "SCO",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760421,
+      "date": "2026-06-14",
+      "time": "12:00",
+      "group": "D",
+      "home": "AUS",
+      "away": "ROU",
+      "status": "FT",
+      "stadium": "BC Place (Vancouver)",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "analysis": "在本场 D 组的激烈较量中，澳大利亚 与 罗马尼亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          28,
+          72
+        ],
+        "shots": [
+          9,
+          30
+        ],
+        "target": [
+          4,
+          8
+        ],
+        "fouls": [
+          12,
+          4
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (澳大利亚)",
+        "team": "AUS",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760425,
+      "date": "2026-06-15",
+      "time": "04:00",
+      "group": "F",
+      "home": "NED",
+      "away": "JPN",
+      "status": "FT",
+      "stadium": "AT&T Stadium (Arlington, Texas)",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "analysis": "在本场 F 组的激烈较量中，荷兰 与 日本 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "target": [
+          6,
+          3
+        ],
+        "fouls": [
+          7,
+          7
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (荷兰)",
+        "team": "NED",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760424,
+      "date": "2026-06-15",
+      "time": "10:00",
+      "group": "F",
+      "home": "SWE",
+      "away": "TUN",
+      "status": "FT",
+      "stadium": "Estadio BBVA (Guadalupe)",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "analysis": "在本场 F 组的激烈较量中，瑞典 与 突尼斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 5 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          49,
+          51
+        ],
+        "shots": [
+          13,
+          6
+        ],
+        "target": [
+          7,
+          2
+        ],
+        "fouls": [
+          10,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (瑞典)",
+        "team": "SWE",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760428,
+      "date": "2026-06-16",
+      "time": "00:00",
+      "group": "H",
+      "home": "ESP",
+      "away": "CPV",
+      "status": "FT",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "analysis": "在本场 H 组的激烈较量中，西班牙 与 佛得角 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          74,
+          26
+        ],
+        "shots": [
+          27,
+          6
+        ],
+        "target": [
+          7,
+          1
+        ],
+        "fouls": [
+          10,
+          1
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (西班牙)",
+        "team": "ESP",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760426,
+      "date": "2026-06-16",
+      "time": "03:00",
+      "group": "G",
+      "home": "BEL",
+      "away": "EGY",
+      "status": "FT",
+      "stadium": "Lumen Field (Seattle, Washington)",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "analysis": "在本场 G 组的激烈较量中，比利时 与 埃及 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          15,
+          14
+        ],
+        "target": [
+          3,
+          3
+        ],
+        "fouls": [
+          15,
+          15
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (比利时)",
+        "team": "BEL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760429,
+      "date": "2026-06-16",
+      "time": "06:00",
+      "group": "H",
+      "home": "KSA",
+      "away": "URU",
+      "status": "FT",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "analysis": "在本场 H 组的激烈较量中，沙特阿拉伯 与 乌拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          33,
+          67
+        ],
+        "shots": [
+          7,
+          27
+        ],
+        "target": [
+          3,
+          10
+        ],
+        "fouls": [
+          11,
+          6
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (沙特阿拉伯)",
+        "team": "KSA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760427,
+      "date": "2026-06-16",
+      "time": "09:00",
+      "group": "G",
+      "home": "IRN",
+      "away": "NZL",
+      "status": "FT",
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "analysis": "在本场 G 组的激烈较量中，伊朗 与 新西兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          49,
+          51
+        ],
+        "shots": [
+          17,
+          14
+        ],
+        "target": [
+          4,
+          8
+        ],
+        "fouls": [
+          10,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (伊朗)",
+        "team": "IRN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760432,
+      "date": "2026-06-17",
+      "time": "03:00",
+      "group": "I",
+      "home": "FRA",
+      "away": "SEN",
+      "status": "FT",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 I 组的激烈较量中，法国 与 塞内加尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          53,
+          47
+        ],
+        "shots": [
+          11,
+          6
+        ],
+        "target": [
+          8,
+          2
+        ],
+        "fouls": [
+          5,
+          9
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760430,
+      "date": "2026-06-17",
+      "time": "06:00",
+      "group": "I",
+      "home": "HON",
+      "away": "NOR",
+      "status": "FT",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "analysis": "在本场 I 组的激烈较量中，洪都拉斯 与 挪威 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          39,
+          61
+        ],
+        "shots": [
+          11,
+          12
+        ],
+        "target": [
+          1,
+          5
+        ],
+        "fouls": [
+          12,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (挪威)",
+        "team": "NOR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760433,
+      "date": "2026-06-17",
+      "time": "09:00",
+      "group": "J",
+      "home": "ARG",
+      "away": "ALG",
+      "status": "FT",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "analysis": "在本场 J 组的激烈较量中，阿根廷 与 阿尔及利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          10,
+          7
+        ],
+        "target": [
+          6,
+          1
+        ],
+        "fouls": [
+          13,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760431,
+      "date": "2026-06-17",
+      "time": "12:00",
+      "group": "J",
+      "home": "AUT",
+      "away": "JOR",
+      "status": "FT",
+      "stadium": "Levi's Stadium (Santa Clara, California)",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 J 组的激烈较量中，奥地利 与 约旦 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          63,
+          37
+        ],
+        "shots": [
+          11,
+          11
+        ],
+        "target": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          7
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (奥地利)",
+        "team": "AUT",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760446,
+      "date": "2026-06-21",
+      "time": "08:00",
+      "group": "E",
+      "home": "ECU",
+      "away": "CUR",
+      "status": "11'",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          78,
+          22
+        ],
+        "shots": [
+          1,
+          1
+        ],
+        "target": [
+          1,
+          0
+        ],
+        "fouls": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 760449,
+      "date": "2026-06-21",
+      "time": "12:00",
+      "group": "F",
+      "home": "TUN",
+      "away": "JPN",
+      "status": "Scheduled",
+      "stadium": "Estadio BBVA (Guadalupe)"
+    },
+    {
+      "id": 760453,
+      "date": "2026-06-22",
+      "time": "00:00",
+      "group": "H",
+      "home": "ESP",
+      "away": "KSA",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760451,
+      "date": "2026-06-22",
+      "time": "03:00",
+      "group": "G",
+      "home": "BEL",
+      "away": "IRN",
+      "status": "Scheduled",
+      "stadium": "SoFi Stadium (Inglewood, California)"
+    },
+    {
+      "id": 760450,
+      "date": "2026-06-22",
+      "time": "06:00",
+      "group": "H",
+      "home": "URU",
+      "away": "CPV",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760452,
+      "date": "2026-06-22",
+      "time": "09:00",
+      "group": "G",
+      "home": "NZL",
+      "away": "EGY",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
+    },
+    {
+      "id": 760456,
+      "date": "2026-06-23",
+      "time": "01:00",
+      "group": "J",
+      "home": "ARG",
+      "away": "AUT",
+      "status": "Scheduled",
+      "stadium": "AT&T Stadium (Arlington, Texas)"
+    },
+    {
+      "id": 760457,
+      "date": "2026-06-23",
+      "time": "05:00",
+      "group": "I",
+      "home": "FRA",
+      "away": "HON",
+      "status": "Scheduled",
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+    },
+    {
+      "id": 760454,
+      "date": "2026-06-23",
+      "time": "08:00",
+      "group": "I",
+      "home": "NOR",
+      "away": "SEN",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760455,
+      "date": "2026-06-23",
+      "time": "11:00",
+      "group": "J",
+      "home": "JOR",
+      "away": "ALG",
+      "status": "Scheduled",
+      "stadium": "Levi's Stadium (Santa Clara, California)"
+    },
+    {
+      "id": 760461,
+      "date": "2026-06-24",
+      "time": "01:00",
+      "group": "K",
+      "home": "POR",
+      "away": "UZB",
+      "status": "Scheduled",
+      "stadium": "NRG Stadium (Houston, Texas)"
+    },
+    {
+      "id": 760458,
+      "date": "2026-06-24",
+      "time": "04:00",
+      "group": "L",
+      "home": "ENG",
+      "away": "GHA",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+    },
+    {
+      "id": 760460,
+      "date": "2026-06-24",
+      "time": "07:00",
+      "group": "L",
+      "home": "PAN",
+      "away": "CRO",
+      "status": "Scheduled",
+      "stadium": "BMO Field (Toronto)"
+    },
+    {
+      "id": 760459,
+      "date": "2026-06-24",
+      "time": "10:00",
+      "group": "K",
+      "home": "COL",
+      "away": "COD",
+      "status": "Scheduled",
+      "stadium": "Estadio Akron (Guadalajara)"
+    },
+    {
+      "id": 760462,
+      "date": "2026-06-25",
+      "time": "03:00",
+      "group": "B",
+      "home": "BIH",
+      "away": "QAT",
+      "status": "Scheduled",
+      "stadium": "Lumen Field (Seattle, Washington)"
+    },
+    {
+      "id": 760463,
+      "date": "2026-06-25",
+      "time": "03:00",
+      "group": "B",
+      "home": "SUI",
+      "away": "CAN",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
+    },
+    {
+      "id": 760464,
+      "date": "2026-06-25",
+      "time": "06:00",
+      "group": "C",
+      "home": "MAR",
+      "away": "HAI",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760465,
+      "date": "2026-06-25",
+      "time": "06:00",
+      "group": "C",
+      "home": "SCO",
+      "away": "BRA",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760467,
+      "date": "2026-06-25",
+      "time": "09:00",
+      "group": "A",
+      "home": "CZE",
+      "away": "MEX",
+      "status": "Scheduled",
+      "stadium": "Estadio Banorte (Mexico City)"
+    },
+    {
+      "id": 760466,
+      "date": "2026-06-25",
+      "time": "09:00",
+      "group": "A",
+      "home": "RSA",
+      "away": "KOR",
+      "status": "Scheduled",
+      "stadium": "Estadio BBVA (Guadalupe)"
+    },
+    {
+      "id": 760473,
+      "date": "2026-06-26",
+      "time": "04:00",
+      "group": "E",
+      "home": "CUR",
+      "away": "CIV",
+      "status": "Scheduled",
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+    },
+    {
+      "id": 760468,
+      "date": "2026-06-26",
+      "time": "04:00",
+      "group": "E",
+      "home": "ECU",
+      "away": "GER",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760475,
+      "date": "2026-06-27",
+      "time": "03:00",
+      "group": "I",
+      "home": "NOR",
+      "away": "FRA",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+    },
+    {
+      "id": 760474,
+      "date": "2026-06-27",
+      "time": "03:00",
+      "group": "I",
+      "home": "SEN",
+      "away": "HON",
+      "status": "Scheduled",
+      "stadium": "BMO Field (Toronto)"
+    },
+    {
+      "id": 760478,
+      "date": "2026-06-27",
+      "time": "08:00",
+      "group": "H",
+      "home": "CPV",
+      "away": "KSA",
+      "status": "Scheduled",
+      "stadium": "NRG Stadium (Houston, Texas)"
+    },
+    {
+      "id": 760479,
+      "date": "2026-06-27",
+      "time": "08:00",
+      "group": "H",
+      "home": "URU",
+      "away": "ESP",
+      "status": "Scheduled",
+      "stadium": "Estadio Akron (Guadalajara)"
+    },
+    {
+      "id": 760476,
+      "date": "2026-06-27",
+      "time": "11:00",
+      "group": "G",
+      "home": "EGY",
+      "away": "IRN",
+      "status": "Scheduled",
+      "stadium": "Lumen Field (Seattle, Washington)"
+    },
+    {
+      "id": 760477,
+      "date": "2026-06-27",
+      "time": "11:00",
+      "group": "G",
+      "home": "NZL",
+      "away": "BEL",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
+    },
+    {
+      "id": 760480,
+      "date": "2026-06-28",
+      "time": "05:00",
+      "group": "L",
+      "home": "CRO",
+      "away": "GHA",
+      "status": "Scheduled",
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+    },
+    {
+      "id": 760485,
+      "date": "2026-06-28",
+      "time": "05:00",
+      "group": "L",
+      "home": "PAN",
+      "away": "ENG",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760481,
+      "date": "2026-06-28",
+      "time": "07:30",
+      "group": "K",
+      "home": "COL",
+      "away": "POR",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760482,
+      "date": "2026-06-28",
+      "time": "07:30",
+      "group": "K",
+      "home": "COD",
+      "away": "UZB",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760484,
+      "date": "2026-06-28",
+      "time": "10:00",
+      "group": "J",
+      "home": "ALG",
+      "away": "AUT",
+      "status": "Scheduled",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+    },
+    {
+      "id": 760483,
+      "date": "2026-06-28",
+      "time": "10:00",
+      "group": "J",
+      "home": "JOR",
+      "away": "ARG",
+      "status": "Scheduled",
+      "stadium": "AT&T Stadium (Arlington, Texas)"
+    },
+    {
+      "id": 760486,
+      "date": "2026-06-29",
+      "time": "03:00",
+      "group": "淘汰赛",
+      "home": "2A",
+      "away": "2B",
+      "status": "Scheduled",
+      "stadium": "SoFi Stadium (Inglewood, California)"
+    },
+    {
+      "id": 760487,
+      "date": "2026-06-30",
+      "time": "01:00",
+      "group": "淘汰赛",
+      "home": "1C",
+      "away": "2F",
+      "status": "Scheduled",
+      "stadium": "NRG Stadium (Houston, Texas)"
+    },
+    {
+      "id": 760489,
+      "date": "2026-06-30",
+      "time": "04:30",
+      "group": "淘汰赛",
+      "home": "1E",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+    },
+    {
+      "id": 760488,
+      "date": "2026-06-30",
+      "time": "09:00",
+      "group": "淘汰赛",
+      "home": "1F",
+      "away": "2C",
+      "status": "Scheduled",
+      "stadium": "Estadio BBVA (Guadalupe)"
+    },
+    {
+      "id": 760490,
+      "date": "2026-07-01",
+      "time": "01:00",
+      "group": "淘汰赛",
+      "home": "2E",
+      "away": "2I",
+      "status": "Scheduled",
+      "stadium": "AT&T Stadium (Arlington, Texas)"
+    },
+    {
+      "id": 760492,
+      "date": "2026-07-01",
+      "time": "05:00",
+      "group": "淘汰赛",
+      "home": "1I",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760491,
+      "date": "2026-07-01",
+      "time": "09:00",
+      "group": "A",
+      "home": "MEX",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Estadio Banorte (Mexico City)"
+    },
+    {
+      "id": 760495,
+      "date": "2026-07-02",
+      "time": "00:00",
+      "group": "淘汰赛",
+      "home": "1L",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760493,
+      "date": "2026-07-02",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "1G",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Lumen Field (Seattle, Washington)"
+    },
+    {
+      "id": 760494,
+      "date": "2026-07-02",
+      "time": "08:00",
+      "group": "D",
+      "home": "USA",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Levi's Stadium (Santa Clara, California)"
+    },
+    {
+      "id": 760497,
+      "date": "2026-07-03",
+      "time": "03:00",
+      "group": "淘汰赛",
+      "home": "1H",
+      "away": "2J",
+      "status": "Scheduled",
+      "stadium": "SoFi Stadium (Inglewood, California)"
+    },
+    {
+      "id": 760496,
+      "date": "2026-07-03",
+      "time": "07:00",
+      "group": "淘汰赛",
+      "home": "2K",
+      "away": "2L",
+      "status": "Scheduled",
+      "stadium": "BMO Field (Toronto)"
+    },
+    {
+      "id": 760498,
+      "date": "2026-07-03",
+      "time": "11:00",
+      "group": "淘汰赛",
+      "home": "1B",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
+    },
+    {
+      "id": 760499,
+      "date": "2026-07-04",
+      "time": "02:00",
+      "group": "淘汰赛",
+      "home": "2D",
+      "away": "2G",
+      "status": "Scheduled",
+      "stadium": "AT&T Stadium (Arlington, Texas)"
+    },
+    {
+      "id": 760500,
+      "date": "2026-07-04",
+      "time": "06:00",
+      "group": "淘汰赛",
+      "home": "1J",
+      "away": "2H",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760501,
+      "date": "2026-07-04",
+      "time": "09:30",
+      "group": "淘汰赛",
+      "home": "1K",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+    },
+    {
+      "id": 760502,
+      "date": "2026-07-08",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "NRG Stadium (Houston, Texas)"
+    },
+    {
+      "id": 760510,
+      "date": "2026-07-10",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "RD16 W1",
+      "away": "RD16 W2",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+    },
+    {
+      "id": 760511,
+      "date": "2026-07-11",
+      "time": "03:00",
+      "group": "淘汰赛",
+      "home": "RD16 W5",
+      "away": "RD16 W6",
+      "status": "Scheduled",
+      "stadium": "SoFi Stadium (Inglewood, California)"
+    },
+    {
+      "id": 760512,
+      "date": "2026-07-12",
+      "time": "05:00",
+      "group": "淘汰赛",
+      "home": "RD16 W3",
+      "away": "RD16 W4",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760513,
+      "date": "2026-07-12",
+      "time": "09:00",
+      "group": "淘汰赛",
+      "home": "RD16 W7",
+      "away": "RD16 W8",
+      "status": "Scheduled",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
     }
   ],
   "dailySummaries": {
@@ -1179,30 +2297,6 @@ const WORLDCUP_DATA = {
       "content": "2026世界杯终于开幕！揭幕战中墨西哥展现统治力，以2-0击退南非。随后韩国队与捷克上演史诗级对决，捷克头球先声夺人，韩国下半场两球逆转，孙兴慜在第88分钟轰入标志性世界波完成绝杀！",
       "keyMatch": 2,
       "statOfTheDay": "揭幕战阿兹特克体育场涌入83,264名球迷，创下中北美洲赛事入场新高。"
-    },
-    "2026-06-13": {
-      "title": "枫叶国错失好局，加拿大首战被波黑逼平",
-      "content": "作为联合东道主之一，加拿大在温哥华登场。老将哲科为波黑首开纪录，随后阿方索·戴维斯以无解的速度连过两人打入单骑闯关进球，帮助加拿大1-1逼平强硬的波黑。加拿大全场占优但射术欠佳，痛失3分。",
-      "keyMatch": 3,
-      "statOfTheDay": "阿方索·戴维斯的进球是加拿大国家队在本土世界杯上打入的历史首球。"
-    },
-    "2026-06-14": {
-      "title": "摩洛哥险胜苏格兰，卡塔尔逼平欧洲劲旅瑞士",
-      "content": "B组的卡塔尔防守顽强，阿菲夫制造点球并罚入。瑞士直到下半场才靠扎卡扳平。C组的摩洛哥凭借极其华丽的传递，由齐耶赫助攻恩内斯里，并由替补哈里特打入制胜球，2-1力力克苏格兰，尽显黑马本色。",
-      "keyMatch": 5,
-      "statOfTheDay": "卡塔尔门将巴沙姆全场贡献5次惊天扑救，获评全场第二高分。"
-    },
-    "2026-06-16": {
-      "title": "德国双子星闪耀狂轰四球，厄瓜多尔与科特迪瓦上演拉锯战",
-      "content": "德国坦克在多伦多展现恐怖火力，穆西亚拉梅开二度，维尔茨传射，4-1轻松踏平库拉索。E组另一场大战，厄瓜多尔老将瓦伦西亚展现超强嗅觉打入两球，但顽强的科特迪瓦由阿丁格拉绝平，双方2-2握手言和。",
-      "keyMatch": 8,
-      "statOfTheDay": "穆西亚拉以23岁110天成为德国队史在世界杯单场梅开二度第三年轻的球员。"
-    },
-    "2026-06-17": {
-      "title": "橙衣军团轻取突尼斯，日瑞大战各有千秋握手言和",
-      "content": "荷兰队整场压制突尼斯，加克波首开纪录，范戴克头球建功，2-0轻松赢得开门红。另一场F组强强对话中，日本的地面技术与瑞典的力量身体激烈碰撞。堂安律率先建功，但伊萨克门前捅射扳平，两队1-1握手言和。",
-      "keyMatch": 11,
-      "statOfTheDay": "范戴克打入了他个人世界杯生涯首个进球，成为了荷兰队史在世界杯进球年龄最大的防守队员。"
     },
     "2026-06-18": {
       "title": "第8比赛日战况汇总",
@@ -1216,12 +2310,6 @@ const WORLDCUP_DATA = {
       "keyMatch": 16,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     },
-    "2026-06-15": {
-      "title": "第5比赛日战况汇总",
-      "content": "在第5比赛日中，完成了多场强强对话，具体赛果为：德国 7-1 库拉索；厄瓜多尔 0-1 科特迪瓦。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
-      "keyMatch": 8,
-      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
-    },
     "2026-06-20": {
       "title": "第10比赛日战况汇总",
       "content": "在第10比赛日中，完成了多场强强对话，具体赛果为：摩洛哥 1-0 苏格兰；美国 2-0 澳大利亚；罗马尼亚 0-1 巴拉圭；巴西 3-0 海地。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
@@ -1232,6 +2320,36 @@ const WORLDCUP_DATA = {
       "title": "第11比赛日战况汇总",
       "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 23,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-13": {
+      "title": "第3比赛日战况汇总",
+      "content": "在第3比赛日中，完成了多场强强对话，具体赛果为：加拿大 1-1 波黑；美国 4-1 巴拉圭。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 3,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-14": {
+      "title": "第4比赛日战况汇总",
+      "content": "在第4比赛日中，完成了多场强强对话，具体赛果为：卡塔尔 1-1 瑞士；巴西 1-1 摩洛哥；海地 0-1 苏格兰；澳大利亚 2-0 罗马尼亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 4,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-15": {
+      "title": "第5比赛日战况汇总",
+      "content": "在第5比赛日中，完成了多场强强对话，具体赛果为：德国 7-1 库拉索；厄瓜多尔 0-1 科特迪瓦；荷兰 2-2 日本；瑞典 5-1 突尼斯。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 8,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-16": {
+      "title": "第6比赛日战况汇总",
+      "content": "在第6比赛日中，完成了多场强强对话，具体赛果为：西班牙 0-0 佛得角；比利时 1-1 埃及；沙特阿拉伯 1-1 乌拉圭；伊朗 2-2 新西兰。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760428,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-17": {
+      "title": "第7比赛日战况汇总",
+      "content": "在第7比赛日中，完成了多场强强对话，具体赛果为：法国 3-1 塞内加尔；洪都拉斯 1-4 挪威；阿根廷 3-0 阿尔及利亚；奥地利 3-1 约旦。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760432,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
