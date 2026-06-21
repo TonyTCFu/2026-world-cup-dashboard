@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 04:08:48
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 05:48:49
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 04:08:48",
-  "currentDate": "2026-06-21",
-  "currentMatchday": 11,
+  "lastUpdated": "2026-06-22 05:48:49",
+  "currentDate": "2026-06-22",
+  "currentMatchday": 12,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -1803,28 +1803,28 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "ESP",
       "away": "KSA",
-      "status": "HT",
+      "status": "FT",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "score": {
-        "home": 3,
+        "home": 4,
         "away": 0
       },
       "stats": {
         "possession": [
-          72,
-          28
+          67,
+          33
         ],
         "shots": [
-          17,
-          2
+          22,
+          3
         ],
         "target": [
-          5,
-          0
+          8,
+          1
         ],
         "fouls": [
-          3,
-          1
+          10,
+          2
         ]
       },
       "analysis": "在本场 H 组的激烈较量中，西班牙 与 沙特阿拉伯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
@@ -1842,8 +1842,37 @@ const WORLDCUP_DATA = {
       "group": "G",
       "home": "BEL",
       "away": "IRN",
-      "status": "Scheduled",
-      "stadium": "SoFi Stadium (Inglewood, California)"
+      "status": "FT",
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "analysis": "在本场 G 组的激烈较量中，比利时 与 伊朗 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          70,
+          30
+        ],
+        "shots": [
+          23,
+          7
+        ],
+        "target": [
+          7,
+          3
+        ],
+        "fouls": [
+          7,
+          9
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (比利时)",
+        "team": "BEL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760450,
@@ -2429,7 +2458,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-22": {
       "title": "第12比赛日战况汇总",
-      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯；比利时 0-0 伊朗。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760453,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
