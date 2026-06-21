@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 02:17:44
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 04:08:48
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 02:17:44",
-  "currentDate": "2026-06-22",
-  "currentMatchday": 12,
+  "lastUpdated": "2026-06-22 04:08:48",
+  "currentDate": "2026-06-21",
+  "currentMatchday": 11,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -1803,28 +1803,28 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "ESP",
       "away": "KSA",
-      "status": "FT",
+      "status": "HT",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "score": {
-        "home": 4,
+        "home": 3,
         "away": 0
       },
       "stats": {
         "possession": [
-          67,
-          33
+          72,
+          28
         ],
         "shots": [
-          22,
-          3
+          17,
+          2
         ],
         "target": [
-          8,
-          1
+          5,
+          0
         ],
         "fouls": [
-          10,
-          2
+          3,
+          1
         ]
       },
       "analysis": "在本场 H 组的激烈较量中，西班牙 与 沙特阿拉伯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
