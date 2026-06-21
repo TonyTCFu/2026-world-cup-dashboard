@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 00:58:47
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 02:17:44
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 00:58:47",
-  "currentDate": "2026-06-21",
-  "currentMatchday": 11,
+  "lastUpdated": "2026-06-22 02:17:44",
+  "currentDate": "2026-06-22",
+  "currentMatchday": 12,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -1803,29 +1803,36 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "ESP",
       "away": "KSA",
-      "status": "11'",
+      "status": "FT",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "score": {
-        "home": 1,
+        "home": 4,
         "away": 0
       },
       "stats": {
         "possession": [
-          86,
-          14
+          67,
+          33
         ],
         "shots": [
-          5,
-          0
+          22,
+          3
         ],
         "target": [
-          1,
-          0
+          8,
+          1
         ],
         "fouls": [
-          0,
-          1
+          10,
+          2
         ]
+      },
+      "analysis": "在本场 H 组的激烈较量中，西班牙 与 沙特阿拉伯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (西班牙)",
+        "team": "ESP",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2418,6 +2425,12 @@ const WORLDCUP_DATA = {
       "title": "第11比赛日战况汇总",
       "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦；厄瓜多尔 0-0 库拉索；突尼斯 0-4 日本。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 23,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-22": {
+      "title": "第12比赛日战况汇总",
+      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760453,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
