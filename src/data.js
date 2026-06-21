@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 08:12:10
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 10:41:05
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 08:12:10",
+  "lastUpdated": "2026-06-21 10:41:05",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
@@ -1725,7 +1725,7 @@ const WORLDCUP_DATA = {
       "group": "E",
       "home": "ECU",
       "away": "CUR",
-      "status": "11'",
+      "status": "FT",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "score": {
         "home": 0,
@@ -1733,21 +1733,28 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          78,
-          22
+          75,
+          25
         ],
         "shots": [
-          1,
-          1
+          27,
+          10
         ],
         "target": [
-          1,
-          0
+          15,
+          3
         ],
         "fouls": [
-          0,
-          0
+          7,
+          10
         ]
+      },
+      "analysis": "在本场 E 组的激烈较量中，厄瓜多尔 与 库拉索 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (厄瓜多尔)",
+        "team": "ECU",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2289,6 +2296,16 @@ const WORLDCUP_DATA = {
       "away": "RD16 W8",
       "status": "Scheduled",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+    },
+    {
+      "id": 760489,
+      "date": "2026-06-30",
+      "time": "04:30",
+      "group": "E",
+      "home": "GER",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
     }
   ],
   "dailySummaries": {
@@ -2314,12 +2331,6 @@ const WORLDCUP_DATA = {
       "title": "第10比赛日战况汇总",
       "content": "在第10比赛日中，完成了多场强强对话，具体赛果为：摩洛哥 1-0 苏格兰；美国 2-0 澳大利亚；罗马尼亚 0-1 巴拉圭；巴西 3-0 海地。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 5,
-      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
-    },
-    "2026-06-21": {
-      "title": "第11比赛日战况汇总",
-      "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
-      "keyMatch": 23,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     },
     "2026-06-13": {
@@ -2350,6 +2361,12 @@ const WORLDCUP_DATA = {
       "title": "第7比赛日战况汇总",
       "content": "在第7比赛日中，完成了多场强强对话，具体赛果为：法国 3-1 塞内加尔；洪都拉斯 1-4 挪威；阿根廷 3-0 阿尔及利亚；奥地利 3-1 约旦。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760432,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-21": {
+      "title": "第11比赛日战况汇总",
+      "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦；厄瓜多尔 0-0 库拉索。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 23,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
