@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 10:41:05
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 15:21:30
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 10:41:05",
+  "lastUpdated": "2026-06-21 15:21:30",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
@@ -1764,8 +1764,37 @@ const WORLDCUP_DATA = {
       "group": "F",
       "home": "TUN",
       "away": "JPN",
-      "status": "Scheduled",
-      "stadium": "Estadio BBVA (Guadalupe)"
+      "status": "FT",
+      "stadium": "Estadio BBVA (Guadalupe)",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "analysis": "在本场 F 组的激烈较量中，突尼斯 与 日本 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          38,
+          62
+        ],
+        "shots": [
+          2,
+          11
+        ],
+        "target": [
+          0,
+          5
+        ],
+        "fouls": [
+          8,
+          15
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (日本)",
+        "team": "JPN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760453,
@@ -2365,7 +2394,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-21": {
       "title": "第11比赛日战况汇总",
-      "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦；厄瓜多尔 0-0 库拉索。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第11比赛日中，完成了多场强强对话，具体赛果为：荷兰 5-1 瑞典；德国 2-1 科特迪瓦；厄瓜多尔 0-0 库拉索；突尼斯 0-4 日本。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 23,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
