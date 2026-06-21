@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 05:48:49
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 06:56:19
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 05:48:49",
+  "lastUpdated": "2026-06-22 06:56:19",
   "currentDate": "2026-06-22",
   "currentMatchday": 12,
   "teams": {
@@ -1881,8 +1881,30 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "URU",
       "away": "CPV",
-      "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+      "status": "HT",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "stats": {
+        "possession": [
+          65,
+          35
+        ],
+        "shots": [
+          11,
+          2
+        ],
+        "target": [
+          2,
+          1
+        ],
+        "fouls": [
+          6,
+          2
+        ]
+      }
     },
     {
       "id": 760452,
