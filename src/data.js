@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 15:21:30
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-21 18:50:41
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-21 15:21:30",
+  "lastUpdated": "2026-06-21 18:50:41",
   "currentDate": "2026-06-21",
   "currentMatchday": 11,
   "teams": {
