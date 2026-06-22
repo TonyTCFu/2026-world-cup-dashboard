@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 00:08:39
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 03:52:03
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-23 00:08:39",
-  "currentDate": "2026-06-22",
-  "currentMatchday": 12,
+  "lastUpdated": "2026-06-23 03:52:03",
+  "currentDate": "2026-06-23",
+  "currentMatchday": 13,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -1959,8 +1959,37 @@ const WORLDCUP_DATA = {
       "group": "J",
       "home": "ARG",
       "away": "AUT",
-      "status": "Scheduled",
-      "stadium": "AT&T Stadium (Arlington, Texas)"
+      "status": "FT",
+      "stadium": "AT&T Stadium (Arlington, Texas)",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "analysis": "在本场 J 组的激烈较量中，阿根廷 与 奥地利 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          12,
+          6
+        ],
+        "target": [
+          5,
+          1
+        ],
+        "fouls": [
+          13,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760457,
@@ -2518,6 +2547,12 @@ const WORLDCUP_DATA = {
       "title": "第12比赛日战况汇总",
       "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯；比利时 0-0 伊朗；乌拉圭 2-2 佛得角；新西兰 1-3 埃及。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760453,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-23": {
+      "title": "第13比赛日战况汇总",
+      "content": "在第13比赛日中，完成了多场强强对话，具体赛果为：阿根廷 2-0 奥地利。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760456,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
