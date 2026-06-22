@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 06:56:19
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 08:03:23
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 06:56:19",
+  "lastUpdated": "2026-06-22 08:03:23",
   "currentDate": "2026-06-22",
   "currentMatchday": 12,
   "teams": {
@@ -1842,7 +1842,7 @@ const WORLDCUP_DATA = {
       "group": "G",
       "home": "BEL",
       "away": "IRN",
-      "status": "FT",
+      "status": "HT",
       "stadium": "SoFi Stadium (Inglewood, California)",
       "score": {
         "home": 0,
@@ -1851,20 +1851,20 @@ const WORLDCUP_DATA = {
       "analysis": "在本场 G 组的激烈较量中，比利时 与 伊朗 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          70,
-          30
+          81,
+          19
         ],
         "shots": [
-          23,
-          7
+          11,
+          2
         ],
         "target": [
-          7,
-          3
+          4,
+          1
         ],
         "fouls": [
-          7,
-          9
+          5,
+          5
         ]
       },
       "mvp": {
@@ -1881,30 +1881,8 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "URU",
       "away": "CPV",
-      "status": "HT",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "stats": {
-        "possession": [
-          65,
-          35
-        ],
-        "shots": [
-          11,
-          2
-        ],
-        "target": [
-          2,
-          1
-        ],
-        "fouls": [
-          6,
-          2
-        ]
-      }
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
     },
     {
       "id": 760452,
@@ -2480,7 +2458,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-22": {
       "title": "第12比赛日战况汇总",
-      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯；比利时 0-0 伊朗。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760453,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
