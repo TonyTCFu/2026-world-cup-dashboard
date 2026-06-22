@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 08:03:23
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-22 13:37:08
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-22 08:03:23",
+  "lastUpdated": "2026-06-22 13:37:08",
   "currentDate": "2026-06-22",
   "currentMatchday": 12,
   "teams": {
@@ -1842,7 +1842,7 @@ const WORLDCUP_DATA = {
       "group": "G",
       "home": "BEL",
       "away": "IRN",
-      "status": "HT",
+      "status": "FT",
       "stadium": "SoFi Stadium (Inglewood, California)",
       "score": {
         "home": 0,
@@ -1851,20 +1851,20 @@ const WORLDCUP_DATA = {
       "analysis": "在本场 G 组的激烈较量中，比利时 与 伊朗 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          81,
-          19
+          70,
+          30
         ],
         "shots": [
-          11,
-          2
+          23,
+          7
         ],
         "target": [
-          4,
-          1
+          7,
+          3
         ],
         "fouls": [
-          5,
-          5
+          7,
+          9
         ]
       },
       "mvp": {
@@ -1881,8 +1881,37 @@ const WORLDCUP_DATA = {
       "group": "H",
       "home": "URU",
       "away": "CPV",
-      "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+      "status": "FT",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "analysis": "在本场 H 组的激烈较量中，乌拉圭 与 佛得角 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          65,
+          35
+        ],
+        "shots": [
+          17,
+          12
+        ],
+        "target": [
+          2,
+          4
+        ],
+        "fouls": [
+          11,
+          4
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (乌拉圭)",
+        "team": "URU",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760452,
@@ -1891,8 +1920,37 @@ const WORLDCUP_DATA = {
       "group": "G",
       "home": "NZL",
       "away": "EGY",
-      "status": "Scheduled",
-      "stadium": "BC Place (Vancouver)"
+      "status": "FT",
+      "stadium": "BC Place (Vancouver)",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "analysis": "在本场 G 组的激烈较量中，新西兰 与 埃及 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          44,
+          56
+        ],
+        "shots": [
+          11,
+          19
+        ],
+        "target": [
+          5,
+          7
+        ],
+        "fouls": [
+          14,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (埃及)",
+        "team": "EGY",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760456,
@@ -2458,7 +2516,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-22": {
       "title": "第12比赛日战况汇总",
-      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第12比赛日中，完成了多场强强对话，具体赛果为：西班牙 4-0 沙特阿拉伯；比利时 0-0 伊朗；乌拉圭 2-2 佛得角；新西兰 1-3 埃及。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760453,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
