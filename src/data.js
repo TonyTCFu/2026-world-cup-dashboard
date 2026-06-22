@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 05:53:13
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 07:09:28
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-23 05:53:13",
+  "lastUpdated": "2026-06-23 07:09:28",
   "currentDate": "2026-06-23",
   "currentMatchday": 13,
   "teams": {
@@ -1998,7 +1998,7 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "FRA",
       "away": "HON",
-      "status": "27'",
+      "status": "HT",
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "score": {
         "home": 1,
@@ -2006,20 +2006,20 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          64,
-          36
+          58,
+          42
         ],
         "shots": [
-          5,
-          1
+          7,
+          2
         ],
         "target": [
           1,
           0
         ],
         "fouls": [
-          2,
-          1
+          5,
+          2
         ]
       }
     },
