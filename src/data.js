@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 13:34:57
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 07:36:09
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-23 13:34:57",
+  "lastUpdated": "2026-06-23 07:36:09",
   "currentDate": "2026-06-23",
   "currentMatchday": 13,
   "teams": {
@@ -451,7 +451,24 @@ const WORLDCUP_DATA = {
       "home": "USA",
       "away": "ROU",
       "status": "Scheduled",
-      "stadium": "洛杉矶体育场 (洛杉矶)"
+      "stadium": "洛杉矶体育场 (洛杉矶)",
+      "odds": {
+        "moneyline": {
+          "home": -105,
+          "away": 260,
+          "draw": 300
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -115,
+          "awayOdds": -115
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -135,
+          "underOdds": 110
+        }
+      }
     },
     {
       "id": 7,
@@ -461,7 +478,24 @@ const WORLDCUP_DATA = {
       "home": "PAR",
       "away": "AUS",
       "status": "Scheduled",
-      "stadium": "NRG体育场 (休斯敦)"
+      "stadium": "NRG体育场 (休斯敦)",
+      "odds": {
+        "moneyline": {
+          "home": 190,
+          "away": 295,
+          "draw": 125
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 185,
+          "awayOdds": -235
+        },
+        "total": {
+          "line": 1.5,
+          "overOdds": -160,
+          "underOdds": 130
+        }
+      }
     },
     {
       "id": 8,
@@ -549,7 +583,24 @@ const WORLDCUP_DATA = {
       "home": "NED",
       "away": "TUN",
       "status": "Scheduled",
-      "stadium": "吉列体育场 (波士顿)"
+      "stadium": "吉列体育场 (波士顿)",
+      "odds": {
+        "moneyline": {
+          "home": -750,
+          "away": 1900,
+          "draw": 800
+        },
+        "pointSpread": {
+          "line": -2.5,
+          "homeOdds": 110,
+          "awayOdds": -135
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 115,
+          "underOdds": -145
+        }
+      }
     },
     {
       "id": 11,
@@ -559,7 +610,24 @@ const WORLDCUP_DATA = {
       "home": "JPN",
       "away": "SWE",
       "status": "Scheduled",
-      "stadium": "大都会体育场 (东卢瑟福)"
+      "stadium": "大都会体育场 (东卢瑟福)",
+      "odds": {
+        "moneyline": {
+          "home": -105,
+          "away": 330,
+          "draw": 245
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -115,
+          "awayOdds": -110
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -125,
+          "underOdds": 100
+        }
+      }
     },
     {
       "id": 12,
@@ -2116,7 +2184,24 @@ const WORLDCUP_DATA = {
       "home": "POR",
       "away": "UZB",
       "status": "Scheduled",
-      "stadium": "NRG Stadium (Houston, Texas)"
+      "stadium": "NRG Stadium (Houston, Texas)",
+      "odds": {
+        "moneyline": {
+          "home": -650,
+          "away": 1800,
+          "draw": 750
+        },
+        "pointSpread": {
+          "line": -2.5,
+          "homeOdds": 110,
+          "awayOdds": -140
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 125,
+          "underOdds": -155
+        }
+      }
     },
     {
       "id": 760458,
@@ -2126,7 +2211,24 @@ const WORLDCUP_DATA = {
       "home": "ENG",
       "away": "GHA",
       "status": "Scheduled",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "odds": {
+        "moneyline": {
+          "home": -500,
+          "away": 1400,
+          "draw": 600
+        },
+        "pointSpread": {
+          "line": -1.5,
+          "homeOdds": -165,
+          "awayOdds": 130
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -170,
+          "underOdds": 140
+        }
+      }
     },
     {
       "id": 760460,
@@ -2136,7 +2238,24 @@ const WORLDCUP_DATA = {
       "home": "PAN",
       "away": "CRO",
       "status": "Scheduled",
-      "stadium": "BMO Field (Toronto)"
+      "stadium": "BMO Field (Toronto)",
+      "odds": {
+        "moneyline": {
+          "home": 600,
+          "away": -200,
+          "draw": 340
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": -180,
+          "awayOdds": 140
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -135,
+          "underOdds": 110
+        }
+      }
     },
     {
       "id": 760459,
@@ -2146,7 +2265,24 @@ const WORLDCUP_DATA = {
       "home": "COL",
       "away": "COD",
       "status": "Scheduled",
-      "stadium": "Estadio Akron (Guadalajara)"
+      "stadium": "Estadio Akron (Guadalajara)",
+      "odds": {
+        "moneyline": {
+          "home": -180,
+          "away": 550,
+          "draw": 300
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -190,
+          "awayOdds": 150
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 120,
+          "underOdds": -150
+        }
+      }
     },
     {
       "id": 760462,
@@ -2156,7 +2292,24 @@ const WORLDCUP_DATA = {
       "home": "BIH",
       "away": "QAT",
       "status": "Scheduled",
-      "stadium": "Lumen Field (Seattle, Washington)"
+      "stadium": "Lumen Field (Seattle, Washington)",
+      "odds": {
+        "moneyline": {
+          "home": -245,
+          "away": 650,
+          "draw": 400
+        },
+        "pointSpread": {
+          "line": -1.5,
+          "homeOdds": 110,
+          "awayOdds": -135
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -160,
+          "underOdds": 130
+        }
+      }
     },
     {
       "id": 760463,
@@ -2166,7 +2319,24 @@ const WORLDCUP_DATA = {
       "home": "SUI",
       "away": "CAN",
       "status": "Scheduled",
-      "stadium": "BC Place (Vancouver)"
+      "stadium": "BC Place (Vancouver)",
+      "odds": {
+        "moneyline": {
+          "home": 140,
+          "away": 240,
+          "draw": 205
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 130,
+          "awayOdds": -165
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 105,
+          "underOdds": -130
+        }
+      }
     },
     {
       "id": 760464,
@@ -2176,7 +2346,24 @@ const WORLDCUP_DATA = {
       "home": "MAR",
       "away": "HAI",
       "status": "Scheduled",
-      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "odds": {
+        "moneyline": {
+          "home": -550,
+          "away": 1600,
+          "draw": 650
+        },
+        "pointSpread": {
+          "line": -2.5,
+          "homeOdds": 140,
+          "awayOdds": -180
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -180,
+          "underOdds": 145
+        }
+      }
     },
     {
       "id": 760465,
@@ -2186,7 +2373,24 @@ const WORLDCUP_DATA = {
       "home": "SCO",
       "away": "BRA",
       "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "odds": {
+        "moneyline": {
+          "home": 650,
+          "away": -255,
+          "draw": 425
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": -130,
+          "awayOdds": 105
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -115,
+          "underOdds": -105
+        }
+      }
     },
     {
       "id": 760467,
@@ -2196,7 +2400,24 @@ const WORLDCUP_DATA = {
       "home": "CZE",
       "away": "MEX",
       "status": "Scheduled",
-      "stadium": "Estadio Banorte (Mexico City)"
+      "stadium": "Estadio Banorte (Mexico City)",
+      "odds": {
+        "moneyline": {
+          "home": 275,
+          "away": -105,
+          "draw": 285
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -110,
+          "awayOdds": -115
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 110,
+          "underOdds": -135
+        }
+      }
     },
     {
       "id": 760466,
@@ -2206,7 +2427,24 @@ const WORLDCUP_DATA = {
       "home": "RSA",
       "away": "KOR",
       "status": "Scheduled",
-      "stadium": "Estadio BBVA (Guadalupe)"
+      "stadium": "Estadio BBVA (Guadalupe)",
+      "odds": {
+        "moneyline": {
+          "home": 450,
+          "away": -155,
+          "draw": 300
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": 130,
+          "awayOdds": -165
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 105,
+          "underOdds": -130
+        }
+      }
     },
     {
       "id": 760473,
@@ -2216,7 +2454,24 @@ const WORLDCUP_DATA = {
       "home": "CUR",
       "away": "CIV",
       "status": "Scheduled",
-      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
+      "odds": {
+        "moneyline": {
+          "home": 1700,
+          "away": -650,
+          "draw": 750
+        },
+        "pointSpread": {
+          "line": 2.5,
+          "homeOdds": -160,
+          "awayOdds": 125
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 125,
+          "underOdds": -160
+        }
+      }
     },
     {
       "id": 760468,
@@ -2226,7 +2481,24 @@ const WORLDCUP_DATA = {
       "home": "ECU",
       "away": "GER",
       "status": "Scheduled",
-      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "odds": {
+        "moneyline": {
+          "home": 265,
+          "away": -105,
+          "draw": 300
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -110,
+          "awayOdds": -115
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -130,
+          "underOdds": 105
+        }
+      }
     },
     {
       "id": 760475,
@@ -2236,7 +2508,24 @@ const WORLDCUP_DATA = {
       "home": "NOR",
       "away": "FRA",
       "status": "Scheduled",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "odds": {
+        "moneyline": {
+          "home": 360,
+          "away": -140,
+          "draw": 320
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": 115,
+          "awayOdds": -150
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -150,
+          "underOdds": 120
+        }
+      }
     },
     {
       "id": 760474,
@@ -2246,7 +2535,24 @@ const WORLDCUP_DATA = {
       "home": "SEN",
       "away": "HON",
       "status": "Scheduled",
-      "stadium": "BMO Field (Toronto)"
+      "stadium": "BMO Field (Toronto)",
+      "odds": {
+        "moneyline": {
+          "home": -425,
+          "away": 1100,
+          "draw": 550
+        },
+        "pointSpread": {
+          "line": -1.5,
+          "homeOdds": -145,
+          "awayOdds": 115
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -175,
+          "underOdds": 140
+        }
+      }
     },
     {
       "id": 760478,
@@ -2256,7 +2562,24 @@ const WORLDCUP_DATA = {
       "home": "CPV",
       "away": "KSA",
       "status": "Scheduled",
-      "stadium": "NRG Stadium (Houston, Texas)"
+      "stadium": "NRG Stadium (Houston, Texas)",
+      "odds": {
+        "moneyline": {
+          "home": 140,
+          "away": 200,
+          "draw": 250
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 130,
+          "awayOdds": -165
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -105,
+          "underOdds": -120
+        }
+      }
     },
     {
       "id": 760479,
@@ -2266,7 +2589,24 @@ const WORLDCUP_DATA = {
       "home": "URU",
       "away": "ESP",
       "status": "Scheduled",
-      "stadium": "Estadio Akron (Guadalajara)"
+      "stadium": "Estadio Akron (Guadalajara)",
+      "odds": {
+        "moneyline": {
+          "home": 650,
+          "away": -210,
+          "draw": 340
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": -180,
+          "awayOdds": 140
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -120,
+          "underOdds": 100
+        }
+      }
     },
     {
       "id": 760476,
@@ -2276,7 +2616,24 @@ const WORLDCUP_DATA = {
       "home": "EGY",
       "away": "IRN",
       "status": "Scheduled",
-      "stadium": "Lumen Field (Seattle, Washington)"
+      "stadium": "Lumen Field (Seattle, Washington)",
+      "odds": {
+        "moneyline": {
+          "home": 145,
+          "away": 270,
+          "draw": 175
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 135,
+          "awayOdds": -175
+        },
+        "total": {
+          "line": 1.5,
+          "overOdds": -185,
+          "underOdds": 150
+        }
+      }
     },
     {
       "id": 760477,
@@ -2286,7 +2643,24 @@ const WORLDCUP_DATA = {
       "home": "NZL",
       "away": "BEL",
       "status": "Scheduled",
-      "stadium": "BC Place (Vancouver)"
+      "stadium": "BC Place (Vancouver)",
+      "odds": {
+        "moneyline": {
+          "home": 1300,
+          "away": -475,
+          "draw": 600
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": 125,
+          "awayOdds": -160
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -175,
+          "underOdds": 140
+        }
+      }
     },
     {
       "id": 760480,
@@ -2296,7 +2670,24 @@ const WORLDCUP_DATA = {
       "home": "CRO",
       "away": "GHA",
       "status": "Scheduled",
-      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
+      "odds": {
+        "moneyline": {
+          "home": -160,
+          "away": 500,
+          "draw": 295
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -170,
+          "awayOdds": 135
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 105,
+          "underOdds": -130
+        }
+      }
     },
     {
       "id": 760485,
@@ -2306,7 +2697,24 @@ const WORLDCUP_DATA = {
       "home": "PAN",
       "away": "ENG",
       "status": "Scheduled",
-      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "odds": {
+        "moneyline": {
+          "home": 1200,
+          "away": -500,
+          "draw": 650
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": 140,
+          "awayOdds": -180
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 120,
+          "underOdds": -150
+        }
+      }
     },
     {
       "id": 760481,
@@ -2316,7 +2724,24 @@ const WORLDCUP_DATA = {
       "home": "COL",
       "away": "POR",
       "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "odds": {
+        "moneyline": {
+          "home": 265,
+          "away": 105,
+          "draw": 255
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -125,
+          "awayOdds": 100
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 105,
+          "underOdds": -135
+        }
+      }
     },
     {
       "id": 760482,
@@ -2326,7 +2751,24 @@ const WORLDCUP_DATA = {
       "home": "COD",
       "away": "UZB",
       "status": "Scheduled",
-      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "odds": {
+        "moneyline": {
+          "home": 110,
+          "away": 235,
+          "draw": 270
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 105,
+          "awayOdds": -135
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 110,
+          "underOdds": -135
+        }
+      }
     },
     {
       "id": 760484,
@@ -2336,7 +2778,24 @@ const WORLDCUP_DATA = {
       "home": "ALG",
       "away": "AUT",
       "status": "Scheduled",
-      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "odds": {
+        "moneyline": {
+          "home": 290,
+          "away": 170,
+          "draw": 140
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -205,
+          "awayOdds": 160
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 135,
+          "underOdds": -170
+        }
+      }
     },
     {
       "id": 760483,
@@ -2346,7 +2805,24 @@ const WORLDCUP_DATA = {
       "home": "JOR",
       "away": "ARG",
       "status": "Scheduled",
-      "stadium": "AT&T Stadium (Arlington, Texas)"
+      "stadium": "AT&T Stadium (Arlington, Texas)",
+      "odds": {
+        "moneyline": {
+          "home": 1200,
+          "away": -475,
+          "draw": 600
+        },
+        "pointSpread": {
+          "line": 1.5,
+          "homeOdds": 120,
+          "awayOdds": -155
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -165,
+          "underOdds": 130
+        }
+      }
     },
     {
       "id": 760486,

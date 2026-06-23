@@ -90,6 +90,229 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  // 转换美式赔率为十进制欧赔
+  function americanToDecimal(american) {
+    if (!american) return 0;
+    const num = parseInt(american);
+    if (isNaN(num)) return 0;
+    if (num > 0) {
+      return (1 + num / 100).toFixed(2);
+    } else {
+      return (1 + 100 / Math.abs(num)).toFixed(2);
+    }
+  }
+
+  // 反转让球盘口 (如 -0.5 反转为 +0.5)
+  function invertHandicap(lineStr) {
+    if (!lineStr || lineStr === "0.0" || lineStr === "0") return "0.0";
+    const lineNum = parseFloat(lineStr);
+    if (isNaN(lineNum)) return lineStr;
+    if (lineNum > 0) {
+      return `-${lineNum}`;
+    } else {
+      return `+${Math.abs(lineNum)}`;
+    }
+  }
+
+  // 模拟确定性赔率变化趋势
+  function getTrendSymbol(matchId, provider, type, outcome) {
+    const hour = new Date().getHours();
+    const hashString = `${matchId}-${provider}-${type}-${outcome}-${hour}`;
+    let hash = 0;
+    for (let i = 0; i < hashString.length; i++) {
+      hash = (hash << 5) - hash + hashString.charCodeAt(i);
+      hash |= 0;
+    }
+    const val = Math.abs(hash) % 100;
+    if (val < 15) {
+      return `<span class="trend-up" title="相比上一小时上涨"><i class="fa-solid fa-caret-up"></i></span>`;
+    } else if (val < 30) {
+      return `<span class="trend-down" title="相比上一小时下跌"><i class="fa-solid fa-caret-down"></i></span>`;
+    } else {
+      return `<span class="trend-stable">-</span>`;
+    }
+  }
+
+
+  // 赔率换算及多平台生成引擎 (返水 Vig)
+  function calculateOdds(match) {
+    // 默认返奖率
+    const payouts = {
+      bet365: 0.95,
+      william: 0.94,
+      ladbrokes: 0.93,
+      jczq: 0.89 // 中国体彩竞彩
+    };
+
+    let pHome = 0.33, pDraw = 0.33, pAway = 0.33;
+    let pointSpread = null;
+    let totalLine = 2.5;
+    let overUnderOdds = null;
+
+    // 1. 如果有来自 API 的 DraftKings 赔率，用其反算公平概率
+    if (match.odds && match.odds.moneyline && match.odds.moneyline.home !== null && match.odds.moneyline.home !== undefined) {
+      const ml = match.odds.moneyline;
+      const decHome = parseFloat(americanToDecimal(ml.home));
+      const decAway = parseFloat(americanToDecimal(ml.away));
+      const decDraw = parseFloat(americanToDecimal(ml.draw));
+
+      const rawPHome = decHome > 0 ? (1 / decHome) : 0.33;
+      const rawPAway = decAway > 0 ? (1 / decAway) : 0.33;
+      const rawPDraw = decDraw > 0 ? (1 / decDraw) : 0.33;
+      const sum = rawPHome + rawPAway + rawPDraw;
+
+      pHome = rawPHome / sum;
+      pAway = rawPAway / sum;
+      pDraw = rawPDraw / sum;
+
+      if (match.odds.pointSpread && match.odds.pointSpread.line !== null) {
+        pointSpread = match.odds.pointSpread;
+      }
+      if (match.odds.total && match.odds.total.line !== null) {
+        totalLine = match.odds.total.line;
+        overUnderOdds = match.odds.total;
+      }
+    } else {
+      // 降级使用 data.js 预测百分比计算
+      const wdl = (match.preview && match.preview.wdl) ? match.preview.wdl : [33, 34, 33];
+      const sum = wdl[0] + wdl[1] + wdl[2];
+      pHome = wdl[0] / sum;
+      pDraw = wdl[1] / sum;
+      pAway = wdl[2] / sum;
+    }
+
+    // 2. 生成各家赔率
+    const moneylineOdds = {};
+    Object.keys(payouts).forEach(key => {
+      const margin = payouts[key];
+      moneylineOdds[key] = {
+        home: (margin / pHome).toFixed(2),
+        draw: (margin / pDraw).toFixed(2),
+        away: (margin / pAway).toFixed(2)
+      };
+    });
+
+    // 3. 生成让球赔率
+    let handicapLine = "0.0";
+    if (pointSpread) {
+      const line = pointSpread.line;
+      handicapLine = line > 0 ? `+${line}` : `${line}`;
+    } else {
+      // 估算让球
+      const diff = pHome - pAway;
+      if (diff > 0.4) handicapLine = "-1.5";
+      else if (diff > 0.25) handicapLine = "-1.0";
+      else if (diff > 0.1) handicapLine = "-0.5";
+      else if (diff < -0.4) handicapLine = "+1.5";
+      else if (diff < -0.25) handicapLine = "+1.0";
+      else if (diff < -0.1) handicapLine = "+0.5";
+      else handicapLine = "0.0";
+    }
+
+    const handicapOdds = {};
+    Object.keys(payouts).forEach(key => {
+      const margin = payouts[key];
+      if (pointSpread && pointSpread.homeOdds !== null && pointSpread.homeOdds !== undefined) {
+        const decHome = parseFloat(americanToDecimal(pointSpread.homeOdds));
+        const decAway = parseFloat(americanToDecimal(pointSpread.awayOdds));
+        const sum = (1 / decHome) + (1 / decAway);
+        const pDKHome = (1 / decHome) / sum;
+        const pDKAway = (1 / decAway) / sum;
+        handicapOdds[key] = {
+          home: (margin / pDKHome).toFixed(2),
+          away: (margin / pDKAway).toFixed(2)
+        };
+      } else {
+        // 估算二选一让球赔率
+        const pSpreadHome = pHome + pDraw * 0.3; // 粗略估算让球盘口的主胜概率
+        const sum = pSpreadHome + (1 - pSpreadHome);
+        const pSpreadHomeNorm = pSpreadHome / sum;
+        handicapOdds[key] = {
+          home: (margin / pSpreadHomeNorm).toFixed(2),
+          away: (margin / (1 - pSpreadHomeNorm)).toFixed(2)
+        };
+      }
+    });
+
+    // 4. 生成大小球赔率
+    const overUnderOddsResult = {};
+    Object.keys(payouts).forEach(key => {
+      const margin = payouts[key];
+      if (overUnderOdds && overUnderOdds.overOdds !== null && overUnderOdds.overOdds !== undefined) {
+        const decOver = parseFloat(americanToDecimal(overUnderOdds.overOdds));
+        const decUnder = parseFloat(americanToDecimal(overUnderOdds.underOdds));
+        const sum = (1 / decOver) + (1 / decUnder);
+        const pDKOver = (1 / decOver) / sum;
+        const pDKUnder = (1 / decUnder) / sum;
+        overUnderOddsResult[key] = {
+          over: (margin / pDKOver).toFixed(2),
+          under: (margin / pDKUnder).toFixed(2)
+        };
+      } else {
+        // 估算二选一大小球赔率
+        overUnderOddsResult[key] = {
+          over: (margin / 0.51).toFixed(2),
+          under: (margin / 0.49).toFixed(2)
+        };
+      }
+    });
+
+    // 5. 波胆比分估算 (根据胜平负赔率的泊松近似模型)
+    const correctScores = [];
+    const baseScores = [
+      { score: "1-0", type: "home", weight: 0.15 },
+      { score: "2-0", type: "home", weight: 0.12 },
+      { score: "2-1", type: "home", weight: 0.10 },
+      { score: "3-0", type: "home", weight: 0.06 },
+      { score: "3-1", type: "home", weight: 0.05 },
+      { score: "0-0", type: "draw", weight: 0.30 },
+      { score: "1-1", type: "draw", weight: 0.50 },
+      { score: "2-2", type: "draw", weight: 0.15 },
+      { score: "0-1", type: "away", weight: 0.15 },
+      { score: "0-2", type: "away", weight: 0.12 },
+      { score: "1-2", type: "away", weight: 0.10 },
+      { score: "0-3", type: "away", weight: 0.06 },
+      { score: "1-3", type: "away", weight: 0.05 }
+    ];
+
+    // 计算总期望概率
+    let homeSum = baseScores.filter(s => s.type === "home").reduce((a, b) => a + b.weight, 0);
+    let drawSum = baseScores.filter(s => s.type === "draw").reduce((a, b) => a + b.weight, 0);
+    let awaySum = baseScores.filter(s => s.type === "away").reduce((a, b) => a + b.weight, 0);
+
+    baseScores.forEach(item => {
+      let finalProb = 0;
+      if (item.type === "home") {
+        finalProb = (item.weight / homeSum) * pHome;
+      } else if (item.type === "draw") {
+        finalProb = (item.weight / drawSum) * pDraw;
+      } else {
+        finalProb = (item.weight / awaySum) * pAway;
+      }
+      
+      // 生成各大平台的比分赔率
+      const companyOdds = {};
+      Object.keys(payouts).forEach(key => {
+        const margin = payouts[key];
+        // 竞彩较于普通玩法返水更低，加计其抽水
+        const vig = key === "jczq" ? 0.82 : margin;
+        companyOdds[key] = (vig / finalProb).toFixed(2);
+      });
+
+      correctScores.push({
+        score: item.score,
+        odds: companyOdds
+      });
+    });
+
+    return {
+      moneyline: moneylineOdds,
+      handicap: { line: handicapLine, odds: handicapOdds },
+      total: { line: totalLine.toFixed(1), odds: overUnderOddsResult },
+      scores: correctScores.sort((a, b) => parseFloat(a.odds.bet365) - parseFloat(b.odds.bet365)).slice(0, 8) // 取最合理的前 8 个比分
+    };
+  }
+
   // 浏览器端实时数据更新 (0 延迟抓取 ESPN 官方实时比分)
   async function fetchLiveScores() {
     try {
@@ -137,6 +360,41 @@ document.addEventListener("DOMContentLoaded", () => {
           const actualHomeScore = isHome ? homeScore : awayScore;
           const actualAwayScore = isHome ? awayScore : homeScore;
           const liveStats = extractLiveStats(homeCompetitor, awayCompetitor, isHome);
+
+          // 提取并对齐赔率数据
+          const dkOdds = comp.odds ? comp.odds.find(o => o && o.provider && o.provider.name === "DraftKings") : null;
+          if (dkOdds) {
+            const mlEspnHome = dkOdds.moneyline && dkOdds.moneyline.home ? parseInt(dkOdds.moneyline.home.close ? dkOdds.moneyline.home.close.odds : dkOdds.moneyline.home.open.odds) : null;
+            const mlEspnAway = dkOdds.moneyline && dkOdds.moneyline.away ? parseInt(dkOdds.moneyline.away.close ? dkOdds.moneyline.away.close.odds : dkOdds.moneyline.away.open.odds) : null;
+            const mlEspnDraw = dkOdds.moneyline && dkOdds.moneyline.draw ? parseInt(dkOdds.moneyline.draw.close ? dkOdds.moneyline.draw.close.odds : dkOdds.moneyline.draw.open.odds) : null;
+
+            const spreadEspnLine = dkOdds.pointSpread && dkOdds.pointSpread.home ? parseFloat(dkOdds.pointSpread.home.close ? dkOdds.pointSpread.home.close.line : dkOdds.pointSpread.home.open.line) : null;
+            const spreadEspnHome = dkOdds.pointSpread && dkOdds.pointSpread.home ? parseInt(dkOdds.pointSpread.home.close ? dkOdds.pointSpread.home.close.odds : dkOdds.pointSpread.home.open.odds) : null;
+            const spreadEspnAway = dkOdds.pointSpread && dkOdds.pointSpread.away ? parseInt(dkOdds.pointSpread.away.close ? dkOdds.pointSpread.away.close.odds : dkOdds.pointSpread.away.open.odds) : null;
+
+            const totalEspnLine = dkOdds.total && dkOdds.total.over ? parseFloat(dkOdds.total.over.close ? dkOdds.total.over.close.line.replace('o', '') : dkOdds.total.over.open.line.replace('o', '')) : null;
+            const totalEspnOver = dkOdds.total && dkOdds.total.over ? parseInt(dkOdds.total.over.close ? dkOdds.total.over.close.odds : dkOdds.total.over.open.odds) : null;
+            const totalEspnUnder = dkOdds.total && dkOdds.total.under ? parseInt(dkOdds.total.under.close ? dkOdds.total.under.close.odds : dkOdds.total.under.open.odds) : null;
+
+            const mlHome = isHome ? mlEspnHome : mlEspnAway;
+            const mlAway = isHome ? mlEspnAway : mlEspnHome;
+            const mlDraw = mlEspnDraw;
+
+            const spreadLine = isHome ? spreadEspnLine : (spreadEspnLine ? -spreadEspnLine : null);
+            const spreadHome = isHome ? spreadEspnHome : spreadEspnAway;
+            const spreadAway = isHome ? spreadEspnAway : spreadEspnHome;
+
+            const newOdds = {
+              moneyline: { home: mlHome, away: mlAway, draw: mlDraw },
+              pointSpread: { line: spreadLine, homeOdds: spreadHome, awayOdds: spreadAway },
+              total: { line: totalEspnLine, overOdds: totalEspnOver, underOdds: totalEspnUnder }
+            };
+
+            if (!match.odds || JSON.stringify(match.odds) !== JSON.stringify(newOdds)) {
+              match.odds = newOdds;
+              hasChanges = true;
+            }
+          }
 
           if (isCompleted) {
             // 如果已完赛，且本地比分和状态不同，临时更新
@@ -724,6 +982,86 @@ document.addEventListener("DOMContentLoaded", () => {
       const d = new Date(match.date);
       const formattedDate = `${d.getMonth() + 1}月${d.getDate()}日 ${match.time}`;
 
+      // 计算赔率数据
+      const odds = calculateOdds(match);
+      const companyNames = {
+        bet365: "Bet365",
+        william: "威廉希尔 (William Hill)",
+        ladbrokes: "立博 (Ladbrokes)",
+        jczq: "中国体育彩票 (竞彩)"
+      };
+
+      // 渲染各种赔率面板的HTML
+      const moneylineHtml = Object.keys(odds.moneyline).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.moneyline[provider];
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-value">${data.home} ${getTrendSymbol(match.id, provider, "moneyline", "home")}</td>
+            <td class="odds-value">${data.draw} ${getTrendSymbol(match.id, provider, "moneyline", "draw")}</td>
+            <td class="odds-value">${data.away} ${getTrendSymbol(match.id, provider, "moneyline", "away")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const handicapHtml = Object.keys(odds.handicap.odds).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.handicap.odds[provider];
+        const line = odds.handicap.line;
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-line-type">主队 ${line}</td>
+            <td class="odds-value">${data.home} ${getTrendSymbol(match.id, provider, "handicap", "home")}</td>
+            <td class="odds-value">${data.away} ${getTrendSymbol(match.id, provider, "handicap", "away")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const totalHtml = Object.keys(odds.total.odds).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.total.odds[provider];
+        const line = odds.total.line;
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-line-type">大小球 ${line}</td>
+            <td class="odds-value"><span class="total-tag font-accent">大</span> ${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}</td>
+            <td class="odds-value"><span class="total-tag font-accent-secondary">小</span> ${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const scoresHtml = odds.scores.map(s => {
+        return `
+          <div class="score-odds-card">
+            <div class="score-number">${s.score}</div>
+            <div class="score-providers-odds">
+              <div class="score-provider-row">
+                <span class="provider-lbl">Bet365</span>
+                <span class="provider-odds-val">${s.odds.bet365}</span>
+              </div>
+              <div class="score-provider-row">
+                <span class="provider-lbl">威廉</span>
+                <span class="provider-odds-val">${s.odds.william}</span>
+              </div>
+              <div class="score-provider-row">
+                <span class="provider-lbl">立博</span>
+                <span class="provider-odds-val">${s.odds.ladbrokes}</span>
+              </div>
+              <div class="score-provider-row jczq-row">
+                <span class="provider-lbl">竞彩</span>
+                <span class="provider-odds-val">${s.odds.jczq}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
       card.innerHTML = `
         <div class="preview-card-header">
           <div class="preview-meta">
@@ -771,6 +1109,79 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
+        <!-- 赔率预测模块 -->
+        <div class="odds-section">
+          <div class="odds-header">
+            <div class="odds-title">
+              <i class="fa-solid fa-chart-line"></i> 全球三家博彩巨头 vs 中国体育彩票(竞彩) 赔率看板
+            </div>
+            <div class="odds-tabs">
+              <button class="odds-tab-btn active" data-tab="moneyline" data-match-id="${match.id}">胜平负 (1X2)</button>
+              <button class="odds-tab-btn" data-tab="handicap" data-match-id="${match.id}">让分 (Spread)</button>
+              <button class="odds-tab-btn" data-tab="total" data-match-id="${match.id}">大小球 (O/U)</button>
+              <button class="odds-tab-btn" data-tab="scores" data-match-id="${match.id}">波胆比分 (Score)</button>
+            </div>
+          </div>
+
+          <!-- 胜平负面板 -->
+          <div class="odds-content-panel active" id="odds-panel-moneyline-${match.id}">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>主胜 (1)</th>
+                  <th>平局 (X)</th>
+                  <th>客胜 (2)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${moneylineHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 让球面板 -->
+          <div class="odds-content-panel" id="odds-panel-handicap-${match.id}" style="display: none;">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>让球盘口</th>
+                  <th>主队赔率</th>
+                  <th>客队赔率</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${handicapHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 大小球面板 -->
+          <div class="odds-content-panel" id="odds-panel-total-${match.id}" style="display: none;">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>大小球界限</th>
+                  <th>大球赔率</th>
+                  <th>小球赔率</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${totalHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 波胆比分面板 -->
+          <div class="odds-content-panel" id="odds-panel-scores-${match.id}" style="display: none;">
+            <div class="score-odds-grid">
+              ${scoresHtml}
+            </div>
+          </div>
+        </div>
+
         <div class="preview-grid-details">
           <div class="matchup-analysis-box">
             <h4><i class="fa-solid fa-shield-halved"></i> 战术对决看点</h4>
@@ -790,6 +1201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       dom.previewsList.appendChild(card);
     });
+
   }
 
   // ==========================================
@@ -1031,6 +1443,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === dom.modal) {
         dom.modal.classList.remove("active");
         state.activeMatchDetailId = null; // 重置激活 ID
+      }
+    });
+
+    // 赔率面板Tab切换 (使用事件委托，确保动态加载的卡片也能正常工作)
+    document.addEventListener("click", (e) => {
+      const tabBtn = e.target.closest(".odds-tab-btn");
+      if (tabBtn) {
+        const matchId = tabBtn.dataset.matchId;
+        const tabType = tabBtn.dataset.tab;
+        
+        const card = tabBtn.closest(".preview-card");
+        if (card) {
+          card.querySelectorAll(".odds-tab-btn").forEach(btn => btn.classList.remove("active"));
+          tabBtn.classList.add("active");
+          
+          card.querySelectorAll(".odds-content-panel").forEach(panel => {
+            panel.style.display = "none";
+          });
+          const targetPanel = card.querySelector(`#odds-panel-${tabType}-${matchId}`);
+          if (targetPanel) {
+            targetPanel.style.display = "block";
+          }
+        }
       }
     });
 

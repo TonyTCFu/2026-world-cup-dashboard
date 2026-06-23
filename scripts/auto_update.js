@@ -64,6 +64,40 @@ async function run() {
     process.exit(1);
   }
 
+  // 1.5 检查双信息更新频次条件 (开赛前1小时内每5分钟更新，其余时间每小时更新)
+  const now = new Date();
+  const getBeijingTime = () => {
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    return new Date(utc + (3600000 * 8)); // 北京时间 UTC+8
+  };
+  const bjTime = getBeijingTime();
+  const bjMinute = bjTime.getMinutes();
+
+  // 检查是否有比赛满足条件：
+  // a) 正在进行中 (status !== "Scheduled" && status !== "FT")
+  // b) 开赛前1小时内 (status === "Scheduled" 且北京时间距离开赛时间在 0 至 60 分钟之间)
+  const hasMatchRequiringFrequentUpdate = WORLDCUP_DATA.matches.some(m => {
+    if (m.status !== "Scheduled" && m.status !== "FT") {
+      return true; // 正在进行中
+    }
+    if (m.status === "Scheduled") {
+      // 本地数据中的 date 和 time 均是北京时间，如 "2026-06-24" 和 "01:00"
+      const matchStart = new Date(`${m.date}T${m.time}:00+08:00`);
+      const diffMs = matchStart - bjTime;
+      const diffMins = diffMs / (1000 * 60);
+      return diffMins >= 0 && diffMins <= 60; // 距离开赛在1小时内
+    }
+    return false;
+  });
+
+  const isHourlyInterval = bjMinute < 5; // 整点更新 (每小时的前5分钟内触发一次)
+  const isGithubCron = process.env.GITHUB_EVENT_NAME === 'schedule';
+
+  if (isGithubCron && !hasMatchRequiringFrequentUpdate && !isHourlyInterval) {
+    console.log(`[双信息更新过滤] 当前北京时间为 ${bjTime.toISOString().replace('T', ' ').slice(0, 19)} (分钟: ${bjMinute})。当前无正在进行或即将在一小时内开赛的赛事，且非整点，自动跳过抓取以节省 GitHub Actions 额度。`);
+    process.exit(0);
+  }
+
   console.log("正在从 ESPN API 获取最新世界杯赛程与比分...");
   // 2. 从 ESPN API 获取整个小组赛至决赛阶段的比赛
   const url = "http://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260720";
@@ -156,6 +190,36 @@ async function run() {
       const isHome = match.home === homeAbbr;
       const actualHomeScore = isHome ? homeScore : awayScore;
       const actualAwayScore = isHome ? awayScore : homeScore;
+
+      // 提取并对齐赔率数据
+      const dkOdds = comp.odds ? comp.odds.find(o => o && o.provider && o.provider.name === "DraftKings") : null;
+      if (dkOdds) {
+        const mlEspnHome = dkOdds.moneyline && dkOdds.moneyline.home ? parseInt(dkOdds.moneyline.home.close ? dkOdds.moneyline.home.close.odds : dkOdds.moneyline.home.open.odds) : null;
+        const mlEspnAway = dkOdds.moneyline && dkOdds.moneyline.away ? parseInt(dkOdds.moneyline.away.close ? dkOdds.moneyline.away.close.odds : dkOdds.moneyline.away.open.odds) : null;
+        const mlEspnDraw = dkOdds.moneyline && dkOdds.moneyline.draw ? parseInt(dkOdds.moneyline.draw.close ? dkOdds.moneyline.draw.close.odds : dkOdds.moneyline.draw.open.odds) : null;
+
+        const spreadEspnLine = dkOdds.pointSpread && dkOdds.pointSpread.home ? parseFloat(dkOdds.pointSpread.home.close ? dkOdds.pointSpread.home.close.line : dkOdds.pointSpread.home.open.line) : null;
+        const spreadEspnHome = dkOdds.pointSpread && dkOdds.pointSpread.home ? parseInt(dkOdds.pointSpread.home.close ? dkOdds.pointSpread.home.close.odds : dkOdds.pointSpread.home.open.odds) : null;
+        const spreadEspnAway = dkOdds.pointSpread && dkOdds.pointSpread.away ? parseInt(dkOdds.pointSpread.away.close ? dkOdds.pointSpread.away.close.odds : dkOdds.pointSpread.away.open.odds) : null;
+
+        const totalEspnLine = dkOdds.total && dkOdds.total.over ? parseFloat(dkOdds.total.over.close ? dkOdds.total.over.close.line.replace('o', '') : dkOdds.total.over.open.line.replace('o', '')) : null;
+        const totalEspnOver = dkOdds.total && dkOdds.total.over ? parseInt(dkOdds.total.over.close ? dkOdds.total.over.close.odds : dkOdds.total.over.open.odds) : null;
+        const totalEspnUnder = dkOdds.total && dkOdds.total.under ? parseInt(dkOdds.total.under.close ? dkOdds.total.under.close.odds : dkOdds.total.under.open.odds) : null;
+
+        const mlHome = isHome ? mlEspnHome : mlEspnAway;
+        const mlAway = isHome ? mlEspnAway : mlEspnHome;
+        const mlDraw = mlEspnDraw;
+
+        const spreadLine = isHome ? spreadEspnLine : (spreadEspnLine ? -spreadEspnLine : null);
+        const spreadHome = isHome ? spreadEspnHome : spreadEspnAway;
+        const spreadAway = isHome ? spreadEspnAway : spreadEspnHome;
+
+        match.odds = {
+          moneyline: { home: mlHome, away: mlAway, draw: mlDraw },
+          pointSpread: { line: spreadLine, homeOdds: spreadHome, awayOdds: spreadAway },
+          total: { line: totalEspnLine, overOdds: totalEspnOver, underOdds: totalEspnUnder }
+        };
+      }
 
       if (isCompleted) {
         // 更新为已完赛状态
@@ -284,9 +348,7 @@ async function run() {
   });
 
   // 6. 更新更新时间戳 (UTC -> 北京时间格式)
-  const now = new Date();
-  const beijingTime = new Date(now.getTime() + 8 * 60 * 60 * 1000); // 转换为北京时间
-  WORLDCUP_DATA.lastUpdated = beijingTime.toISOString().replace('T', ' ').slice(0, 19);
+  WORLDCUP_DATA.lastUpdated = bjTime.toISOString().replace('T', ' ').slice(0, 19);
 
   // 7. 保存写回 data.js
   const output = `// 2026年世界杯核心数据文件

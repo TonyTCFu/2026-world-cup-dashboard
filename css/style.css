@@ -1394,3 +1394,231 @@ body {
     font-size: 1rem;
   }
 }
+
+/* ==========================================
+   赔率预测看板样式
+   ========================================== */
+.odds-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.odds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.odds-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+.odds-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.odds-tab-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.odds-tab-btn:hover {
+  background: rgba(0, 255, 204, 0.08);
+  border-color: rgba(0, 255, 204, 0.3);
+  color: var(--text-primary);
+}
+
+.odds-tab-btn.active {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: var(--bg-dark);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+}
+
+.odds-content-panel {
+  transition: opacity 0.3s ease;
+}
+
+/* 赔率表格样式 */
+.odds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.odds-table th,
+.odds-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.odds-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.odds-table td {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.odds-table tr:last-child td {
+  border-bottom: none;
+}
+
+.odds-table tr:hover {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+/* 中国体彩竞彩行高亮 */
+.odds-table tr.jczq-row {
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.odds-table tr.jczq-row td.provider-name {
+  color: var(--accent-yellow);
+  font-weight: 700;
+}
+
+.odds-line-type {
+  color: var(--text-secondary);
+  font-weight: 600 !important;
+}
+
+.odds-value {
+  font-family: monospace, sans-serif;
+  font-size: 0.9rem;
+}
+
+.trend-up {
+  color: #10b981;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.trend-down {
+  color: #ef4444;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.trend-stable {
+  color: var(--text-muted);
+  margin-left: 0.25rem;
+}
+
+/* 让球/大小球标签 */
+.handicap-tag,
+.total-tag {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  margin-right: 0.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+/* 波胆比分网格样式 */
+.score-odds-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.score-odds-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.score-odds-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 255, 204, 0.15);
+  transform: translateY(-2px);
+}
+
+.score-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+  font-family: monospace, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.score-providers-odds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.score-provider-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.score-provider-row.jczq-row {
+  color: var(--accent-yellow);
+  font-weight: 600;
+  border-top: 1px dashed rgba(255, 255, 255, 0.05);
+  padding-top: 0.2rem;
+  margin-top: 0.1rem;
+}
+
+.provider-odds-val {
+  font-family: monospace, sans-serif;
+  font-weight: 600;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .odds-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .odds-tabs {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+  .odds-tab-btn {
+    white-space: nowrap;
+  }
+  .score-odds-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
