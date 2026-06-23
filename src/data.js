@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 09:27:01
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 13:34:57
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-23 09:27:01",
+  "lastUpdated": "2026-06-23 13:34:57",
   "currentDate": "2026-06-23",
   "currentMatchday": 13,
   "teams": {
@@ -1998,29 +1998,36 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "FRA",
       "away": "HON",
-      "status": "45'+3'",
+      "status": "FT",
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "score": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "stats": {
         "possession": [
-          58,
-          42
+          56,
+          44
         ],
         "shots": [
-          7,
-          2
+          19,
+          4
         ],
         "target": [
-          1,
+          5,
           0
         ],
         "fouls": [
-          5,
-          2
+          8,
+          4
         ]
+      },
+      "analysis": "在本场 I 组的激烈较量中，法国 与 洪都拉斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2030,8 +2037,37 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "NOR",
       "away": "SEN",
-      "status": "Scheduled",
-      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+      "status": "FT",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "analysis": "在本场 I 组的激烈较量中，挪威 与 塞内加尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          42,
+          58
+        ],
+        "shots": [
+          13,
+          16
+        ],
+        "target": [
+          7,
+          4
+        ],
+        "fouls": [
+          13,
+          5
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (挪威)",
+        "team": "NOR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760455,
@@ -2040,8 +2076,37 @@ const WORLDCUP_DATA = {
       "group": "J",
       "home": "JOR",
       "away": "ALG",
-      "status": "Scheduled",
-      "stadium": "Levi's Stadium (Santa Clara, California)"
+      "status": "FT",
+      "stadium": "Levi's Stadium (Santa Clara, California)",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "analysis": "在本场 J 组的激烈较量中，约旦 与 阿尔及利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          28,
+          72
+        ],
+        "shots": [
+          8,
+          17
+        ],
+        "target": [
+          4,
+          8
+        ],
+        "fouls": [
+          11,
+          6
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿尔及利亚)",
+        "team": "ALG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
     },
     {
       "id": 760461,
@@ -2502,6 +2567,16 @@ const WORLDCUP_DATA = {
       "away": "3RD",
       "status": "Scheduled",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+    },
+    {
+      "id": 760500,
+      "date": "2026-07-04",
+      "time": "06:00",
+      "group": "J",
+      "home": "ARG",
+      "away": "2H",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
     }
   ],
   "dailySummaries": {
@@ -2573,7 +2648,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-23": {
       "title": "第13比赛日战况汇总",
-      "content": "在第13比赛日中，完成了多场强强对话，具体赛果为：阿根廷 2-0 奥地利。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第13比赛日中，完成了多场强强对话，具体赛果为：阿根廷 2-0 奥地利；法国 3-0 洪都拉斯；挪威 3-2 塞内加尔；约旦 1-2 阿尔及利亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760456,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
