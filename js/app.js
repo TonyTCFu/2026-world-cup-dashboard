@@ -926,9 +926,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const odds = calculateOdds(match);
       const companyNames = {
         bet365: "Bet365",
-        william: "威廉希尔 (William Hill)",
-        ladbrokes: "立博 (Ladbrokes)",
-        jczq: "中国体育彩票 (竞彩)"
+        william: "威廉希尔",
+        ladbrokes: "立博",
+        jczq: "中国竞彩"
       };
 
       // 渲染各种赔率面板的HTML
@@ -969,9 +969,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <tr class="${rowClass}">
             <td class="provider-name">${name}</td>
-            <td class="odds-line-type">大小球 ${line}</td>
-            <td class="odds-value"><span class="total-tag font-accent">大</span> ${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}</td>
-            <td class="odds-value"><span class="total-tag font-accent-secondary">小</span> ${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}</td>
+            <td class="odds-line-type">o${line}/u${line}</td>
+            <td class="odds-value">${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}</td>
+            <td class="odds-value">${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}</td>
           </tr>
         `;
       }).join("");
@@ -1098,9 +1098,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <thead>
                 <tr>
                   <th>博彩公司</th>
-                  <th>大小球界限</th>
-                  <th>大球赔率</th>
-                  <th>小球赔率</th>
+                  <th>盘口</th>
+                  <th>大 (Over)</th>
+                  <th>小 (Under)</th>
                 </tr>
               </thead>
               <tbody>
