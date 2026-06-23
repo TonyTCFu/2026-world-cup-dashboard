@@ -969,9 +969,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <tr class="${rowClass}">
             <td class="provider-name">${name}</td>
-            <td class="odds-line-type">o${line}/u${line}</td>
-            <td class="odds-value">${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}</td>
-            <td class="odds-value">${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}</td>
+            <td class="odds-line-type">o${line}<br>u${line}</td>
+            <td class="odds-value">
+              ${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}<br>
+              ${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}
+            </td>
           </tr>
         `;
       }).join("");
@@ -1099,8 +1101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <tr>
                   <th>博彩公司</th>
                   <th>盘口</th>
-                  <th>大 (Over)</th>
-                  <th>小 (Under)</th>
+                  <th>赔率 (大/小)</th>
                 </tr>
               </thead>
               <tbody>
