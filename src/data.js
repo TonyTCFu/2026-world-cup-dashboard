@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 19:49:29
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-23 22:12:52
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-23 19:49:29",
+  "lastUpdated": "2026-06-23 22:12:52",
   "currentDate": "2026-06-23",
   "currentMatchday": 13,
   "teams": {
@@ -465,7 +465,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
+          "overOdds": -140,
           "underOdds": 110
         }
       }
@@ -613,9 +613,9 @@ const WORLDCUP_DATA = {
       "stadium": "大都会体育场 (东卢瑟福)",
       "odds": {
         "moneyline": {
-          "home": -105,
+          "home": -110,
           "away": 330,
-          "draw": 245
+          "draw": 250
         },
         "pointSpread": {
           "line": -0.5,
@@ -624,7 +624,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
+          "overOdds": -125,
           "underOdds": 100
         }
       }
@@ -2198,8 +2198,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 3.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
@@ -2224,9 +2224,9 @@ const WORLDCUP_DATA = {
           "awayOdds": -175
         },
         "total": {
-          "line": 2.5,
-          "overOdds": -175,
-          "underOdds": 140
+          "line": 3.5,
+          "overOdds": 140,
+          "underOdds": -175
         }
       }
     },
@@ -2252,8 +2252,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -140,
-          "underOdds": 110
+          "overOdds": -150,
+          "underOdds": 120
         }
       }
     },
@@ -2268,8 +2268,8 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Akron (Guadalajara)",
       "odds": {
         "moneyline": {
-          "home": -180,
-          "away": 550,
+          "home": -185,
+          "away": 600,
           "draw": 300
         },
         "pointSpread": {
@@ -2280,7 +2280,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 115,
-          "underOdds": -145
+          "underOdds": -140
         }
       }
     },
@@ -2295,18 +2295,18 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": -255,
+          "home": -265,
           "away": 650,
           "draw": 425
         },
         "pointSpread": {
           "line": -1.5,
           "homeOdds": 100,
-          "awayOdds": -130
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
-          "overOdds": -165,
+          "overOdds": -170,
           "underOdds": 135
         }
       }
@@ -2322,14 +2322,14 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 140,
-          "away": 235,
+          "home": 135,
+          "away": 240,
           "draw": 205
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 135,
-          "awayOdds": -170
+          "homeOdds": 125,
+          "awayOdds": -160
         },
         "total": {
           "line": 2.5,
@@ -2356,12 +2356,12 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -2.5,
           "homeOdds": 135,
-          "awayOdds": -175
+          "awayOdds": -170
         },
         "total": {
           "line": 3.5,
           "overOdds": 145,
-          "underOdds": -185
+          "underOdds": -180
         }
       }
     },
@@ -2415,7 +2415,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 105,
-          "underOdds": -135
+          "underOdds": -130
         }
       }
     },
@@ -2468,7 +2468,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 3.5,
-          "overOdds": 125,
+          "overOdds": 130,
           "underOdds": -160
         }
       }
@@ -2549,7 +2549,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 3.5,
-          "overOdds": 140,
+          "overOdds": 135,
           "underOdds": -170
         }
       }
@@ -2571,8 +2571,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 130,
-          "awayOdds": -165
+          "homeOdds": 135,
+          "awayOdds": -170
         },
         "total": {
           "line": 2.5,
@@ -2592,19 +2592,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Akron (Guadalajara)",
       "odds": {
         "moneyline": {
-          "home": 650,
-          "away": -205,
-          "draw": 330
+          "home": 600,
+          "away": -200,
+          "draw": 320
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": -180,
-          "awayOdds": 140
+          "homeOdds": -185,
+          "awayOdds": 145
         },
         "total": {
           "line": 2.5,
           "overOdds": -120,
-          "underOdds": 100
+          "underOdds": -105
         }
       }
     },
@@ -2619,9 +2619,9 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 145,
-          "away": 275,
-          "draw": 175
+          "home": 150,
+          "away": 280,
+          "draw": 165
         },
         "pointSpread": {
           "line": -0.5,
@@ -2706,13 +2706,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": 140,
-          "awayOdds": -180
+          "homeOdds": 135,
+          "awayOdds": -170
         },
         "total": {
           "line": 3.5,
-          "overOdds": 120,
-          "underOdds": -150
+          "overOdds": 125,
+          "underOdds": -155
         }
       }
     },
@@ -2793,7 +2793,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 155,
-          "underOdds": -190
+          "underOdds": -195
         }
       }
     },
