@@ -543,7 +543,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       const activeCard = dom.dateSlider.querySelector(".date-card.active");
       if (activeCard) {
-        activeCard.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        const sliderWidth = dom.dateSlider.clientWidth;
+        const cardOffsetLeft = activeCard.offsetLeft;
+        const cardWidth = activeCard.clientWidth;
+        dom.dateSlider.scrollTo({
+          left: cardOffsetLeft - (sliderWidth / 2) + (cardWidth / 2),
+          behavior: "smooth"
+        });
       }
     }, 100);
   }
