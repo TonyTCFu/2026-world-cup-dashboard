@@ -1623,17 +1623,54 @@ body {
   .odds-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .odds-title {
+    font-size: 0.8rem;
   }
   .odds-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+    overflow-x: visible;
+    padding-bottom: 0;
   }
   .odds-tab-btn {
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    padding: 0.35rem 0.25rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+  }
+  .odds-table th,
+  .odds-table td {
+    padding: 0.4rem 0.25rem;
+    font-size: 0.7rem;
+  }
+  .odds-table th {
+    font-size: 0.62rem;
+    letter-spacing: 0px;
+  }
+  .odds-value {
+    font-size: 0.72rem;
   }
   .score-odds-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+  .score-odds-card {
+    padding: 0.4rem;
+  }
+  .score-number {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+  .score-provider-row {
+    font-size: 0.62rem;
+  }
+  .provider-odds-val {
+    font-size: 0.62rem;
   }
 }
 
