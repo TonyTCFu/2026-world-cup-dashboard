@@ -1339,6 +1339,86 @@ document.addEventListener("DOMContentLoaded", () => {
       const probDraw = prev.wdl[1];
       const probAway = prev.wdl[2];
 
+      // 计算赔率数据
+      const odds = calculateOdds(match);
+      const companyNames = {
+        bet365: "Bet365",
+        william: "威廉希尔 (William Hill)",
+        ladbrokes: "立博 (Ladbrokes)",
+        jczq: "中国体育彩票 (竞彩)"
+      };
+
+      // 渲染各种赔率面板的HTML
+      const moneylineHtml = Object.keys(odds.moneyline).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.moneyline[provider];
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-value">${data.home} ${getTrendSymbol(match.id, provider, "moneyline", "home")}</td>
+            <td class="odds-value">${data.draw} ${getTrendSymbol(match.id, provider, "moneyline", "draw")}</td>
+            <td class="odds-value">${data.away} ${getTrendSymbol(match.id, provider, "moneyline", "away")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const handicapHtml = Object.keys(odds.handicap.odds).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.handicap.odds[provider];
+        const line = odds.handicap.line;
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-line-type">主队 ${line}</td>
+            <td class="odds-value">${data.home} ${getTrendSymbol(match.id, provider, "handicap", "home")}</td>
+            <td class="odds-value">${data.away} ${getTrendSymbol(match.id, provider, "handicap", "away")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const totalHtml = Object.keys(odds.total.odds).map(provider => {
+        const name = companyNames[provider] || provider;
+        const rowClass = provider === "jczq" ? "jczq-row" : "";
+        const data = odds.total.odds[provider];
+        const line = odds.total.line;
+        return `
+          <tr class="${rowClass}">
+            <td class="provider-name">${name}</td>
+            <td class="odds-line-type">大小球 ${line}</td>
+            <td class="odds-value"><span class="total-tag font-accent">大</span> ${data.over} ${getTrendSymbol(match.id, provider, "total", "over")}</td>
+            <td class="odds-value"><span class="total-tag font-accent-secondary">小</span> ${data.under} ${getTrendSymbol(match.id, provider, "total", "under")}</td>
+          </tr>
+        `;
+      }).join("");
+
+      const scoresHtml = odds.scores.map(s => {
+        return `
+          <div class="score-odds-card">
+            <div class="score-number">${s.score}</div>
+            <div class="score-providers-odds">
+              <div class="score-provider-row">
+                <span class="provider-lbl">Bet365</span>
+                <span class="provider-odds-val">${s.odds.bet365}</span>
+              </div>
+              <div class="score-provider-row">
+                <span class="provider-lbl">威廉</span>
+                <span class="provider-odds-val">${s.odds.william}</span>
+              </div>
+              <div class="score-provider-row">
+                <span class="provider-lbl">立博</span>
+                <span class="provider-odds-val">${s.odds.ladbrokes}</span>
+              </div>
+              <div class="score-provider-row jczq-row">
+                <span class="provider-lbl">竞彩</span>
+                <span class="provider-odds-val">${s.odds.jczq}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
       modalHtml = `
         <div class="detail-meta" style="margin-bottom: 1rem;">
           <span class="detail-meta-group">${match.group}组</span>
@@ -1378,6 +1458,79 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="prob-segment home" style="width: ${probHome}%;" title="${homeTeam.name}胜 ${probHome}%"></div>
             <div class="prob-segment draw" style="width: ${probDraw}%;" title="平局 ${probDraw}%"></div>
             <div class="prob-segment away" style="width: ${probAway}%;" title="${awayTeam.name}胜 ${probAway}%"></div>
+          </div>
+        </div>
+
+        <!-- 赔率预测模块 -->
+        <div class="odds-section">
+          <div class="odds-header">
+            <div class="odds-title">
+              <i class="fa-solid fa-chart-line"></i> 全球三家博彩巨头 vs 中国体育彩票(竞彩) 赔率看板
+            </div>
+            <div class="odds-tabs">
+              <button class="odds-tab-btn active" data-tab="moneyline" data-match-id="${match.id}">胜平负 (1X2)</button>
+              <button class="odds-tab-btn" data-tab="handicap" data-match-id="${match.id}">让分 (Spread)</button>
+              <button class="odds-tab-btn" data-tab="total" data-match-id="${match.id}">大小球 (O/U)</button>
+              <button class="odds-tab-btn" data-tab="scores" data-match-id="${match.id}">波胆比分 (Score)</button>
+            </div>
+          </div>
+
+          <!-- 胜平负面板 -->
+          <div class="odds-content-panel active" id="odds-panel-moneyline-${match.id}">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>主胜 (1)</th>
+                  <th>平局 (X)</th>
+                  <th>客胜 (2)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${moneylineHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 让球面板 -->
+          <div class="odds-content-panel" id="odds-panel-handicap-${match.id}" style="display: none;">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>让球盘口</th>
+                  <th>主队赔率</th>
+                  <th>客队赔率</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${handicapHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 大小球面板 -->
+          <div class="odds-content-panel" id="odds-panel-total-${match.id}" style="display: none;">
+            <table class="odds-table">
+              <thead>
+                <tr>
+                  <th>博彩公司</th>
+                  <th>大小球界限</th>
+                  <th>大球赔率</th>
+                  <th>小球赔率</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${totalHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 波胆比分面板 -->
+          <div class="odds-content-panel" id="odds-panel-scores-${match.id}" style="display: none;">
+            <div class="score-odds-grid">
+              ${scoresHtml}
+            </div>
           </div>
         </div>
 
@@ -1453,15 +1606,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const matchId = tabBtn.dataset.matchId;
         const tabType = tabBtn.dataset.tab;
         
-        const card = tabBtn.closest(".preview-card");
-        if (card) {
-          card.querySelectorAll(".odds-tab-btn").forEach(btn => btn.classList.remove("active"));
+        const container = tabBtn.closest(".odds-section");
+        if (container) {
+          container.querySelectorAll(".odds-tab-btn").forEach(btn => btn.classList.remove("active"));
           tabBtn.classList.add("active");
           
-          card.querySelectorAll(".odds-content-panel").forEach(panel => {
+          container.querySelectorAll(".odds-content-panel").forEach(panel => {
             panel.style.display = "none";
           });
-          const targetPanel = card.querySelector(`#odds-panel-${tabType}-${matchId}`);
+          const targetPanel = container.querySelector(`#odds-panel-${tabType}-${matchId}`);
           if (targetPanel) {
             targetPanel.style.display = "block";
           }
