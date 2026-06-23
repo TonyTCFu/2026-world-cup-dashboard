@@ -601,7 +601,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (match.status !== "Scheduled") {
         actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wave-square"></i> 实时统计</button>`;
       } else {
-        actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赛前预测</button>`;
+        actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赔率比较分析</button>`;
       }
 
       card.innerHTML = `
@@ -1431,7 +1431,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span>${homeTeam.name}</span>
             <span style="font-size: 2.2rem;">${homeTeam.flag}</span>
           </div>
-          <div class="prediction-vs-badge" style="font-size: 1rem;">PREVIEW</div>
+          <div class="prediction-vs-badge" style="font-size: 1rem;">赔率比较分析</div>
           <div class="prediction-team away">
             <span style="font-size: 2.2rem;">${awayTeam.flag}</span>
             <span>${awayTeam.name}</span>
