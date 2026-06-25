@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-25 00:11:50
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-25 08:01:15
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-25 00:11:50",
-  "currentDate": "2026-06-24",
-  "currentMatchday": 14,
+  "lastUpdated": "2026-06-25 08:01:15",
+  "currentDate": "2026-06-25",
+  "currentMatchday": 15,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -488,7 +488,7 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -0.5,
           "homeOdds": 175,
-          "awayOdds": -225
+          "awayOdds": -220
         },
         "total": {
           "line": 1.5,
@@ -586,19 +586,19 @@ const WORLDCUP_DATA = {
       "stadium": "吉列体育场 (波士顿)",
       "odds": {
         "moneyline": {
-          "home": -900,
+          "home": -1000,
           "away": 2000,
           "draw": 950
         },
         "pointSpread": {
           "line": -2.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 3.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "overOdds": 105,
+          "underOdds": -130
         }
       }
     },
@@ -624,7 +624,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
+          "overOdds": -130,
           "underOdds": 105
         }
       }
@@ -2407,7 +2407,7 @@ const WORLDCUP_DATA = {
       "group": "B",
       "home": "BIH",
       "away": "QAT",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
@@ -2425,6 +2425,35 @@ const WORLDCUP_DATA = {
           "overOdds": -175,
           "underOdds": 140
         }
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 B 组的激烈较量中，波黑 与 卡塔尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          54,
+          46
+        ],
+        "shots": [
+          14,
+          9
+        ],
+        "target": [
+          5,
+          3
+        ],
+        "fouls": [
+          9,
+          14
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (波黑)",
+        "team": "BIH",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2434,7 +2463,7 @@ const WORLDCUP_DATA = {
       "group": "B",
       "home": "SUI",
       "away": "CAN",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
@@ -2452,6 +2481,35 @@ const WORLDCUP_DATA = {
           "overOdds": 115,
           "underOdds": -145
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "analysis": "在本场 B 组的激烈较量中，瑞士 与 加拿大 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          55,
+          45
+        ],
+        "shots": [
+          6,
+          13
+        ],
+        "target": [
+          4,
+          7
+        ],
+        "fouls": [
+          19,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (瑞士)",
+        "team": "SUI",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2461,24 +2519,46 @@ const WORLDCUP_DATA = {
       "group": "C",
       "home": "MAR",
       "away": "HAI",
-      "status": "Scheduled",
+      "status": "90'+9'",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -550,
-          "away": 1600,
-          "draw": 650
+          "home": -330,
+          "away": 900,
+          "draw": 475
         },
         "pointSpread": {
-          "line": -2.5,
-          "homeOdds": 130,
-          "awayOdds": -170
+          "line": -1.5,
+          "homeOdds": -115,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -185,
-          "underOdds": 145
+          "overOdds": -160,
+          "underOdds": 130
         }
+      },
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "stats": {
+        "possession": [
+          69,
+          31
+        ],
+        "shots": [
+          22,
+          7
+        ],
+        "target": [
+          11,
+          2
+        ],
+        "fouls": [
+          10,
+          18
+        ]
       }
     },
     {
@@ -2488,24 +2568,46 @@ const WORLDCUP_DATA = {
       "group": "C",
       "home": "SCO",
       "away": "BRA",
-      "status": "Scheduled",
+      "status": "90'+6'",
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 850,
-          "away": -310,
-          "draw": 450
+          "home": 900,
+          "away": -300,
+          "draw": 425
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": -110,
-          "awayOdds": -115
+          "homeOdds": -120,
+          "awayOdds": -105
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -125,
+          "underOdds": 100
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "stats": {
+        "possession": [
+          46,
+          54
+        ],
+        "shots": [
+          13,
+          20
+        ],
+        "target": [
+          4,
+          9
+        ],
+        "fouls": [
+          10,
+          10
+        ]
       }
     },
     {
@@ -2519,19 +2621,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 270,
-          "away": -105,
-          "draw": 275
+          "home": 360,
+          "away": -135,
+          "draw": 295
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -115,
-          "awayOdds": -110
+          "homeOdds": 105,
+          "awayOdds": -135
         },
         "total": {
           "line": 2.5,
           "overOdds": -105,
-          "underOdds": -120
+          "underOdds": -115
         }
       }
     },
@@ -2546,19 +2648,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio BBVA (Guadalupe)",
       "odds": {
         "moneyline": {
-          "home": 500,
-          "away": -165,
-          "draw": 300
+          "home": 450,
+          "away": -145,
+          "draw": 275
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 140,
-          "awayOdds": -175
+          "homeOdds": 120,
+          "awayOdds": -155
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
@@ -2585,7 +2687,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 3.5,
           "overOdds": 130,
-          "underOdds": -160
+          "underOdds": -165
         }
       }
     },
@@ -2600,19 +2702,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": 285,
-          "away": -120,
+          "home": 300,
+          "away": -125,
           "draw": 320
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": 105,
+          "awayOdds": -135
         },
         "total": {
           "line": 2.5,
-          "overOdds": -140,
-          "underOdds": 110
+          "overOdds": -145,
+          "underOdds": 115
         }
       }
     },
@@ -2638,7 +2740,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
+          "overOdds": -150,
           "underOdds": 120
         }
       }
@@ -2762,19 +2864,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 1500,
-          "away": -550,
-          "draw": 650
+          "home": 1600,
+          "away": -650,
+          "draw": 700
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -175,
-          "awayOdds": 135
+          "homeOdds": -150,
+          "awayOdds": 120
         },
         "total": {
           "line": 3.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 115,
+          "underOdds": -145
         }
       }
     },
@@ -2795,13 +2897,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -140,
+          "homeOdds": -135,
           "awayOdds": 110
         },
         "total": {
           "line": 2.5,
           "overOdds": 125,
-          "underOdds": -150
+          "underOdds": -155
         }
       }
     },
@@ -2823,12 +2925,12 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": 2.5,
           "homeOdds": -155,
-          "awayOdds": 125
+          "awayOdds": 120
         },
         "total": {
           "line": 3.5,
           "overOdds": 110,
-          "underOdds": -140
+          "underOdds": -135
         }
       }
     },
@@ -2843,8 +2945,8 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 300,
-          "away": -110,
+          "home": 320,
+          "away": -115,
           "draw": 275
         },
         "pointSpread": {
@@ -2870,14 +2972,14 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -125,
-          "away": 310,
+          "home": -130,
+          "away": 330,
           "draw": 310
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -130,
-          "awayOdds": 105
+          "homeOdds": -140,
+          "awayOdds": 110
         },
         "total": {
           "line": 2.5,
@@ -2908,8 +3010,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 1.5,
-          "overOdds": -180,
-          "underOdds": 145
+          "overOdds": -200,
+          "underOdds": 160
         }
       }
     },
@@ -3169,6 +3271,26 @@ const WORLDCUP_DATA = {
       "away": "2H",
       "status": "Scheduled",
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760486,
+      "date": "2026-06-29",
+      "time": "03:00",
+      "group": "B",
+      "home": "2A",
+      "away": "CAN",
+      "status": "Scheduled",
+      "stadium": "SoFi Stadium (Inglewood, California)"
+    },
+    {
+      "id": 760498,
+      "date": "2026-07-03",
+      "time": "11:00",
+      "group": "B",
+      "home": "SUI",
+      "away": "3RD",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
     }
   ],
   "dailySummaries": {
@@ -3248,6 +3370,12 @@ const WORLDCUP_DATA = {
       "title": "第14比赛日战况汇总",
       "content": "在第14比赛日中，完成了多场强强对话，具体赛果为：葡萄牙 5-0 乌兹别克斯坦；英格兰 0-0 加纳；巴拿马 0-1 克罗地亚；哥伦比亚 1-0 刚果(金)。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760461,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-25": {
+      "title": "第15比赛日战况汇总",
+      "content": "在第15比赛日中，完成了多场强强对话，具体赛果为：波黑 3-1 卡塔尔；瑞士 2-1 加拿大。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760462,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
