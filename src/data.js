@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-25 12:38:52
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-25 19:11:06
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-25 12:38:52",
+  "lastUpdated": "2026-06-25 19:11:06",
   "currentDate": "2026-06-25",
   "currentMatchday": 15,
   "teams": {
@@ -454,18 +454,18 @@ const WORLDCUP_DATA = {
       "stadium": "洛杉矶体育场 (洛杉矶)",
       "odds": {
         "moneyline": {
-          "home": -115,
-          "away": 275,
-          "draw": 310
+          "home": -110,
+          "away": 270,
+          "draw": 300
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -120,
-          "awayOdds": -105
+          "homeOdds": -115,
+          "awayOdds": -110
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
+          "overOdds": -150,
           "underOdds": 120
         }
       }
@@ -481,14 +481,14 @@ const WORLDCUP_DATA = {
       "stadium": "NRG体育场 (休斯敦)",
       "odds": {
         "moneyline": {
-          "home": 180,
-          "away": 310,
-          "draw": 125
+          "home": 170,
+          "away": 320,
+          "draw": 130
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 175,
-          "awayOdds": -220
+          "homeOdds": 160,
+          "awayOdds": -200
         },
         "total": {
           "line": 1.5,
@@ -592,13 +592,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -2.5,
-          "homeOdds": -115,
-          "awayOdds": -110
+          "homeOdds": -125,
+          "awayOdds": 100
         },
         "total": {
           "line": 3.5,
           "overOdds": 100,
-          "underOdds": -125
+          "underOdds": -120
         }
       }
     },
@@ -613,19 +613,19 @@ const WORLDCUP_DATA = {
       "stadium": "大都会体育场 (东卢瑟福)",
       "odds": {
         "moneyline": {
-          "home": -115,
-          "away": 350,
-          "draw": 255
+          "home": -110,
+          "away": 340,
+          "draw": 250
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -125,
-          "awayOdds": -105
+          "homeOdds": -115,
+          "awayOdds": -110
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
-          "underOdds": -105
+          "overOdds": -110,
+          "underOdds": -110
         }
       }
     },
@@ -2747,19 +2747,19 @@ const WORLDCUP_DATA = {
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": 1800,
-          "away": -650,
-          "draw": 750
+          "home": 1500,
+          "away": -575,
+          "draw": 700
         },
         "pointSpread": {
           "line": 2.5,
           "homeOdds": -150,
-          "awayOdds": 115
+          "awayOdds": 120
         },
         "total": {
           "line": 3.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -2774,19 +2774,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": 450,
-          "away": -190,
+          "home": 425,
+          "away": -185,
           "draw": 390
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": -175,
-          "awayOdds": 140
+          "homeOdds": -180,
+          "awayOdds": 145
         },
         "total": {
           "line": 2.5,
-          "overOdds": -160,
-          "underOdds": 130
+          "overOdds": -155,
+          "underOdds": 125
         }
       }
     },
@@ -2801,14 +2801,14 @@ const WORLDCUP_DATA = {
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
-          "home": 380,
-          "away": -155,
+          "home": 400,
+          "away": -160,
           "draw": 340
         },
         "pointSpread": {
           "line": 0.5,
           "homeOdds": 130,
-          "awayOdds": -160
+          "awayOdds": -170
         },
         "total": {
           "line": 2.5,
@@ -2855,19 +2855,19 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 150,
-          "away": 190,
-          "draw": 240
+          "home": 155,
+          "away": 185,
+          "draw": 235
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 140,
-          "awayOdds": -180
+          "homeOdds": 145,
+          "awayOdds": -185
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -2888,8 +2888,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": -185,
-          "awayOdds": 145
+          "homeOdds": -180,
+          "awayOdds": 140
         },
         "total": {
           "line": 2.5,
@@ -2937,18 +2937,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 1600,
-          "away": -600,
-          "draw": 700
+          "away": -650,
+          "draw": 750
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -155,
-          "awayOdds": 120
+          "homeOdds": -145,
+          "awayOdds": 115
         },
         "total": {
           "line": 3.5,
-          "overOdds": 115,
-          "underOdds": -145
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -2997,12 +2997,12 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": 2.5,
           "homeOdds": -155,
-          "awayOdds": 120
+          "awayOdds": 125
         },
         "total": {
           "line": 3.5,
           "overOdds": 110,
-          "underOdds": -135
+          "underOdds": -140
         }
       }
     },
@@ -3018,18 +3018,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 320,
-          "away": -115,
-          "draw": 275
+          "away": -120,
+          "draw": 280
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": 100,
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
-          "overOdds": 105,
-          "underOdds": -130
+          "overOdds": 100,
+          "underOdds": -125
         }
       }
     },
@@ -3083,7 +3083,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 1.5,
           "overOdds": -195,
-          "underOdds": 160
+          "underOdds": 155
         }
       }
     },
@@ -3098,18 +3098,18 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 1300,
-          "away": -475,
-          "draw": 600
+          "home": 1400,
+          "away": -525,
+          "draw": 650
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": 125,
-          "awayOdds": -155
+          "homeOdds": 130,
+          "awayOdds": -165
         },
         "total": {
           "line": 2.5,
-          "overOdds": -165,
+          "overOdds": -170,
           "underOdds": 135
         }
       }
@@ -3375,19 +3375,19 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": 475,
-          "away": -135,
-          "draw": 245
+          "home": 400,
+          "away": -130,
+          "draw": 255
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 105,
+          "awayOdds": -135
         },
         "total": {
           "line": 2.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
