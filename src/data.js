@@ -366,6 +366,45 @@ const WORLDCUP_DATA = {
       }
     },
     {
+      "id": 760417,
+      "date": "2026-06-13",
+      "time": "09:00",
+      "group": "D",
+      "home": "USA",
+      "away": "PAR",
+      "status": "FT",
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "analysis": "在本场 D 组的激烈较量中，美国 与 巴拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          65,
+          35
+        ],
+        "shots": [
+          16,
+          9
+        ],
+        "target": [
+          6,
+          1
+        ],
+        "fouls": [
+          13,
+          17
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (美国)",
+        "team": "USA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
       "id": 4,
       "date": "2026-06-14",
       "time": "03:00",
@@ -405,140 +444,120 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 5,
-      "date": "2026-06-20",
+      "id": 760419,
+      "date": "2026-06-14",
       "time": "06:00",
       "group": "C",
-      "home": "MAR",
-      "away": "SCO",
+      "home": "BRA",
+      "away": "MAR",
       "status": "FT",
-      "stadium": "朗威体育场 (夏洛特)",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
-      "analysis": "在本场 C 组的激烈较量中，摩洛哥 与 苏格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "analysis": "在本场 C 组的激烈较量中，巴西 与 摩洛哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          59,
-          41
+          51,
+          49
         ],
         "shots": [
           12,
-          6
+          14
         ],
         "target": [
-          2,
-          0
+          5,
+          3
         ],
         "fouls": [
-          8,
-          11
+          16,
+          14
         ]
       },
       "mvp": {
-        "name": "核心球员 (摩洛哥)",
-        "team": "MAR",
+        "name": "核心球员 (巴西)",
+        "team": "BRA",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
-      "id": 6,
-      "date": "2026-06-26",
-      "time": "10:00",
-      "group": "D",
-      "home": "USA",
-      "away": "ROU",
-      "status": "41'",
-      "stadium": "洛杉矶体育场 (洛杉矶)",
-      "odds": {
-        "moneyline": {
-          "home": 105,
-          "away": 245,
-          "draw": 285
-        },
-        "pointSpread": {
-          "line": -0.5,
-          "homeOdds": 105,
-          "awayOdds": -130
-        },
-        "total": {
-          "line": 2.5,
-          "overOdds": -155,
-          "underOdds": 125
-        }
-      },
+      "id": 760418,
+      "date": "2026-06-14",
+      "time": "09:00",
+      "group": "C",
+      "home": "HAI",
+      "away": "SCO",
+      "status": "FT",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "score": {
-        "home": 1,
-        "away": 2
+        "home": 0,
+        "away": 1
       },
+      "analysis": "在本场 C 组的激烈较量中，海地 与 苏格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          55,
-          45
+          54,
+          46
         ],
         "shots": [
-          6,
-          3
+          15,
+          9
         ],
         "target": [
-          3,
+          2,
           2
         ],
         "fouls": [
-          7,
-          5
+          23,
+          21
         ]
+      },
+      "mvp": {
+        "name": "核心球员 (苏格兰)",
+        "team": "SCO",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
-      "id": 7,
-      "date": "2026-06-26",
-      "time": "10:00",
+      "id": 760421,
+      "date": "2026-06-14",
+      "time": "12:00",
       "group": "D",
-      "home": "PAR",
-      "away": "AUS",
-      "status": "41'",
-      "stadium": "NRG体育场 (休斯敦)",
-      "odds": {
-        "moneyline": {
-          "home": 155,
-          "away": 330,
-          "draw": 140
-        },
-        "pointSpread": {
-          "line": -0.5,
-          "homeOdds": 145,
-          "awayOdds": -185
-        },
-        "total": {
-          "line": 1.5,
-          "overOdds": -115,
-          "underOdds": -110
-        }
-      },
+      "home": "AUS",
+      "away": "ROU",
+      "status": "FT",
+      "stadium": "BC Place (Vancouver)",
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
+      "analysis": "在本场 D 组的激烈较量中，澳大利亚 与 罗马尼亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          39,
-          61
+          28,
+          72
         ],
         "shots": [
-          1,
-          4
+          9,
+          30
         ],
         "target": [
-          0,
-          2
+          4,
+          8
         ],
         "fouls": [
-          4,
-          3
+          12,
+          4
         ]
+      },
+      "mvp": {
+        "name": "核心球员 (澳大利亚)",
+        "team": "AUS",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -576,6 +595,45 @@ const WORLDCUP_DATA = {
       "mvp": {
         "name": "核心球员 (德国)",
         "team": "GER",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760425,
+      "date": "2026-06-15",
+      "time": "04:00",
+      "group": "F",
+      "home": "NED",
+      "away": "JPN",
+      "status": "FT",
+      "stadium": "AT&T Stadium (Arlington, Texas)",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "analysis": "在本场 F 组的激烈较量中，荷兰 与 日本 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          60,
+          40
+        ],
+        "shots": [
+          10,
+          10
+        ],
+        "target": [
+          6,
+          3
+        ],
+        "fouls": [
+          7,
+          7
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (荷兰)",
+        "team": "NED",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -620,113 +678,352 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 10,
-      "date": "2026-06-26",
-      "time": "07:00",
+      "id": 760424,
+      "date": "2026-06-15",
+      "time": "10:00",
       "group": "F",
-      "home": "NED",
+      "home": "SWE",
       "away": "TUN",
       "status": "FT",
-      "stadium": "吉列体育场 (波士顿)",
-      "odds": {
-        "moneyline": {
-          "home": -1100,
-          "away": 2500,
-          "draw": 1000
-        },
-        "pointSpread": {
-          "line": -2.5,
-          "homeOdds": -125,
-          "awayOdds": 100
-        },
-        "total": {
-          "line": 3.5,
-          "overOdds": 100,
-          "underOdds": -120
-        }
-      },
+      "stadium": "Estadio BBVA (Guadalupe)",
       "score": {
-        "home": 3,
+        "home": 5,
         "away": 1
       },
-      "analysis": "在本场 F 组的激烈较量中，荷兰 与 突尼斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "analysis": "在本场 F 组的激烈较量中，瑞典 与 突尼斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 5 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          72,
-          28
+          49,
+          51
         ],
         "shots": [
-          20,
-          10
+          13,
+          6
         ],
         "target": [
           7,
-          4
+          2
         ],
         "fouls": [
           10,
-          11
+          8
         ]
       },
       "mvp": {
-        "name": "核心球员 (荷兰)",
-        "team": "NED",
+        "name": "核心球员 (瑞典)",
+        "team": "SWE",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
-      "id": 11,
-      "date": "2026-06-26",
-      "time": "07:00",
-      "group": "F",
-      "home": "JPN",
-      "away": "SWE",
+      "id": 760428,
+      "date": "2026-06-16",
+      "time": "00:00",
+      "group": "H",
+      "home": "ESP",
+      "away": "CPV",
       "status": "FT",
-      "stadium": "大都会体育场 (东卢瑟福)",
-      "odds": {
-        "moneyline": {
-          "home": -110,
-          "away": 340,
-          "draw": 250
-        },
-        "pointSpread": {
-          "line": -0.5,
-          "homeOdds": -115,
-          "awayOdds": -110
-        },
-        "total": {
-          "line": 2.5,
-          "overOdds": -110,
-          "underOdds": -110
-        }
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "score": {
+        "home": 0,
+        "away": 0
       },
+      "analysis": "在本场 H 组的激烈较量中，西班牙 与 佛得角 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          74,
+          26
+        ],
+        "shots": [
+          27,
+          6
+        ],
+        "target": [
+          7,
+          1
+        ],
+        "fouls": [
+          10,
+          1
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (西班牙)",
+        "team": "ESP",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760426,
+      "date": "2026-06-16",
+      "time": "03:00",
+      "group": "G",
+      "home": "BEL",
+      "away": "EGY",
+      "status": "FT",
+      "stadium": "Lumen Field (Seattle, Washington)",
       "score": {
         "home": 1,
         "away": 1
       },
-      "analysis": "在本场 F 组的激烈较量中，日本 与 瑞典 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "analysis": "在本场 G 组的激烈较量中，比利时 与 埃及 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          52,
-          48
+          54,
+          46
         ],
         "shots": [
-          8,
-          11
+          15,
+          14
         ],
         "target": [
           3,
-          5
+          3
         ],
         "fouls": [
-          20,
-          11
+          15,
+          15
         ]
       },
       "mvp": {
-        "name": "核心球员 (日本)",
-        "team": "JPN",
+        "name": "核心球员 (比利时)",
+        "team": "BEL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760429,
+      "date": "2026-06-16",
+      "time": "06:00",
+      "group": "H",
+      "home": "KSA",
+      "away": "URU",
+      "status": "FT",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "analysis": "在本场 H 组的激烈较量中，沙特阿拉伯 与 乌拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          33,
+          67
+        ],
+        "shots": [
+          7,
+          27
+        ],
+        "target": [
+          3,
+          10
+        ],
+        "fouls": [
+          11,
+          6
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (沙特阿拉伯)",
+        "team": "KSA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760427,
+      "date": "2026-06-16",
+      "time": "09:00",
+      "group": "G",
+      "home": "IRN",
+      "away": "NZL",
+      "status": "FT",
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "analysis": "在本场 G 组的激烈较量中，伊朗 与 新西兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          49,
+          51
+        ],
+        "shots": [
+          17,
+          14
+        ],
+        "target": [
+          4,
+          8
+        ],
+        "fouls": [
+          10,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (伊朗)",
+        "team": "IRN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760432,
+      "date": "2026-06-17",
+      "time": "03:00",
+      "group": "I",
+      "home": "FRA",
+      "away": "SEN",
+      "status": "FT",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 I 组的激烈较量中，法国 与 塞内加尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          53,
+          47
+        ],
+        "shots": [
+          11,
+          6
+        ],
+        "target": [
+          8,
+          2
+        ],
+        "fouls": [
+          5,
+          9
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760430,
+      "date": "2026-06-17",
+      "time": "06:00",
+      "group": "I",
+      "home": "HON",
+      "away": "NOR",
+      "status": "FT",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "analysis": "在本场 I 组的激烈较量中，洪都拉斯 与 挪威 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          39,
+          61
+        ],
+        "shots": [
+          11,
+          12
+        ],
+        "target": [
+          1,
+          5
+        ],
+        "fouls": [
+          12,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (挪威)",
+        "team": "NOR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760433,
+      "date": "2026-06-17",
+      "time": "09:00",
+      "group": "J",
+      "home": "ARG",
+      "away": "ALG",
+      "status": "FT",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "analysis": "在本场 J 组的激烈较量中，阿根廷 与 阿尔及利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          10,
+          7
+        ],
+        "target": [
+          6,
+          1
+        ],
+        "fouls": [
+          13,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 760431,
+      "date": "2026-06-17",
+      "time": "12:00",
+      "group": "J",
+      "home": "AUT",
+      "away": "JOR",
+      "status": "FT",
+      "stadium": "Levi's Stadium (Santa Clara, California)",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 J 组的激烈较量中，奥地利 与 约旦 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          63,
+          37
+        ],
+        "shots": [
+          11,
+          11
+        ],
+        "target": [
+          4,
+          4
+        ],
+        "fouls": [
+          12,
+          7
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (奥地利)",
+        "team": "AUT",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -1135,53 +1432,40 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 21,
+      "id": 5,
       "date": "2026-06-20",
-      "time": "11:00",
-      "group": "D",
-      "home": "ROU",
-      "away": "PAR",
+      "time": "06:00",
+      "group": "C",
+      "home": "MAR",
+      "away": "SCO",
       "status": "FT",
-      "stadium": "李维斯体育场 (圣克拉拉)",
-      "preview": {
-        "wdl": [
-          30,
-          35,
-          35
-        ],
-        "matchup": "罗马尼亚的细腻传控与巴拉圭的坚韧高强度逼抢正面对决。巴拉圭防守稳健，如果能限制罗马尼亚的中场衔接，极有可能再次零封对手并凭借反击得手。",
-        "keyPlayer": "斯坦丘 (罗马尼亚) & 阿尔米隆 (巴拉圭)",
-        "injuries": {
-          "home": "全员健康，无主力伤停",
-          "away": "前锋萨纳夫里亚 (大腿肌肉纤维轻度撕裂，确认缺阵)"
-        }
-      },
+      "stadium": "朗威体育场 (夏洛特)",
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 0
       },
-      "analysis": "在本场 D 组的激烈较量中，罗马尼亚 与 巴拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "analysis": "在本场 C 组的激烈较量中，摩洛哥 与 苏格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          79,
-          21
+          59,
+          41
         ],
         "shots": [
-          32,
-          7
+          12,
+          6
         ],
         "target": [
-          5,
-          2
+          2,
+          0
         ],
         "fouls": [
-          14,
-          15
+          8,
+          11
         ]
       },
       "mvp": {
-        "name": "核心球员 (巴拉圭)",
-        "team": "PAR",
+        "name": "核心球员 (摩洛哥)",
+        "team": "MAR",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -1234,6 +1518,58 @@ const WORLDCUP_DATA = {
       "mvp": {
         "name": "核心球员 (巴西)",
         "team": "BRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 21,
+      "date": "2026-06-20",
+      "time": "11:00",
+      "group": "D",
+      "home": "ROU",
+      "away": "PAR",
+      "status": "FT",
+      "stadium": "李维斯体育场 (圣克拉拉)",
+      "preview": {
+        "wdl": [
+          30,
+          35,
+          35
+        ],
+        "matchup": "罗马尼亚的细腻传控与巴拉圭的坚韧高强度逼抢正面对决。巴拉圭防守稳健，如果能限制罗马尼亚的中场衔接，极有可能再次零封对手并凭借反击得手。",
+        "keyPlayer": "斯坦丘 (罗马尼亚) & 阿尔米隆 (巴拉圭)",
+        "injuries": {
+          "home": "全员健康，无主力伤停",
+          "away": "前锋萨纳夫里亚 (大腿肌肉纤维轻度撕裂，确认缺阵)"
+        }
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "analysis": "在本场 D 组的激烈较量中，罗马尼亚 与 巴拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          79,
+          21
+        ],
+        "shots": [
+          32,
+          7
+        ],
+        "target": [
+          5,
+          2
+        ],
+        "fouls": [
+          14,
+          15
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (巴拉圭)",
+        "team": "PAR",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -1338,552 +1674,6 @@ const WORLDCUP_DATA = {
       "mvp": {
         "name": "核心球员 (德国)",
         "team": "GER",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760417,
-      "date": "2026-06-13",
-      "time": "09:00",
-      "group": "D",
-      "home": "USA",
-      "away": "PAR",
-      "status": "FT",
-      "stadium": "SoFi Stadium (Inglewood, California)",
-      "score": {
-        "home": 4,
-        "away": 1
-      },
-      "analysis": "在本场 D 组的激烈较量中，美国 与 巴拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 4 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          65,
-          35
-        ],
-        "shots": [
-          16,
-          9
-        ],
-        "target": [
-          6,
-          1
-        ],
-        "fouls": [
-          13,
-          17
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (美国)",
-        "team": "USA",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760419,
-      "date": "2026-06-14",
-      "time": "06:00",
-      "group": "C",
-      "home": "BRA",
-      "away": "MAR",
-      "status": "FT",
-      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "analysis": "在本场 C 组的激烈较量中，巴西 与 摩洛哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          51,
-          49
-        ],
-        "shots": [
-          12,
-          14
-        ],
-        "target": [
-          5,
-          3
-        ],
-        "fouls": [
-          16,
-          14
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (巴西)",
-        "team": "BRA",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760418,
-      "date": "2026-06-14",
-      "time": "09:00",
-      "group": "C",
-      "home": "HAI",
-      "away": "SCO",
-      "status": "FT",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "analysis": "在本场 C 组的激烈较量中，海地 与 苏格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          54,
-          46
-        ],
-        "shots": [
-          15,
-          9
-        ],
-        "target": [
-          2,
-          2
-        ],
-        "fouls": [
-          23,
-          21
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (苏格兰)",
-        "team": "SCO",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760421,
-      "date": "2026-06-14",
-      "time": "12:00",
-      "group": "D",
-      "home": "AUS",
-      "away": "ROU",
-      "status": "FT",
-      "stadium": "BC Place (Vancouver)",
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "analysis": "在本场 D 组的激烈较量中，澳大利亚 与 罗马尼亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          28,
-          72
-        ],
-        "shots": [
-          9,
-          30
-        ],
-        "target": [
-          4,
-          8
-        ],
-        "fouls": [
-          12,
-          4
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (澳大利亚)",
-        "team": "AUS",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760425,
-      "date": "2026-06-15",
-      "time": "04:00",
-      "group": "F",
-      "home": "NED",
-      "away": "JPN",
-      "status": "FT",
-      "stadium": "AT&T Stadium (Arlington, Texas)",
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "analysis": "在本场 F 组的激烈较量中，荷兰 与 日本 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          60,
-          40
-        ],
-        "shots": [
-          10,
-          10
-        ],
-        "target": [
-          6,
-          3
-        ],
-        "fouls": [
-          7,
-          7
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (荷兰)",
-        "team": "NED",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760424,
-      "date": "2026-06-15",
-      "time": "10:00",
-      "group": "F",
-      "home": "SWE",
-      "away": "TUN",
-      "status": "FT",
-      "stadium": "Estadio BBVA (Guadalupe)",
-      "score": {
-        "home": 5,
-        "away": 1
-      },
-      "analysis": "在本场 F 组的激烈较量中，瑞典 与 突尼斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 5 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          49,
-          51
-        ],
-        "shots": [
-          13,
-          6
-        ],
-        "target": [
-          7,
-          2
-        ],
-        "fouls": [
-          10,
-          8
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (瑞典)",
-        "team": "SWE",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760428,
-      "date": "2026-06-16",
-      "time": "00:00",
-      "group": "H",
-      "home": "ESP",
-      "away": "CPV",
-      "status": "FT",
-      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "analysis": "在本场 H 组的激烈较量中，西班牙 与 佛得角 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          74,
-          26
-        ],
-        "shots": [
-          27,
-          6
-        ],
-        "target": [
-          7,
-          1
-        ],
-        "fouls": [
-          10,
-          1
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (西班牙)",
-        "team": "ESP",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760426,
-      "date": "2026-06-16",
-      "time": "03:00",
-      "group": "G",
-      "home": "BEL",
-      "away": "EGY",
-      "status": "FT",
-      "stadium": "Lumen Field (Seattle, Washington)",
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "analysis": "在本场 G 组的激烈较量中，比利时 与 埃及 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          54,
-          46
-        ],
-        "shots": [
-          15,
-          14
-        ],
-        "target": [
-          3,
-          3
-        ],
-        "fouls": [
-          15,
-          15
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (比利时)",
-        "team": "BEL",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760429,
-      "date": "2026-06-16",
-      "time": "06:00",
-      "group": "H",
-      "home": "KSA",
-      "away": "URU",
-      "status": "FT",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "analysis": "在本场 H 组的激烈较量中，沙特阿拉伯 与 乌拉圭 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          33,
-          67
-        ],
-        "shots": [
-          7,
-          27
-        ],
-        "target": [
-          3,
-          10
-        ],
-        "fouls": [
-          11,
-          6
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (沙特阿拉伯)",
-        "team": "KSA",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760427,
-      "date": "2026-06-16",
-      "time": "09:00",
-      "group": "G",
-      "home": "IRN",
-      "away": "NZL",
-      "status": "FT",
-      "stadium": "SoFi Stadium (Inglewood, California)",
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "analysis": "在本场 G 组的激烈较量中，伊朗 与 新西兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          49,
-          51
-        ],
-        "shots": [
-          17,
-          14
-        ],
-        "target": [
-          4,
-          8
-        ],
-        "fouls": [
-          10,
-          8
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (伊朗)",
-        "team": "IRN",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760432,
-      "date": "2026-06-17",
-      "time": "03:00",
-      "group": "I",
-      "home": "FRA",
-      "away": "SEN",
-      "status": "FT",
-      "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "analysis": "在本场 I 组的激烈较量中，法国 与 塞内加尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          53,
-          47
-        ],
-        "shots": [
-          11,
-          6
-        ],
-        "target": [
-          8,
-          2
-        ],
-        "fouls": [
-          5,
-          9
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (法国)",
-        "team": "FRA",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760430,
-      "date": "2026-06-17",
-      "time": "06:00",
-      "group": "I",
-      "home": "HON",
-      "away": "NOR",
-      "status": "FT",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
-      "score": {
-        "home": 1,
-        "away": 4
-      },
-      "analysis": "在本场 I 组的激烈较量中，洪都拉斯 与 挪威 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          39,
-          61
-        ],
-        "shots": [
-          11,
-          12
-        ],
-        "target": [
-          1,
-          5
-        ],
-        "fouls": [
-          12,
-          13
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (挪威)",
-        "team": "NOR",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760433,
-      "date": "2026-06-17",
-      "time": "09:00",
-      "group": "J",
-      "home": "ARG",
-      "away": "ALG",
-      "status": "FT",
-      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "analysis": "在本场 J 组的激烈较量中，阿根廷 与 阿尔及利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          48,
-          52
-        ],
-        "shots": [
-          10,
-          7
-        ],
-        "target": [
-          6,
-          1
-        ],
-        "fouls": [
-          13,
-          8
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (阿根廷)",
-        "team": "ARG",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
-      "id": 760431,
-      "date": "2026-06-17",
-      "time": "12:00",
-      "group": "J",
-      "home": "AUT",
-      "away": "JOR",
-      "status": "FT",
-      "stadium": "Levi's Stadium (Santa Clara, California)",
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "analysis": "在本场 J 组的激烈较量中，奥地利 与 约旦 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          63,
-          37
-        ],
-        "shots": [
-          11,
-          11
-        ],
-        "target": [
-          4,
-          4
-        ],
-        "fouls": [
-          12,
-          7
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (奥地利)",
-        "team": "AUT",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -2727,62 +2517,6 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 760467,
-      "date": "2026-06-25",
-      "time": "09:00",
-      "group": "A",
-      "home": "CZE",
-      "away": "MEX",
-      "status": "FT",
-      "stadium": "Estadio Banorte (Mexico City)",
-      "odds": {
-        "moneyline": {
-          "home": 360,
-          "away": -135,
-          "draw": 295
-        },
-        "pointSpread": {
-          "line": 0.5,
-          "homeOdds": 105,
-          "awayOdds": -135
-        },
-        "total": {
-          "line": 2.5,
-          "overOdds": -105,
-          "underOdds": -115
-        }
-      },
-      "score": {
-        "home": 0,
-        "away": 3
-      },
-      "analysis": "在本场 A 组的激烈较量中，捷克 与 墨西哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
-      "stats": {
-        "possession": [
-          52,
-          48
-        ],
-        "shots": [
-          13,
-          11
-        ],
-        "target": [
-          1,
-          5
-        ],
-        "fouls": [
-          9,
-          13
-        ]
-      },
-      "mvp": {
-        "name": "核心球员 (墨西哥)",
-        "team": "MEX",
-        "rating": 8.2,
-        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
-      }
-    },
-    {
       "id": 760466,
       "date": "2026-06-25",
       "time": "09:00",
@@ -2839,57 +2573,57 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 760473,
-      "date": "2026-06-26",
-      "time": "04:00",
-      "group": "E",
-      "home": "CUR",
-      "away": "CIV",
+      "id": 760467,
+      "date": "2026-06-25",
+      "time": "09:00",
+      "group": "A",
+      "home": "CZE",
+      "away": "MEX",
       "status": "FT",
-      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
+      "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 1500,
-          "away": -575,
-          "draw": 700
+          "home": 360,
+          "away": -135,
+          "draw": 295
         },
         "pointSpread": {
-          "line": 2.5,
-          "homeOdds": -150,
-          "awayOdds": 120
+          "line": 0.5,
+          "homeOdds": 105,
+          "awayOdds": -135
         },
         "total": {
-          "line": 3.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "line": 2.5,
+          "overOdds": -105,
+          "underOdds": -115
         }
       },
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
-      "analysis": "在本场 E 组的激烈较量中，库拉索 与 科特迪瓦 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "analysis": "在本场 A 组的激烈较量中，捷克 与 墨西哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
       "stats": {
         "possession": [
-          37,
-          63
+          52,
+          48
         ],
         "shots": [
-          11,
-          7
+          13,
+          11
         ],
         "target": [
-          2,
-          3
+          1,
+          5
         ],
         "fouls": [
-          11,
-          6
+          9,
+          13
         ]
       },
       "mvp": {
-        "name": "核心球员 (科特迪瓦)",
-        "team": "CIV",
+        "name": "核心球员 (墨西哥)",
+        "team": "MEX",
         "rating": 8.2,
         "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
@@ -2951,30 +2685,269 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 760475,
-      "date": "2026-06-27",
-      "time": "03:00",
-      "group": "I",
-      "home": "NOR",
-      "away": "FRA",
-      "status": "Scheduled",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "id": 760473,
+      "date": "2026-06-26",
+      "time": "04:00",
+      "group": "E",
+      "home": "CUR",
+      "away": "CIV",
+      "status": "FT",
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": 425,
-          "away": -175,
-          "draw": 370
+          "home": 1500,
+          "away": -575,
+          "draw": 700
         },
         "pointSpread": {
-          "line": 0.5,
-          "homeOdds": 150,
-          "awayOdds": -190
+          "line": 2.5,
+          "homeOdds": -150,
+          "awayOdds": 120
         },
         "total": {
           "line": 3.5,
-          "overOdds": 140,
-          "underOdds": -175
+          "overOdds": 110,
+          "underOdds": -135
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "analysis": "在本场 E 组的激烈较量中，库拉索 与 科特迪瓦 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          37,
+          63
+        ],
+        "shots": [
+          11,
+          7
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "fouls": [
+          11,
+          6
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (科特迪瓦)",
+        "team": "CIV",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 10,
+      "date": "2026-06-26",
+      "time": "07:00",
+      "group": "F",
+      "home": "NED",
+      "away": "TUN",
+      "status": "FT",
+      "stadium": "吉列体育场 (波士顿)",
+      "odds": {
+        "moneyline": {
+          "home": -1100,
+          "away": 2500,
+          "draw": 1000
+        },
+        "pointSpread": {
+          "line": -2.5,
+          "homeOdds": -125,
+          "awayOdds": 100
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 100,
+          "underOdds": -120
+        }
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 F 组的激烈较量中，荷兰 与 突尼斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          72,
+          28
+        ],
+        "shots": [
+          20,
+          10
+        ],
+        "target": [
+          7,
+          4
+        ],
+        "fouls": [
+          10,
+          11
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (荷兰)",
+        "team": "NED",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 11,
+      "date": "2026-06-26",
+      "time": "07:00",
+      "group": "F",
+      "home": "JPN",
+      "away": "SWE",
+      "status": "FT",
+      "stadium": "大都会体育场 (东卢瑟福)",
+      "odds": {
+        "moneyline": {
+          "home": -110,
+          "away": 340,
+          "draw": 250
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -115,
+          "awayOdds": -110
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -110,
+          "underOdds": -110
+        }
+      },
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "analysis": "在本场 F 组的激烈较量中，日本 与 瑞典 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          52,
+          48
+        ],
+        "shots": [
+          8,
+          11
+        ],
+        "target": [
+          3,
+          5
+        ],
+        "fouls": [
+          20,
+          11
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (日本)",
+        "team": "JPN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
+      }
+    },
+    {
+      "id": 6,
+      "date": "2026-06-26",
+      "time": "10:00",
+      "group": "D",
+      "home": "USA",
+      "away": "ROU",
+      "status": "41'",
+      "stadium": "洛杉矶体育场 (洛杉矶)",
+      "odds": {
+        "moneyline": {
+          "home": 105,
+          "away": 245,
+          "draw": 285
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 105,
+          "awayOdds": -130
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -155,
+          "underOdds": 125
+        }
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "stats": {
+        "possession": [
+          55,
+          45
+        ],
+        "shots": [
+          6,
+          3
+        ],
+        "target": [
+          3,
+          2
+        ],
+        "fouls": [
+          7,
+          5
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "date": "2026-06-26",
+      "time": "10:00",
+      "group": "D",
+      "home": "PAR",
+      "away": "AUS",
+      "status": "41'",
+      "stadium": "NRG体育场 (休斯敦)",
+      "odds": {
+        "moneyline": {
+          "home": 155,
+          "away": 330,
+          "draw": 140
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 145,
+          "awayOdds": -185
+        },
+        "total": {
+          "line": 1.5,
+          "overOdds": -115,
+          "underOdds": -110
+        }
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          39,
+          61
+        ],
+        "shots": [
+          1,
+          4
+        ],
+        "target": [
+          0,
+          2
+        ],
+        "fouls": [
+          4,
+          3
+        ]
       }
     },
     {
@@ -2996,6 +2969,33 @@ const WORLDCUP_DATA = {
           "line": -1.5,
           "homeOdds": -150,
           "awayOdds": 120
+        },
+        "total": {
+          "line": 3.5,
+          "overOdds": 140,
+          "underOdds": -175
+        }
+      }
+    },
+    {
+      "id": 760475,
+      "date": "2026-06-27",
+      "time": "03:00",
+      "group": "I",
+      "home": "NOR",
+      "away": "FRA",
+      "status": "Scheduled",
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "odds": {
+        "moneyline": {
+          "home": 425,
+          "away": -175,
+          "draw": 370
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": 150,
+          "awayOdds": -190
         },
         "total": {
           "line": 3.5,
@@ -3221,33 +3221,6 @@ const WORLDCUP_DATA = {
       }
     },
     {
-      "id": 760484,
-      "date": "2026-06-28",
-      "time": "10:00",
-      "group": "淘汰赛",
-      "home": "ALG",
-      "away": "AUT",
-      "status": "Scheduled",
-      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
-      "odds": {
-        "moneyline": {
-          "home": 295,
-          "away": 190,
-          "draw": 125
-        },
-        "pointSpread": {
-          "line": 0.5,
-          "homeOdds": -235,
-          "awayOdds": 180
-        },
-        "total": {
-          "line": 1.5,
-          "overOdds": -190,
-          "underOdds": 155
-        }
-      }
-    },
-    {
       "id": 760483,
       "date": "2026-06-28",
       "time": "10:00",
@@ -3271,6 +3244,33 @@ const WORLDCUP_DATA = {
           "line": 2.5,
           "overOdds": -175,
           "underOdds": 140
+        }
+      }
+    },
+    {
+      "id": 760484,
+      "date": "2026-06-28",
+      "time": "10:00",
+      "group": "淘汰赛",
+      "home": "ALG",
+      "away": "AUT",
+      "status": "Scheduled",
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "odds": {
+        "moneyline": {
+          "home": 295,
+          "away": 190,
+          "draw": 125
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -235,
+          "awayOdds": 180
+        },
+        "total": {
+          "line": 1.5,
+          "overOdds": -190,
+          "underOdds": 155
         }
       }
     },
@@ -3534,93 +3534,6 @@ const WORLDCUP_DATA = {
       "away": "RD16 W8",
       "status": "Scheduled",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
-    },
-    {
-      "id": 760489,
-      "date": "2026-06-30",
-      "time": "04:30",
-      "group": "E",
-      "home": "GER",
-      "away": "3RD",
-      "status": "Scheduled",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
-    },
-    {
-      "id": 760500,
-      "date": "2026-07-04",
-      "time": "06:00",
-      "group": "J",
-      "home": "ARG",
-      "away": "2H",
-      "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
-    },
-    {
-      "id": 760486,
-      "date": "2026-06-29",
-      "time": "03:00",
-      "group": "B",
-      "home": "2A",
-      "away": "CAN",
-      "status": "Scheduled",
-      "stadium": "SoFi Stadium (Inglewood, California)"
-    },
-    {
-      "id": 760498,
-      "date": "2026-07-03",
-      "time": "11:00",
-      "group": "B",
-      "home": "SUI",
-      "away": "3RD",
-      "status": "Scheduled",
-      "stadium": "BC Place (Vancouver)"
-    },
-    {
-      "id": 760486,
-      "date": "2026-06-29",
-      "time": "03:00",
-      "group": "A",
-      "home": "RSA",
-      "away": "CAN",
-      "status": "Scheduled",
-      "stadium": "SoFi Stadium (Inglewood, California)",
-      "odds": {
-        "moneyline": {
-          "home": 400,
-          "away": -130,
-          "draw": 255
-        },
-        "pointSpread": {
-          "line": 0.5,
-          "homeOdds": 105,
-          "awayOdds": -135
-        },
-        "total": {
-          "line": 2.5,
-          "overOdds": 120,
-          "underOdds": -150
-        }
-      }
-    },
-    {
-      "id": 760487,
-      "date": "2026-06-30",
-      "time": "01:00",
-      "group": "C",
-      "home": "BRA",
-      "away": "2F",
-      "status": "Scheduled",
-      "stadium": "NRG Stadium (Houston, Texas)"
-    },
-    {
-      "id": 760488,
-      "date": "2026-06-30",
-      "time": "09:00",
-      "group": "C",
-      "home": "1F",
-      "away": "MAR",
-      "status": "Scheduled",
-      "stadium": "Estadio BBVA (Guadalupe)"
     }
   ],
   "dailySummaries": {
