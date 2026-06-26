@@ -138,11 +138,28 @@ async function run() {
     const isCompleted = comp.status.type.completed;
     const detailStatus = comp.status.type.detail; // e.g. "FT", "Live 45'"
 
-    // 在本地赛程表中查找对应的比赛
-    let match = WORLDCUP_DATA.matches.find(m => 
-      (m.home === homeAbbr && m.away === awayAbbr) ||
-      (m.home === awayAbbr && m.away === homeAbbr)
-    );
+    // 在本地赛程表中优先根据 ID 查找对应的比赛，以防淘汰赛/小组赛末轮队伍更新导致对碰名称变化
+    const eventId = parseInt(event.id);
+    let match = WORLDCUP_DATA.matches.find(m => m.id === eventId);
+    
+    // 如果匹配到已有比赛，且该比赛是淘汰赛阶段，则将实际晋级球队覆盖 placeholder 并确保组别为淘汰赛
+    if (match) {
+      const utcDate = new Date(event.date);
+      const bjDate = new Date(utcDate.getTime() + 8 * 60 * 60 * 1000);
+      const matchDate = bjDate.toISOString().slice(0, 10);
+      
+      if (matchDate >= "2026-06-28" || match.group === "淘汰赛") {
+        match.group = "淘汰赛";
+        match.home = homeAbbr;
+        match.away = awayAbbr;
+      }
+    } else {
+      // 降级：如果按 ID 找不到，作为兼容降级按主客队对碰寻找
+      match = WORLDCUP_DATA.matches.find(m => 
+        (m.home === homeAbbr && m.away === awayAbbr) ||
+        (m.home === awayAbbr && m.away === homeAbbr)
+      );
+    }
 
     if (!match) {
       // 如果本地没有这场比赛，则动态添加它！
@@ -156,10 +173,13 @@ async function run() {
 
       // 查询组别
       let group = "淘汰赛";
-      if (WORLDCUP_DATA.teams[homeAbbr] && WORLDCUP_DATA.teams[homeAbbr].group) {
-        group = WORLDCUP_DATA.teams[homeAbbr].group;
-      } else if (WORLDCUP_DATA.teams[awayAbbr] && WORLDCUP_DATA.teams[awayAbbr].group) {
-        group = WORLDCUP_DATA.teams[awayAbbr].group;
+      // 小组赛阶段（2026-06-27 及之前）自动检测国家所属分组，之后全部归为淘汰赛
+      if (matchDate <= "2026-06-27") {
+        if (WORLDCUP_DATA.teams[homeAbbr] && WORLDCUP_DATA.teams[homeAbbr].group) {
+          group = WORLDCUP_DATA.teams[homeAbbr].group;
+        } else if (WORLDCUP_DATA.teams[awayAbbr] && WORLDCUP_DATA.teams[awayAbbr].group) {
+          group = WORLDCUP_DATA.teams[awayAbbr].group;
+        }
       }
 
       // 获取球场信息

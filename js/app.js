@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const localDate = new Date(today.getTime() - (offset * 60 * 1000));
   const localDateString = localDate.toISOString().split('T')[0];
 
-  // 检查本地日期是否在小组赛范围内 (2026-06-11 至 2026-06-27)
-  const isWithinWorldCup = localDateString >= "2026-06-11" && localDateString <= "2026-06-27";
+  // 检查本地日期是否在世界杯范围内 (2026-06-11 至 2026-07-20)
+  const isWithinWorldCup = localDateString >= "2026-06-11" && localDateString <= "2026-07-20";
   const defaultDate = isWithinWorldCup ? localDateString : WORLDCUP_DATA.currentDate;
 
   const state = {
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedDate: defaultDate,
     activeTab: "tab-schedule",
     activeMatchDetailId: null, // 跟踪当前打开的详情弹窗比赛 ID
+    activeKnockoutRound: "R32", // 淘汰赛当前激活轮次 (R32, R16, QF, SF, FI)
   };
 
   // DOM 节点缓存
@@ -42,6 +43,40 @@ document.addEventListener("DOMContentLoaded", () => {
     tabPanels: document.querySelectorAll(".tab-panel"),
     prevDateBtn: document.querySelector(".prev-btn"),
     nextDateBtn: document.querySelector(".next-btn"),
+  };
+
+  // 球队信息获取助手（处理真实球队与淘汰赛预留席位占位符）
+  const getTeam = (code) => {
+    if (!code) return { name: "待定", flag: "🏳️" };
+    if (WORLDCUP_DATA.teams[code]) {
+      return WORLDCUP_DATA.teams[code];
+    }
+    
+    let name = code;
+    let flag = "🏳️";
+    
+    const groupMatch1 = code.match(/^1([A-L])$/);
+    const groupMatch2 = code.match(/^2([A-L])$/);
+    
+    if (groupMatch1) {
+      name = `${groupMatch1[1]}组第一`;
+    } else if (groupMatch2) {
+      name = `${groupMatch2[1]}组第二`;
+    } else if (code === "3RD") {
+      name = "小组第三";
+    } else if (code === "RD32") {
+      name = "32强晋级队";
+    } else if (code.startsWith("RD16 W")) {
+      name = `1/8决赛 胜者 ${code.split('W').pop()}`;
+    } else if (code.startsWith("QF W")) {
+      name = `1/4决赛 胜者 ${code.split('W').pop()}`;
+    } else if (code.startsWith("SF W")) {
+      name = `半决赛 胜者 ${code.split('W').pop()}`;
+    } else if (code.startsWith("SF L")) {
+      name = `半决赛 败者 ${code.split('L').pop()}`;
+    }
+    
+    return { name, flag, group: "淘汰赛" };
   };
 
   // 提取 ESPN 数据统计指标并对其进行主客场排列调整
@@ -478,9 +513,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderDateSlider() {
     dom.dateSlider.innerHTML = "";
     
-    // 生成从 6月11日 到 6月27日 (小组赛阶段) 的日期数组
+    // 动态获取所有比赛的日期范围并自动扩展日历滑块
+    const matchDates = WORLDCUP_DATA.matches.map(m => m.date).filter(Boolean).sort();
     const startDate = new Date("2026-06-11");
-    const endDate = new Date("2026-06-27");
+    const endDate = matchDates.length > 0 ? new Date(matchDates[matchDates.length - 1]) : new Date("2026-07-20");
     
     for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
       const dateString = d.toISOString().split("T")[0];
@@ -568,8 +604,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     dayMatches.forEach(match => {
-      const homeTeam = WORLDCUP_DATA.teams[match.home];
-      const awayTeam = WORLDCUP_DATA.teams[match.away];
+      const homeTeam = getTeam(match.home);
+      const awayTeam = getTeam(match.away);
       
       const card = document.createElement("div");
       card.className = "card match-card animate-slide-up";
@@ -601,7 +637,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <div class="match-card-header">
-          <span class="match-group">${match.group}组</span>
+          <span class="match-group">${match.group === "淘汰赛" ? "淘汰赛" : match.group + "组"}</span>
           <span class="match-stadium"><i class="fa-solid fa-location-dot"></i> ${match.stadium}</span>
         </div>
         <div class="match-teams-box">
@@ -650,35 +686,37 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     });
 
-    // 统计已完赛的所有比赛
+    // 统计已完赛的所有小组赛比赛 (过滤淘汰赛，且检查队伍在积分表内存在)
     WORLDCUP_DATA.matches.forEach(m => {
-      if (m.status === "FT") {
+      if (m.status === "FT" && m.group !== "淘汰赛") {
         const home = standings[m.home];
         const away = standings[m.away];
         
-        home.mp += 1;
-        away.mp += 1;
-        home.gf += m.score.home;
-        home.ga += m.score.away;
-        away.gf += m.score.away;
-        away.ga += m.score.home;
-        
-        home.gd = home.gf - home.ga;
-        away.gd = away.gf - away.ga;
+        if (home && away) {
+          home.mp += 1;
+          away.mp += 1;
+          home.gf += m.score.home;
+          home.ga += m.score.away;
+          away.gf += m.score.away;
+          away.ga += m.score.home;
+          
+          home.gd = home.gf - home.ga;
+          away.gd = away.gf - away.ga;
 
-        if (m.score.home > m.score.away) {
-          home.w += 1;
-          home.pts += 3;
-          away.l += 1;
-        } else if (m.score.home < m.score.away) {
-          away.w += 1;
-          away.pts += 3;
-          home.l += 1;
-        } else {
-          home.d += 1;
-          away.d += 1;
-          home.pts += 1;
-          away.pts += 1;
+          if (m.score.home > m.score.away) {
+            home.w += 1;
+            home.pts += 3;
+            away.l += 1;
+          } else if (m.score.home < m.score.away) {
+            away.w += 1;
+            away.pts += 3;
+            home.l += 1;
+          } else {
+            home.d += 1;
+            away.d += 1;
+            home.pts += 1;
+            away.pts += 1;
+          }
         }
       }
     });
@@ -785,7 +823,152 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ==========================================
+  // 6. 淘汰赛对阵图与轮次选择面板渲染 (Tab Knockout)
+  // ==========================================
+  function getKnockoutMatchesByRound(roundId) {
+    return WORLDCUP_DATA.matches.filter(match => {
+      // 必须是淘汰赛阶段的比赛
+      if (match.group !== "淘汰赛" && match.date < "2026-06-28") return false;
+      
+      const d = match.date;
+      if (roundId === "R32") {
+        return d >= "2026-06-29" && d <= "2026-07-04";
+      } else if (roundId === "R16") {
+        return d >= "2026-07-05" && d <= "2026-07-09";
+      } else if (roundId === "QF") {
+        return d >= "2026-07-10" && d <= "2026-07-13";
+      } else if (roundId === "SF") {
+        return d >= "2026-07-14" && d <= "2026-07-16";
+      } else if (roundId === "FI") {
+        return d >= "2026-07-17";
+      }
+      return false;
+    }).sort((a, b) => {
+      if (a.date !== b.date) return a.date.localeCompare(b.date);
+      return a.time.localeCompare(b.time);
+    });
+  }
 
+  function renderKnockoutTab() {
+    const panel = document.getElementById("tab-knockout");
+    if (!panel) return;
+    
+    const rounds = [
+      { id: "R32", name: "1/16决赛", desc: "32强" },
+      { id: "R16", name: "1/8决赛", desc: "16强" },
+      { id: "QF", name: "1/4决赛", desc: "8强" },
+      { id: "SF", name: "半决赛", desc: "4强" },
+      { id: "FI", name: "决赛 & 三四名", desc: "冠亚军" }
+    ];
+    
+    const subNavHtml = rounds.map(r => `
+      <button class="sub-tab-btn ${state.activeKnockoutRound === r.id ? 'active' : ''}" data-round="${r.id}">
+        <span class="sub-tab-name">${r.name}</span>
+        <span class="sub-tab-desc">${r.desc}</span>
+      </button>
+    `).join("");
+    
+    const filteredMatches = getKnockoutMatchesByRound(state.activeKnockoutRound);
+    
+    let matchesHtml = "";
+    if (filteredMatches.length === 0) {
+      matchesHtml = `
+        <div class="card" style="grid-column: 1/-1; padding: 3rem; text-align: center; color: var(--text-secondary);">
+          <i class="fa-solid fa-hourglass-half" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-muted);"></i>
+          <p>该轮次对阵正在根据小组出线赛果实时匹配中，敬请期待！</p>
+        </div>
+      `;
+    } else {
+      matchesHtml = filteredMatches.map(match => {
+        const homeTeam = getTeam(match.home);
+        const awayTeam = getTeam(match.away);
+        
+        let scoreDisplay = `<span class="match-vs">VS</span>`;
+        let statusClass = "scheduled";
+        let statusText = `${match.date.slice(5)} ${match.time}`;
+  
+        if (match.status === "FT") {
+          scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
+          statusClass = "ft";
+          statusText = "已结束 FT";
+        } else if (match.status !== "Scheduled") {
+          scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
+          statusClass = "live";
+          statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
+        }
+  
+        let actionBtn = "";
+        if (match.status === "FT") {
+          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-file-invoice-chart"></i> 详细战报</button>`;
+        } else if (match.status !== "Scheduled") {
+          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wave-square"></i> 实时统计</button>`;
+        } else {
+          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赔率比较分析</button>`;
+        }
+        
+        let roundLabel = "淘汰赛";
+        if (state.activeKnockoutRound === "FI") {
+          if (match.stadium.toLowerCase().includes("third") || match.home.includes("L") || match.away.includes("L")) {
+            roundLabel = "三四名决赛";
+          } else {
+            roundLabel = "决赛";
+          }
+        } else {
+          const roundObj = rounds.find(r => r.id === state.activeKnockoutRound);
+          if (roundObj) roundLabel = roundObj.name;
+        }
+  
+        return `
+          <div class="card match-card animate-slide-up">
+            <div class="match-card-header">
+              <span class="match-group">${roundLabel}</span>
+              <span class="match-stadium"><i class="fa-solid fa-location-dot"></i> ${match.stadium}</span>
+            </div>
+            <div class="match-teams-box">
+              <div class="match-team home">
+                <span class="team-flag">${homeTeam.flag}</span>
+                <span class="team-name">${homeTeam.name}</span>
+              </div>
+              <div class="match-score-area">
+                ${scoreDisplay}
+              </div>
+              <div class="match-team away">
+                <span class="team-flag">${awayTeam.flag}</span>
+                <span class="team-name">${awayTeam.name}</span>
+              </div>
+            </div>
+            <div class="match-card-footer">
+              <span class="match-status-badge ${statusClass}">${statusText}</span>
+              ${actionBtn}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+    
+    panel.innerHTML = `
+      <div class="panel-header animate-fade-in">
+        <h2><i class="fa-solid fa-diagram-project"></i> 2026年世界杯淘汰赛对阵图</h2>
+        <span class="match-count-badge">${filteredMatches.length} 场对决</span>
+      </div>
+      
+      <div class="knockout-sub-tabs animate-fade-in">
+        ${subNavHtml}
+      </div>
+      
+      <div class="match-grid" id="knockout-match-list" style="margin-top: 1.5rem;">
+        ${matchesHtml}
+      </div>
+    `;
+    
+    panel.querySelectorAll(".sub-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        state.activeKnockoutRound = btn.dataset.round;
+        renderKnockoutTab();
+      });
+    });
+  }
 
   // ==========================================
   // 7. 单场比赛详情弹窗展示 (Modal details)
@@ -795,8 +978,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const match = WORLDCUP_DATA.matches.find(m => m.id === matchId);
     if (!match) return;
 
-    const homeTeam = WORLDCUP_DATA.teams[match.home];
-    const awayTeam = WORLDCUP_DATA.teams[match.away];
+    const homeTeam = getTeam(match.home);
+    const awayTeam = getTeam(match.away);
     
     let modalHtml = "";
 
@@ -828,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modalHtml = `
         <div class="detail-meta" style="margin-bottom: 1rem;">
-          <span class="detail-meta-group">${match.group}组</span>
+          <span class="detail-meta-group">${match.group === "淘汰赛" ? "淘汰赛" : match.group + "组"}</span>
           <span><i class="fa-solid fa-map-location-dot"></i> ${match.stadium}</span>
           <span style="margin-left: 1rem;"><i class="fa-regular fa-clock"></i> ${zhDateString}</span>
         </div>
@@ -910,7 +1093,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <i class="fa-solid fa-award info-icon" style="color: var(--accent-yellow);"></i>
             <div>
               <strong style="color:var(--accent-yellow);">本场最佳球员 (Man of the Match):</strong> 
-              <span>${match.mvp.name} (${WORLDCUP_DATA.teams[match.mvp.team].name}) - 评分: ${match.mvp.rating}。理由: ${match.mvp.reason}</span>
+              <span>${match.mvp.name} (${getTeam(match.mvp.team).name}) - 评分: ${match.mvp.rating}。理由: ${match.mvp.reason}</span>
             </div>
           </div>
         ` : ""}
@@ -1006,7 +1189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modalHtml = `
         <div class="detail-meta" style="margin-bottom: 1rem;">
-          <span class="detail-meta-group">${match.group}组</span>
+          <span class="detail-meta-group">${match.group === "淘汰赛" ? "淘汰赛" : match.group + "组"}</span>
           <span><i class="fa-solid fa-map-location-dot"></i> ${match.stadium}</span>
           <span style="margin-left: 1rem;"><i class="fa-regular fa-clock"></i> ${zhDateString}</span>
         </div>
@@ -1148,6 +1331,8 @@ document.addEventListener("DOMContentLoaded", () => {
       renderScheduleTab();
     } else if (state.activeTab === "tab-standings") {
       renderStandingsTab();
+    } else if (state.activeTab === "tab-knockout") {
+      renderKnockoutTab();
     }
   }
 
