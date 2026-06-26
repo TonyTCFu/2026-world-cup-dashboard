@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-26 02:41:23
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-26 14:04:01
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-26 02:41:23",
+  "lastUpdated": "2026-06-26 14:04:01",
   "currentDate": "2026-06-26",
   "currentMatchday": 16,
   "teams": {
@@ -2859,7 +2859,7 @@ const WORLDCUP_DATA = {
       "group": "D",
       "home": "USA",
       "away": "ROU",
-      "status": "41'",
+      "status": "FT",
       "stadium": "洛杉矶体育场 (洛杉矶)",
       "odds": {
         "moneyline": {
@@ -2879,26 +2879,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 1,
-        "away": 2
+        "home": 2,
+        "away": 3
       },
       "stats": {
         "possession": [
-          55,
-          45
+          52,
+          48
         ],
         "shots": [
-          6,
-          3
+          18,
+          9
         ],
         "target": [
-          3,
-          2
+          7,
+          3
         ],
         "fouls": [
-          7,
-          5
+          13,
+          13
         ]
+      },
+      "analysis": "在本场 D 组的激烈较量中，美国 与 罗马尼亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (罗马尼亚)",
+        "team": "ROU",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2908,7 +2915,7 @@ const WORLDCUP_DATA = {
       "group": "D",
       "home": "PAR",
       "away": "AUS",
-      "status": "41'",
+      "status": "FT",
       "stadium": "NRG体育场 (休斯敦)",
       "odds": {
         "moneyline": {
@@ -2933,21 +2940,28 @@ const WORLDCUP_DATA = {
       },
       "stats": {
         "possession": [
-          39,
-          61
+          44,
+          56
         ],
         "shots": [
-          1,
-          4
+          7,
+          12
         ],
         "target": [
-          0,
-          2
+          2,
+          5
         ],
         "fouls": [
-          4,
-          3
+          9,
+          6
         ]
+      },
+      "analysis": "在本场 D 组的激烈较量中，巴拉圭 与 澳大利亚 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (巴拉圭)",
+        "team": "PAR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -2968,12 +2982,12 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -1.5,
           "homeOdds": -150,
-          "awayOdds": 120
+          "awayOdds": 115
         },
         "total": {
           "line": 3.5,
-          "overOdds": 140,
-          "underOdds": -175
+          "overOdds": 130,
+          "underOdds": -160
         }
       }
     },
@@ -2988,19 +3002,19 @@ const WORLDCUP_DATA = {
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
-          "home": 425,
-          "away": -175,
-          "draw": 370
+          "home": 400,
+          "away": -165,
+          "draw": 360
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 150,
-          "awayOdds": -190
+          "homeOdds": 140,
+          "awayOdds": -175
         },
         "total": {
           "line": 3.5,
-          "overOdds": 140,
-          "underOdds": -175
+          "overOdds": 125,
+          "underOdds": -155
         }
       }
     },
@@ -3016,8 +3030,8 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 165,
-          "away": 170,
-          "draw": 235
+          "away": 175,
+          "draw": 230
         },
         "pointSpread": {
           "line": -0.5,
@@ -3026,8 +3040,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "overOdds": 115,
+          "underOdds": -145
         }
       }
     },
@@ -3042,19 +3056,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Akron (Guadalajara)",
       "odds": {
         "moneyline": {
-          "home": 700,
-          "away": -210,
-          "draw": 320
+          "home": 650,
+          "away": -195,
+          "draw": 300
         },
         "pointSpread": {
-          "line": 1.5,
-          "homeOdds": -185,
-          "awayOdds": 145
+          "line": 0.5,
+          "homeOdds": 160,
+          "awayOdds": -205
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": 110,
+          "underOdds": -140
         }
       }
     },
@@ -3070,12 +3084,12 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 150,
-          "away": 295,
+          "away": 280,
           "draw": 160
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 140,
+          "homeOdds": 145,
           "awayOdds": -180
         },
         "total": {
@@ -3107,7 +3121,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 3.5,
-          "overOdds": 100,
+          "overOdds": -105,
           "underOdds": -120
         }
       }
@@ -3177,14 +3191,14 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 320,
-          "away": -120,
-          "draw": 280
+          "home": 310,
+          "away": -115,
+          "draw": 275
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 100,
-          "awayOdds": -125
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
@@ -3215,7 +3229,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -115,
+          "overOdds": -110,
           "underOdds": -110
         }
       }
@@ -3232,7 +3246,7 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 1400,
-          "away": -525,
+          "away": -550,
           "draw": 650
         },
         "pointSpread": {
@@ -3242,8 +3256,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -175,
-          "underOdds": 140
+          "overOdds": -180,
+          "underOdds": 145
         }
       }
     },
@@ -3258,19 +3272,19 @@ const WORLDCUP_DATA = {
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
-          "home": 295,
+          "home": 310,
           "away": 190,
-          "draw": 125
+          "draw": 120
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -235,
+          "homeOdds": -230,
           "awayOdds": 180
         },
         "total": {
           "line": 1.5,
           "overOdds": -190,
-          "underOdds": 155
+          "underOdds": 150
         }
       }
     },
@@ -3312,14 +3326,14 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": -120,
-          "away": 350,
-          "draw": 265
+          "home": -130,
+          "away": 380,
+          "draw": 275
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -130,
-          "awayOdds": 100
+          "homeOdds": -135,
+          "awayOdds": 110
         },
         "total": {
           "line": 2.5,
@@ -3349,19 +3363,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio BBVA (Guadalupe)",
       "odds": {
         "moneyline": {
-          "home": 110,
-          "away": 275,
+          "home": 105,
+          "away": 280,
           "draw": 235
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 105,
+          "homeOdds": 100,
           "awayOdds": -130
         },
         "total": {
           "line": 2.5,
-          "overOdds": 120,
-          "underOdds": -150
+          "overOdds": 125,
+          "underOdds": -155
         }
       }
     },
@@ -3423,7 +3437,24 @@ const WORLDCUP_DATA = {
       "home": "USA",
       "away": "BIH",
       "status": "Scheduled",
-      "stadium": "Levi's Stadium (Santa Clara, California)"
+      "stadium": "Levi's Stadium (Santa Clara, California)",
+      "odds": {
+        "moneyline": {
+          "home": -195,
+          "away": 550,
+          "draw": 330
+        },
+        "pointSpread": {
+          "line": null,
+          "homeOdds": null,
+          "awayOdds": null
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -120,
+          "underOdds": 100
+        }
+      }
     },
     {
       "id": 760497,
@@ -3460,7 +3491,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-04",
       "time": "02:00",
       "group": "淘汰赛",
-      "home": "2D",
+      "home": "AUS",
       "away": "2G",
       "status": "Scheduled",
       "stadium": "AT&T Stadium (Arlington, Texas)"
@@ -3623,8 +3654,8 @@ const WORLDCUP_DATA = {
     },
     "2026-06-26": {
       "title": "第16比赛日战况汇总",
-      "content": "在第16比赛日中，完成了多场强强对话，具体赛果为：荷兰 3-1 突尼斯；日本 1-1 瑞典；库拉索 0-2 科特迪瓦；厄瓜多尔 2-1 德国。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
-      "keyMatch": 10,
+      "content": "在第16比赛日中，完成了多场强强对话，具体赛果为：厄瓜多尔 2-1 德国；库拉索 0-2 科特迪瓦；荷兰 3-1 突尼斯；日本 1-1 瑞典；美国 2-3 罗马尼亚；巴拉圭 0-0 澳大利亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760468,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
