@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-27 05:00:23
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-27 06:39:51
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-27 05:00:23",
+  "lastUpdated": "2026-06-27 06:39:51",
   "currentDate": "2026-06-26",
   "currentMatchday": 16,
   "teams": {
@@ -2971,7 +2971,7 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "SEN",
       "away": "HON",
-      "status": "90'+1'",
+      "status": "38'",
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
@@ -2991,25 +2991,25 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 5,
+        "home": 1,
         "away": 0
       },
       "stats": {
         "possession": [
-          69,
-          31
+          56,
+          44
         ],
         "shots": [
-          26,
-          6
+          7,
+          2
         ],
         "target": [
-          10,
-          1
+          2,
+          0
         ],
         "fouls": [
-          9,
-          10
+          4,
+          3
         ]
       }
     },
@@ -3020,7 +3020,7 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "NOR",
       "away": "FRA",
-      "status": "90'+5'",
+      "status": "39'",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
@@ -3041,24 +3041,24 @@ const WORLDCUP_DATA = {
       },
       "score": {
         "home": 1,
-        "away": 4
+        "away": 3
       },
       "stats": {
         "possession": [
-          43,
-          57
+          37,
+          63
         ],
         "shots": [
-          10,
-          18
+          4,
+          13
         ],
         "target": [
-          4,
-          9
+          2,
+          8
         ],
         "fouls": [
-          9,
-          10
+          4,
+          4
         ]
       }
     },
@@ -3100,19 +3100,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Akron (Guadalajara)",
       "odds": {
         "moneyline": {
-          "home": 500,
-          "away": -145,
-          "draw": 255
+          "home": 475,
+          "away": -140,
+          "draw": 245
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 120,
-          "awayOdds": -155
+          "homeOdds": 115,
+          "awayOdds": -145
         },
         "total": {
           "line": 2.5,
-          "overOdds": 130,
-          "underOdds": -160
+          "overOdds": 145,
+          "underOdds": -180
         }
       }
     },
@@ -3128,18 +3128,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 150,
-          "away": 275,
-          "draw": 165
+          "away": 295,
+          "draw": 155
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 145,
+          "homeOdds": 140,
           "awayOdds": -180
         },
         "total": {
           "line": 1.5,
-          "overOdds": -155,
-          "underOdds": 125
+          "overOdds": -160,
+          "underOdds": 130
         }
       }
     },
@@ -3160,8 +3160,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -140,
-          "awayOdds": 110
+          "homeOdds": -145,
+          "awayOdds": 115
         },
         "total": {
           "line": 3.5,
@@ -3183,7 +3183,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": -130,
           "away": 450,
-          "draw": 230
+          "draw": 240
         },
         "pointSpread": {
           "line": -0.5,
@@ -3209,18 +3209,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 1500,
-          "away": -600,
+          "away": -650,
           "draw": 750
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -150,
-          "awayOdds": 120
+          "homeOdds": -145,
+          "awayOdds": 115
         },
         "total": {
           "line": 3.5,
           "overOdds": 110,
-          "underOdds": -140
+          "underOdds": -135
         }
       }
     },
@@ -3246,8 +3246,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
-          "underOdds": -120
+          "overOdds": 100,
+          "underOdds": -125
         }
       }
     },
@@ -3327,8 +3327,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 1.5,
-          "overOdds": -175,
-          "underOdds": 140
+          "overOdds": -180,
+          "underOdds": 145
         }
       }
     },
@@ -3376,13 +3376,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -150,
-          "awayOdds": 120
+          "homeOdds": -145,
+          "awayOdds": 115
         },
         "total": {
           "line": 2.5,
           "overOdds": 105,
-          "underOdds": -125
+          "underOdds": -130
         }
       }
     },
@@ -3414,7 +3414,7 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -0.5,
           "homeOdds": 110,
-          "awayOdds": -140
+          "awayOdds": -135
         },
         "total": {
           "line": 2.5,
