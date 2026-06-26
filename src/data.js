@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-27 06:39:51
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-27 07:51:48
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-27 06:39:51",
-  "currentDate": "2026-06-26",
-  "currentMatchday": 16,
+  "lastUpdated": "2026-06-27 07:51:48",
+  "currentDate": "2026-06-27",
+  "currentMatchday": 17,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -2971,7 +2971,7 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "SEN",
       "away": "HON",
-      "status": "38'",
+      "status": "FT",
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
@@ -2991,26 +2991,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 1,
+        "home": 5,
         "away": 0
       },
       "stats": {
         "possession": [
-          56,
-          44
+          69,
+          31
         ],
         "shots": [
-          7,
-          2
+          28,
+          6
         ],
         "target": [
-          2,
-          0
+          12,
+          1
         ],
         "fouls": [
-          4,
-          3
+          10,
+          11
         ]
+      },
+      "analysis": "在本场 I 组的激烈较量中，塞内加尔 与 洪都拉斯 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 5 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (塞内加尔)",
+        "team": "SEN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3020,7 +3027,7 @@ const WORLDCUP_DATA = {
       "group": "I",
       "home": "NOR",
       "away": "FRA",
-      "status": "39'",
+      "status": "FT",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
@@ -3041,25 +3048,32 @@ const WORLDCUP_DATA = {
       },
       "score": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
       "stats": {
         "possession": [
-          37,
-          63
+          43,
+          57
         ],
         "shots": [
-          4,
-          13
+          10,
+          18
         ],
         "target": [
-          2,
-          8
+          4,
+          9
         ],
         "fouls": [
-          4,
-          4
+          9,
+          11
         ]
+      },
+      "analysis": "在本场 I 组的激烈较量中，挪威 与 法国 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3073,19 +3087,19 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 165,
-          "away": 175,
-          "draw": 230
+          "home": 215,
+          "away": 135,
+          "draw": 240
         },
         "pointSpread": {
-          "line": -0.5,
-          "homeOdds": 155,
-          "awayOdds": -200
+          "line": 0.5,
+          "homeOdds": -160,
+          "awayOdds": 125
         },
         "total": {
           "line": 2.5,
-          "overOdds": 120,
-          "underOdds": -150
+          "overOdds": 100,
+          "underOdds": -120
         }
       }
     },
@@ -3100,19 +3114,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Akron (Guadalajara)",
       "odds": {
         "moneyline": {
-          "home": 475,
-          "away": -140,
-          "draw": 245
+          "home": 550,
+          "away": -165,
+          "draw": 280
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 140,
+          "awayOdds": -175
         },
         "total": {
           "line": 2.5,
-          "overOdds": 145,
-          "underOdds": -180
+          "overOdds": 105,
+          "underOdds": -130
         }
       }
     },
@@ -3127,19 +3141,19 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 150,
-          "away": 295,
-          "draw": 155
+          "home": 160,
+          "away": 255,
+          "draw": 165
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 140,
-          "awayOdds": -180
+          "homeOdds": 150,
+          "awayOdds": -195
         },
         "total": {
           "line": 1.5,
-          "overOdds": -160,
-          "underOdds": 130
+          "overOdds": -175,
+          "underOdds": 140
         }
       }
     },
@@ -3155,18 +3169,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 1200,
-          "away": -500,
-          "draw": 650
+          "away": -525,
+          "draw": 700
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -145,
-          "awayOdds": 115
+          "homeOdds": -135,
+          "awayOdds": 110
         },
         "total": {
           "line": 3.5,
-          "overOdds": -135,
-          "underOdds": 110
+          "overOdds": -150,
+          "underOdds": 125
         }
       }
     },
@@ -3183,7 +3197,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": -130,
           "away": 450,
-          "draw": 240
+          "draw": 230
         },
         "pointSpread": {
           "line": -0.5,
@@ -3208,19 +3222,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": 1500,
-          "away": -650,
-          "draw": 750
+          "home": 1300,
+          "away": -525,
+          "draw": 650
         },
         "pointSpread": {
-          "line": 2.5,
-          "homeOdds": -145,
-          "awayOdds": 115
+          "line": 1.5,
+          "homeOdds": 140,
+          "awayOdds": -175
         },
         "total": {
           "line": 3.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
@@ -3235,19 +3249,19 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 310,
-          "away": -115,
-          "draw": 275
+          "home": 300,
+          "away": -110,
+          "draw": 280
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": -105,
+          "underOdds": -120
         }
       }
     },
@@ -3262,14 +3276,14 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -125,
-          "away": 330,
+          "home": -130,
+          "away": 340,
           "draw": 300
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -130,
-          "awayOdds": 105
+          "homeOdds": -140,
+          "awayOdds": 110
         },
         "total": {
           "line": 2.5,
@@ -3316,8 +3330,8 @@ const WORLDCUP_DATA = {
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
-          "home": 300,
-          "away": 190,
+          "home": 310,
+          "away": 195,
           "draw": 120
         },
         "pointSpread": {
@@ -3327,8 +3341,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 1.5,
-          "overOdds": -180,
-          "underOdds": 145
+          "overOdds": -155,
+          "underOdds": 125
         }
       }
     },
@@ -3343,9 +3357,9 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": 450,
+          "home": 425,
           "away": -140,
-          "draw": 270
+          "draw": 265
         },
         "pointSpread": {
           "line": 0.5,
@@ -3376,8 +3390,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -145,
-          "awayOdds": 115
+          "homeOdds": -150,
+          "awayOdds": 120
         },
         "total": {
           "line": 2.5,
@@ -3414,7 +3428,7 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -0.5,
           "homeOdds": 110,
-          "awayOdds": -135
+          "awayOdds": -140
         },
         "total": {
           "line": 2.5,
@@ -3429,7 +3443,7 @@ const WORLDCUP_DATA = {
       "time": "01:00",
       "group": "淘汰赛",
       "home": "CIV",
-      "away": "2I",
+      "away": "NOR",
       "status": "Scheduled",
       "stadium": "AT&T Stadium (Arlington, Texas)"
     },
@@ -3438,7 +3452,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-01",
       "time": "05:00",
       "group": "淘汰赛",
-      "home": "1I",
+      "home": "FRA",
       "away": "3RD",
       "status": "Scheduled",
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
@@ -3496,7 +3510,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": -130,
-          "underOdds": 100
+          "underOdds": 105
         }
       }
     },
@@ -3700,6 +3714,12 @@ const WORLDCUP_DATA = {
       "title": "第16比赛日战况汇总",
       "content": "在第16比赛日中，完成了多场强强对话，具体赛果为：厄瓜多尔 2-1 德国；库拉索 0-2 科特迪瓦；荷兰 3-1 突尼斯；日本 1-1 瑞典；美国 2-3 罗马尼亚；巴拉圭 0-0 澳大利亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760468,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-27": {
+      "title": "第17比赛日战况汇总",
+      "content": "在第17比赛日中，完成了多场强强对话，具体赛果为：塞内加尔 5-0 洪都拉斯；挪威 1-4 法国。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760474,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
