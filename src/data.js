@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-28 00:00:35
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-28 01:34:59
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-28 00:00:35",
+  "lastUpdated": "2026-06-28 01:34:59",
   "currentDate": "2026-06-27",
   "currentMatchday": 17,
   "teams": {
@@ -3311,14 +3311,14 @@ const WORLDCUP_DATA = {
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": -110,
-          "away": 425,
+          "home": -105,
+          "away": 390,
           "draw": 210
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -115,
-          "awayOdds": -110
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
@@ -3338,19 +3338,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": 1500,
+          "home": 1600,
           "away": -650,
-          "draw": 750
+          "draw": 800
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -140,
+          "homeOdds": -135,
           "awayOdds": 110
         },
         "total": {
           "line": 3.5,
-          "overOdds": 105,
-          "underOdds": -130
+          "overOdds": 100,
+          "underOdds": -125
         }
       }
     },
@@ -3365,19 +3365,19 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 265,
-          "away": -105,
+          "home": 255,
+          "away": 100,
           "draw": 285
         },
         "pointSpread": {
           "line": 0.5,
           "homeOdds": -120,
-          "awayOdds": -110
+          "awayOdds": -105
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -135,
+          "underOdds": 110
         }
       }
     },
@@ -3403,7 +3403,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 115,
+          "overOdds": 120,
           "underOdds": -145
         }
       }
@@ -3446,18 +3446,18 @@ const WORLDCUP_DATA = {
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
-          "home": 295,
-          "away": 235,
-          "draw": 105
+          "home": 285,
+          "away": 255,
+          "draw": 100
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -290,
-          "awayOdds": 220
+          "homeOdds": -310,
+          "awayOdds": 235
         },
         "total": {
           "line": 1.5,
-          "overOdds": -140,
+          "overOdds": -135,
           "underOdds": 110
         }
       }
@@ -3479,8 +3479,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 110,
+          "awayOdds": -140
         },
         "total": {
           "line": 2.5,
@@ -3581,14 +3581,14 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 280,
-          "away": 100,
-          "draw": 255
+          "home": 265,
+          "away": 105,
+          "draw": 250
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -120,
-          "awayOdds": -105
+          "homeOdds": -130,
+          "awayOdds": 100
         },
         "total": {
           "line": 2.5,
