@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-27 22:57:53
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-28 00:00:35
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-27 22:57:53",
+  "lastUpdated": "2026-06-28 00:00:35",
   "currentDate": "2026-06-27",
   "currentMatchday": 17,
   "teams": {
@@ -3322,7 +3322,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 145,
+          "overOdds": 140,
           "underOdds": -175
         }
       }
@@ -3344,13 +3344,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 2.5,
-          "homeOdds": -145,
-          "awayOdds": 115
+          "homeOdds": -140,
+          "awayOdds": 110
         },
         "total": {
           "line": 3.5,
           "overOdds": 105,
-          "underOdds": -135
+          "underOdds": -130
         }
       }
     },
@@ -3371,7 +3371,7 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -115,
+          "homeOdds": -120,
           "awayOdds": -110
         },
         "total": {
@@ -3447,18 +3447,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 295,
-          "away": 225,
+          "away": 235,
           "draw": 105
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -280,
-          "awayOdds": 215
+          "homeOdds": -290,
+          "awayOdds": 220
         },
         "total": {
           "line": 1.5,
-          "overOdds": -145,
-          "underOdds": 115
+          "overOdds": -140,
+          "underOdds": 110
         }
       }
     },
@@ -3592,7 +3592,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
+          "overOdds": -110,
           "underOdds": -115
         }
       }
@@ -3608,9 +3608,9 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -340,
+          "home": -330,
           "away": 900,
-          "draw": 500
+          "draw": 475
         },
         "pointSpread": {
           "line": -1.5,
