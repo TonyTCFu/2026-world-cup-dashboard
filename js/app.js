@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scheduleMatchCount: document.getElementById("schedule-match-count"),
     matchScheduleList: document.getElementById("match-schedule-list"),
     
-    groupsGrid: document.getElementById("groups-grid"),
     
     modal: document.getElementById("match-detail-modal"),
     modalContent: document.getElementById("modal-body-content"),
@@ -664,165 +663,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-
-  // ==========================================
-  // 5. 小组积分与预测面板渲染 (Tab 3)
-  // ==========================================
-  function renderStandingsTab() {
-    dom.groupsGrid.innerHTML = "";
-    
-    // 1. 动态生成积分榜 (完全根据 finished 比赛数据进行实时统计计算)
-    const standings = {};
-    
-    // 初始化 48 支球队的积分为零
-    Object.keys(WORLDCUP_DATA.teams).forEach(code => {
-      const team = WORLDCUP_DATA.teams[code];
-      standings[code] = {
-        code: code,
-        name: team.name,
-        flag: team.flag,
-        group: team.group,
-        mp: 0, w: 0, d: 0, l: 0,
-        gf: 0, ga: 0, gd: 0, pts: 0
-      };
-    });
-
-    // 统计已完赛的所有小组赛比赛 (过滤淘汰赛，且检查队伍在积分表内存在)
-    WORLDCUP_DATA.matches.forEach(m => {
-      if (m.status === "FT" && m.group !== "淘汰赛") {
-        const home = standings[m.home];
-        const away = standings[m.away];
-        
-        if (home && away) {
-          home.mp += 1;
-          away.mp += 1;
-          home.gf += m.score.home;
-          home.ga += m.score.away;
-          away.gf += m.score.away;
-          away.ga += m.score.home;
-          
-          home.gd = home.gf - home.ga;
-          away.gd = away.gf - away.ga;
-
-          if (m.score.home > m.score.away) {
-            home.w += 1;
-            home.pts += 3;
-            away.l += 1;
-          } else if (m.score.home < m.score.away) {
-            away.w += 1;
-            away.pts += 3;
-            home.l += 1;
-          } else {
-            home.d += 1;
-            away.d += 1;
-            home.pts += 1;
-            away.pts += 1;
-          }
-        }
-      }
-    });
-
-    // 2. 按小组 A 到 L 渲染
-    const groupsList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
-    
-    groupsList.forEach(groupLetter => {
-      // 提取本小组成员并排序 (积分由高到低，净胜球由高到低，进球数由高到低)
-      const groupTeams = Object.values(standings)
-        .filter(t => t.group === groupLetter)
-        .sort((a, b) => {
-          if (b.pts !== a.pts) return b.pts - a.pts;
-          if (b.gd !== a.gd) return b.gd - a.gd;
-          if (b.gf !== a.gf) return b.gf - a.gf;
-          return a.name.localeCompare(b.name);
-        });
-
-      const groupCard = document.createElement("div");
-      groupCard.className = "card group-card animate-slide-up";
-
-      // 渲染表格行
-      let tableRowsHtml = "";
-      groupTeams.forEach((t, index) => {
-        let rowClass = "";
-        // 模拟前两名直接出线，第三名根据情况可能出线
-        if (index < 2) {
-          rowClass = "row-qualify";
-        } else if (index === 2) {
-          rowClass = "row-qualify-3rd";
-        }
-
-        tableRowsHtml += `
-          <tr class="${rowClass}">
-            <td class="rank-col">${index + 1}</td>
-            <td>
-              <div class="team-col">
-                <span class="team-col-flag">${t.flag}</span>
-                <span>${t.name}</span>
-              </div>
-            </td>
-            <td class="num-col">${t.mp}</td>
-            <td class="num-col">${t.w}-${t.d}-${t.l}</td>
-            <td class="num-col">${t.gd > 0 ? "+" + t.gd : t.gd}</td>
-            <td class="pts-col">${t.pts}</td>
-          </tr>
-        `;
-      });
-
-      // 渲染小组出线预测概率条
-      const prediction = WORLDCUP_DATA.groupPredictions[groupLetter];
-      let predictionBarsHtml = "";
-      
-      if (prediction && prediction.odds) {
-        // 按照晋级概率降序排列展示
-        const sortedOdds = [...prediction.odds].sort((a,b) => b.qualifyProb - a.qualifyProb);
-        sortedOdds.forEach(odd => {
-          const t = standings[odd.team];
-          predictionBarsHtml += `
-            <div class="group-prob-row">
-              <span class="group-prob-team">${t.flag} ${t.name}</span>
-              <div class="group-prob-bar-outer">
-                <div class="group-prob-bar-fill" style="width: ${odd.qualifyProb}%;"></div>
-              </div>
-              <span class="group-prob-num">${odd.qualifyProb}%</span>
-            </div>
-          `;
-        });
-      }
-
-      groupCard.innerHTML = `
-        <div class="group-title-bar">
-          <h3>Group ${groupLetter} 小组积分榜</h3>
-          <span class="qualify-hint">出线: 前2 + 8个成绩最好第3</span>
-        </div>
-        <table class="standings-table">
-          <thead>
-            <tr>
-              <th class="rank-col">排名</th>
-              <th>球队</th>
-              <th class="num-col">赛</th>
-              <th class="num-col">胜-平-负</th>
-              <th class="num-col">净</th>
-              <th class="pts-col">积分</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${tableRowsHtml}
-          </tbody>
-        </table>
-
-        <div class="group-prediction-preview">
-          <div class="group-prediction-title">
-            <i class="fa-solid fa-wand-magic-sparkles text-gradient"></i> AI 晋级出线模拟概率
-          </div>
-          <p class="group-prediction-text">${prediction ? prediction.preview : "暂无该组分析。"}</p>
-          <div class="group-prediction-bars">
-            ${predictionBarsHtml}
-          </div>
-        </div>
-      `;
-
-      dom.groupsGrid.appendChild(groupCard);
-    });
-  }
 
   // ==========================================
   // 6. 淘汰赛对阵图与轮次选择面板渲染 (Tab Knockout)
@@ -1470,8 +1310,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderTabContent() {
     if (state.activeTab === "tab-schedule") {
       renderScheduleTab();
-    } else if (state.activeTab === "tab-standings") {
-      renderStandingsTab();
     } else if (state.activeTab === "tab-knockout") {
       renderKnockoutTab();
     }
