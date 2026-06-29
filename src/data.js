@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-29 03:01:06
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-29 01:44:10
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-29 03:01:06",
-  "currentDate": "2026-06-28",
-  "currentMatchday": 18,
+  "lastUpdated": "2026-06-29 01:44:10",
+  "currentDate": "2026-06-29",
+  "currentMatchday": 19,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -3643,7 +3643,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "RSA",
       "away": "CAN",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
@@ -3661,6 +3661,35 @@ const WORLDCUP_DATA = {
           "overOdds": 120,
           "underOdds": -150
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，南非 与 加拿大 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          58,
+          42
+        ],
+        "shots": [
+          6,
+          12
+        ],
+        "target": [
+          1,
+          7
+        ],
+        "fouls": [
+          10,
+          16
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (加拿大)",
+        "team": "CAN",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3674,19 +3703,19 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": -145,
+          "home": -135,
           "away": 400,
-          "draw": 290
+          "draw": 275
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -150,
+          "homeOdds": -145,
           "awayOdds": 115
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -3701,9 +3730,9 @@ const WORLDCUP_DATA = {
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
-          "home": -295,
+          "home": -300,
           "away": 850,
-          "draw": 450
+          "draw": 425
         },
         "pointSpread": {
           "line": -1.5,
@@ -3728,19 +3757,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio BBVA (Guadalupe)",
       "odds": {
         "moneyline": {
-          "home": 120,
-          "away": 270,
-          "draw": 215
+          "home": 125,
+          "away": 255,
+          "draw": 210
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 120,
+          "awayOdds": -150
         },
         "total": {
           "line": 2.5,
-          "overOdds": 115,
-          "underOdds": -140
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -3761,13 +3790,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -130,
+          "homeOdds": -125,
           "awayOdds": 100
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
-          "underOdds": -105
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
@@ -3782,9 +3811,9 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -360,
+          "home": -370,
           "away": 950,
-          "draw": 500
+          "draw": 550
         },
         "pointSpread": {
           "line": -1.5,
@@ -3793,8 +3822,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 3.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
@@ -3821,7 +3850,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 1.5,
           "overOdds": -170,
-          "underOdds": 135
+          "underOdds": 140
         }
       }
     },
@@ -3842,12 +3871,12 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -125,
-          "awayOdds": 100
+          "homeOdds": -120,
+          "awayOdds": -105
         },
         "total": {
           "line": 2.5,
-          "overOdds": -115,
+          "overOdds": -110,
           "underOdds": -110
         }
       }
@@ -3917,18 +3946,18 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -340,
-          "away": 1100,
-          "draw": 450
+          "home": -320,
+          "away": 950,
+          "draw": 425
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -115,
-          "awayOdds": -110
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
+          "overOdds": -115,
           "underOdds": -105
         }
       }
@@ -3971,19 +4000,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": -105,
-          "away": 320,
-          "draw": 245
+          "home": 105,
+          "away": 300,
+          "draw": 235
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -110,
-          "awayOdds": -115
+          "homeOdds": -105,
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
-          "overOdds": 105,
-          "underOdds": -130
+          "overOdds": 110,
+          "underOdds": -135
         }
       }
     },
@@ -4000,7 +4029,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": 230,
           "away": 150,
-          "draw": 195
+          "draw": 190
         },
         "pointSpread": {
           "line": 0.5,
@@ -4025,19 +4054,19 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": -650,
-          "away": 1800,
+          "home": -600,
+          "away": 1700,
           "draw": 700
         },
         "pointSpread": {
           "line": -2.5,
           "homeOdds": 140,
-          "awayOdds": -175
+          "awayOdds": -180
         },
         "total": {
           "line": 2.5,
-          "overOdds": -160,
-          "underOdds": 130
+          "overOdds": -155,
+          "underOdds": 125
         }
       }
     },
@@ -4052,28 +4081,28 @@ const WORLDCUP_DATA = {
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
-          "home": -180,
-          "away": 550,
-          "draw": 300
+          "home": -190,
+          "away": 600,
+          "draw": 310
         },
         "pointSpread": {
-          "line": -0.5,
-          "homeOdds": -190,
-          "awayOdds": 145
+          "line": -1.5,
+          "homeOdds": 150,
+          "awayOdds": -195
         },
         "total": {
           "line": 2.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
     {
       "id": 760502,
-      "date": "2026-07-08",
-      "time": "04:00",
+      "date": "2026-07-05",
+      "time": "01:00",
       "group": "淘汰赛",
-      "home": "RD32",
+      "home": "CAN",
       "away": "RD32",
       "status": "Scheduled",
       "stadium": "NRG Stadium (Houston, Texas)"
@@ -4117,6 +4146,116 @@ const WORLDCUP_DATA = {
       "away": "RD16 W8",
       "status": "Scheduled",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+    },
+    {
+      "id": 760503,
+      "date": "2026-07-05",
+      "time": "05:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
+    },
+    {
+      "id": 760504,
+      "date": "2026-07-06",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760505,
+      "date": "2026-07-06",
+      "time": "08:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "Estadio Banorte (Mexico City)"
+    },
+    {
+      "id": 760506,
+      "date": "2026-07-07",
+      "time": "03:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "AT&T Stadium (Arlington, Texas)"
+    },
+    {
+      "id": 760507,
+      "date": "2026-07-07",
+      "time": "08:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "Lumen Field (Seattle, Washington)"
+    },
+    {
+      "id": 760509,
+      "date": "2026-07-08",
+      "time": "00:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760508,
+      "date": "2026-07-08",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "RD32",
+      "away": "RD32",
+      "status": "Scheduled",
+      "stadium": "BC Place (Vancouver)"
+    },
+    {
+      "id": 760514,
+      "date": "2026-07-15",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "QF W1",
+      "away": "QF W2",
+      "status": "Scheduled",
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+    },
+    {
+      "id": 760515,
+      "date": "2026-07-16",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "QF W3",
+      "away": "QF W4",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
+    },
+    {
+      "id": 760516,
+      "date": "2026-07-19",
+      "time": "04:00",
+      "group": "淘汰赛",
+      "home": "SF L1",
+      "away": "SF L2",
+      "status": "Scheduled",
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+    },
+    {
+      "id": 760517,
+      "date": "2026-07-20",
+      "time": "05:00",
+      "group": "淘汰赛",
+      "home": "SF W1",
+      "away": "SF W2",
+      "status": "Scheduled",
+      "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
     }
   ],
   "dailySummaries": {
@@ -4220,6 +4359,12 @@ const WORLDCUP_DATA = {
       "title": "第18比赛日战况汇总",
       "content": "在第18比赛日中，完成了多场强强对话，具体赛果为：克罗地亚 2-1 加纳；巴拿马 0-2 英格兰；哥伦比亚 0-0 葡萄牙；刚果(金) 3-1 乌兹别克斯坦；约旦 1-3 阿根廷；阿尔及利亚 3-3 奥地利。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760480,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-29": {
+      "title": "第19比赛日战况汇总",
+      "content": "在第19比赛日中，完成了多场强强对话，具体赛果为：南非 0-1 加拿大。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760486,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },

@@ -154,11 +154,14 @@ async function run() {
         match.away = awayAbbr;
       }
     } else {
-      // 降级：如果按 ID 找不到，作为兼容降级按主客队对碰寻找
-      match = WORLDCUP_DATA.matches.find(m => 
-        (m.home === homeAbbr && m.away === awayAbbr) ||
-        (m.home === awayAbbr && m.away === homeAbbr)
-      );
+      // 只有当双方都不是占位席位时，才允许降级按对碰寻找，避免误匹配重复占位符（如 RD32 vs RD32）
+      const isPlaceholder = (code) => /^\d[A-L]$|^3RD$|^RD16|^QF|^SF|^RD32/.test(code);
+      if (!isPlaceholder(homeAbbr) && !isPlaceholder(awayAbbr)) {
+        match = WORLDCUP_DATA.matches.find(m => 
+          (m.home === homeAbbr && m.away === awayAbbr) ||
+          (m.home === awayAbbr && m.away === homeAbbr)
+        );
+      }
     }
 
     if (!match) {

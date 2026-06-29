@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     activeTab: "tab-schedule",
     activeMatchDetailId: null, // 跟踪当前打开的详情弹窗比赛 ID
     activeKnockoutRound: "R32", // 淘汰赛当前激活轮次 (R32, R16, QF, SF, FI)
+    knockoutViewMode: "bracket", // 默认为对战表晋级图视图 (bracket)
   };
 
   // DOM 节点缓存
@@ -850,124 +851,264 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function renderMatchNode(match) {
+    if (!match) return `<div class="bracket-match-node empty">待定</div>`;
+    
+    const homeTeam = getTeam(match.home);
+    const awayTeam = getTeam(match.away);
+    
+    let homeScore = match.status === "FT" ? match.score.home : "";
+    let awayScore = match.status === "FT" ? match.score.away : "";
+    
+    if (match.status !== "Scheduled" && match.status !== "FT") {
+      homeScore = match.score.home;
+      awayScore = match.score.away;
+    }
+    
+    const homeWinner = match.status === "FT" && match.score.home > match.score.away ? "winner" : "";
+    const awayWinner = match.status === "FT" && match.score.away > match.score.home ? "winner" : "";
+    
+    const dateText = `${match.date.slice(5)} ${match.time}`;
+    const statusClass = match.status === "FT" ? "ft" : (match.status === "Scheduled" ? "scheduled" : "live");
+    
+    return `
+      <div class="bracket-match-node" onclick="window.viewMatchDetails(${match.id})">
+        <div class="bracket-node-header">
+          <span>ID: ${match.id}</span>
+          <span class="status-${statusClass}">${match.status === "FT" ? "已结束" : (match.status === "Scheduled" ? "未开赛" : "进行中")}</span>
+        </div>
+        <div class="bracket-team-row ${homeWinner}">
+          <span class="bracket-team-flag">${homeTeam.flag}</span>
+          <span class="bracket-team-name" title="${homeTeam.name}">${homeTeam.name}</span>
+          <span class="bracket-team-score">${homeScore}</span>
+        </div>
+        <div class="bracket-team-row ${awayWinner}">
+          <span class="bracket-team-flag">${awayTeam.flag}</span>
+          <span class="bracket-team-name" title="${awayTeam.name}">${awayTeam.name}</span>
+          <span class="bracket-team-score">${awayScore}</span>
+        </div>
+        <div class="bracket-node-footer">
+          <span>${dateText}</span>
+        </div>
+      </div>
+    `;
+  }
+
   function renderKnockoutTab() {
     const panel = document.getElementById("tab-knockout");
     if (!panel) return;
     
-    const rounds = [
-      { id: "R32", name: "1/16决赛", desc: "32强" },
-      { id: "R16", name: "1/8决赛", desc: "16强" },
-      { id: "QF", name: "1/4决赛", desc: "8强" },
-      { id: "SF", name: "半决赛", desc: "4强" },
-      { id: "FI", name: "决赛 & 三四名", desc: "冠亚军" }
-    ];
+    // 视图切换控制条
+    const toggleBarHtml = `
+      <div class="view-toggle-bar" style="margin-bottom: 1.25rem;">
+        <button class="view-toggle-btn ${state.knockoutViewMode === 'bracket' ? 'active' : ''}" id="btn-view-bracket">
+          <i class="fa-solid fa-diagram-project"></i> 晋级树图 (Bracket)
+        </button>
+        <button class="view-toggle-btn ${state.knockoutViewMode === 'list' ? 'active' : ''}" id="btn-view-list">
+          <i class="fa-solid fa-list-ul"></i> 对阵列表 (List View)
+        </button>
+      </div>
+    `;
     
-    const subNavHtml = rounds.map(r => `
-      <button class="sub-tab-btn ${state.activeKnockoutRound === r.id ? 'active' : ''}" data-round="${r.id}">
-        <span class="sub-tab-name">${r.name}</span>
-        <span class="sub-tab-desc">${r.desc}</span>
-      </button>
-    `).join("");
+    let contentHtml = "";
     
-    const filteredMatches = getKnockoutMatchesByRound(state.activeKnockoutRound);
+    if (state.knockoutViewMode === "list") {
+      const rounds = [
+        { id: "R32", name: "1/16决赛", desc: "32强" },
+        { id: "R16", name: "1/8决赛", desc: "16强" },
+        { id: "QF", name: "1/4决赛", desc: "8强" },
+        { id: "SF", name: "半决赛", desc: "4强" },
+        { id: "FI", name: "决赛 & 三四名", desc: "冠亚军" }
+      ];
+      
+      const subNavHtml = rounds.map(r => `
+        <button class="sub-tab-btn ${state.activeKnockoutRound === r.id ? 'active' : ''}" data-round="${r.id}">
+          <span class="sub-tab-name">${r.name}</span>
+          <span class="sub-tab-desc">${r.desc}</span>
+        </button>
+      `).join("");
+      
+      const filteredMatches = getKnockoutMatchesByRound(state.activeKnockoutRound);
+      
+      let matchesHtml = "";
+      if (filteredMatches.length === 0) {
+        matchesHtml = `
+          <div class="card" style="grid-column: 1/-1; padding: 3rem; text-align: center; color: var(--text-secondary);">
+            <i class="fa-solid fa-hourglass-half" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-muted);"></i>
+            <p>该轮次对阵正在根据小组出线赛果实时匹配中，敬请期待！</p>
+          </div>
+        `;
+      } else {
+        matchesHtml = filteredMatches.map(match => {
+          const homeTeam = getTeam(match.home);
+          const awayTeam = getTeam(match.away);
+          
+          let scoreDisplay = `<span class="match-vs">VS</span>`;
+          let statusClass = "scheduled";
+          let statusText = `${match.date.slice(5)} ${match.time}`;
     
-    let matchesHtml = "";
-    if (filteredMatches.length === 0) {
-      matchesHtml = `
-        <div class="card" style="grid-column: 1/-1; padding: 3rem; text-align: center; color: var(--text-secondary);">
-          <i class="fa-solid fa-hourglass-half" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-muted);"></i>
-          <p>该轮次对阵正在根据小组出线赛果实时匹配中，敬请期待！</p>
+          if (match.status === "FT") {
+            scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
+            statusClass = "ft";
+            statusText = "已结束 FT";
+          } else if (match.status !== "Scheduled") {
+            scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
+            statusClass = "live";
+            statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
+          }
+    
+          let actionBtn = "";
+          if (match.status === "FT") {
+            actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-file-invoice-chart"></i> 详细战报</button>`;
+          } else if (match.status !== "Scheduled") {
+            actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wave-square"></i> 实时统计</button>`;
+          } else {
+            actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赔率比较分析</button>`;
+          }
+          
+          let roundLabel = "淘汰赛";
+          if (state.activeKnockoutRound === "FI") {
+            if (match.stadium.toLowerCase().includes("third") || match.home.includes("L") || match.away.includes("L")) {
+              roundLabel = "三四名决赛";
+            } else {
+              roundLabel = "决赛";
+            }
+          } else {
+            const roundObj = rounds.find(r => r.id === state.activeKnockoutRound);
+            if (roundObj) roundLabel = roundObj.name;
+          }
+    
+          return `
+            <div class="card match-card animate-slide-up">
+              <div class="match-card-header">
+                <span class="match-group">${roundLabel}</span>
+                <span class="match-stadium"><i class="fa-solid fa-location-dot"></i> ${match.stadium}</span>
+              </div>
+              <div class="match-teams-box">
+                <div class="match-team home">
+                  <span class="team-flag">${homeTeam.flag}</span>
+                  <span class="team-name">${homeTeam.name}</span>
+                </div>
+                <div class="match-score-area">
+                  ${scoreDisplay}
+                </div>
+                <div class="match-team away">
+                  <span class="team-flag">${awayTeam.flag}</span>
+                  <span class="team-name">${awayTeam.name}</span>
+                </div>
+              </div>
+              <div class="match-card-footer">
+                <span class="match-status-badge ${statusClass}">${statusText}</span>
+                ${actionBtn}
+              </div>
+            </div>
+          `;
+        }).join("");
+      }
+      
+      contentHtml = `
+        <div class="knockout-sub-tabs animate-fade-in">
+          ${subNavHtml}
+        </div>
+        <div class="match-grid" id="knockout-match-list" style="margin-top: 1.5rem;">
+          ${matchesHtml}
         </div>
       `;
     } else {
-      matchesHtml = filteredMatches.map(match => {
-        const homeTeam = getTeam(match.home);
-        const awayTeam = getTeam(match.away);
-        
-        let scoreDisplay = `<span class="match-vs">VS</span>`;
-        let statusClass = "scheduled";
-        let statusText = `${match.date.slice(5)} ${match.time}`;
-  
-        if (match.status === "FT") {
-          scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
-          statusClass = "ft";
-          statusText = "已结束 FT";
-        } else if (match.status !== "Scheduled") {
-          scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
-          statusClass = "live";
-          statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
-        }
-  
-        let actionBtn = "";
-        if (match.status === "FT") {
-          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-file-invoice-chart"></i> 详细战报</button>`;
-        } else if (match.status !== "Scheduled") {
-          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wave-square"></i> 实时统计</button>`;
-        } else {
-          actionBtn = `<button class="btn-details" onclick="window.viewMatchDetails(${match.id})"><i class="fa-solid fa-wand-magic-sparkles"></i> 赔率比较分析</button>`;
-        }
-        
-        let roundLabel = "淘汰赛";
-        if (state.activeKnockoutRound === "FI") {
-          if (match.stadium.toLowerCase().includes("third") || match.home.includes("L") || match.away.includes("L")) {
-            roundLabel = "三四名决赛";
-          } else {
-            roundLabel = "决赛";
-          }
-        } else {
-          const roundObj = rounds.find(r => r.id === state.activeKnockoutRound);
-          if (roundObj) roundLabel = roundObj.name;
-        }
-  
+      const R32Matches = getKnockoutMatchesByRound("R32");
+      const R16Matches = getKnockoutMatchesByRound("R16");
+      const QFMatches = getKnockoutMatchesByRound("QF");
+      const SFMatches = getKnockoutMatchesByRound("SF");
+      
+      const leftR32 = R32Matches.slice(0, 8);
+      const leftR16 = R16Matches.slice(0, 4);
+      const leftQF = [QFMatches.find(m => m && m.id === 760510), QFMatches.find(m => m && m.id === 760512)].filter(Boolean);
+      const leftSF = [SFMatches.find(m => m && m.id === 760514)].filter(Boolean);
+      
+      const rightR32 = R32Matches.slice(8, 16);
+      const rightR16 = R16Matches.slice(4, 8);
+      const rightQF = [QFMatches.find(m => m && m.id === 760511), QFMatches.find(m => m && m.id === 760513)].filter(Boolean);
+      const rightSF = [SFMatches.find(m => m && m.id === 760515)].filter(Boolean);
+      
+      const renderCol = (title, matches, colClass = "") => {
+        const matchesHtml = matches.map(m => renderMatchNode(m)).join("");
         return `
-          <div class="card match-card animate-slide-up">
-            <div class="match-card-header">
-              <span class="match-group">${roundLabel}</span>
-              <span class="match-stadium"><i class="fa-solid fa-location-dot"></i> ${match.stadium}</span>
-            </div>
-            <div class="match-teams-box">
-              <div class="match-team home">
-                <span class="team-flag">${homeTeam.flag}</span>
-                <span class="team-name">${homeTeam.name}</span>
-              </div>
-              <div class="match-score-area">
-                ${scoreDisplay}
-              </div>
-              <div class="match-team away">
-                <span class="team-flag">${awayTeam.flag}</span>
-                <span class="team-name">${awayTeam.name}</span>
-              </div>
-            </div>
-            <div class="match-card-footer">
-              <span class="match-status-badge ${statusClass}">${statusText}</span>
-              ${actionBtn}
-            </div>
+          <div class="bracket-col ${colClass}">
+            <div class="bracket-col-header">${title}</div>
+            ${matchesHtml}
           </div>
         `;
-      }).join("");
+      };
+      
+      const finalMatch = WORLDCUP_DATA.matches.find(m => m.id === 760517);
+      const thirdMatch = WORLDCUP_DATA.matches.find(m => m.id === 760516);
+      
+      const centerHtml = `
+        <div class="bracket-col center-col">
+          <div class="bracket-col-header">总决赛</div>
+          <div class="trophy-box" style="text-align: center; margin: 1.5rem 0;">
+            <i class="fa-solid fa-trophy" style="font-size: 2.2rem; color: var(--accent-yellow); filter: drop-shadow(0 0 10px rgba(255,215,0,0.4)); margin-bottom: 0.25rem;"></i>
+            <div style="font-size: 0.6rem; font-weight: 700; color: var(--accent-yellow); text-transform: uppercase; letter-spacing: 1.1px;">FIFA World Cup 2026</div>
+          </div>
+          <div style="margin-bottom: 2rem;">
+            <div class="center-round-title" style="text-align: center; font-size: 0.65rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.3rem;">🏆 冠军决赛</div>
+            ${renderMatchNode(finalMatch)}
+          </div>
+          <div>
+            <div class="center-round-title" style="text-align: center; font-size: 0.65rem; color: var(--text-secondary); font-weight: 700; margin-bottom: 0.3rem;">🥉 季军争夺战</div>
+            ${renderMatchNode(thirdMatch)}
+          </div>
+        </div>
+      `;
+      
+      contentHtml = `
+        <div class="bracket-scroll-hint animate-fade-in" style="font-size: 0.7rem; color: var(--text-muted); text-align: center; margin-bottom: 0.5rem;">
+          <i class="fa-solid fa-left-right"></i> 左右横滑可以浏览完整 32强 晋级树图对战表
+        </div>
+        <div class="bracket-tree-outer card animate-fade-in" style="overflow-x: auto; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.03);">
+          <div class="bracket-tree-container">
+            ${renderCol("1/16决赛", leftR32, "r32-col")}
+            ${renderCol("1/8决赛", leftR16, "r16-col")}
+            ${renderCol("1/4决赛", leftQF, "qf-col")}
+            ${renderCol("半决赛", leftSF, "sf-col")}
+            ${centerHtml}
+            ${renderCol("半决赛", rightSF, "sf-col")}
+            ${renderCol("1/4决赛", rightQF, "qf-col")}
+            ${renderCol("1/8决赛", rightR16, "r16-col")}
+            ${renderCol("1/16决赛", rightR32, "r32-col")}
+          </div>
+        </div>
+      `;
     }
     
     panel.innerHTML = `
       <div class="panel-header animate-fade-in">
-        <h2><i class="fa-solid fa-diagram-project"></i> 2026年世界杯淘汰赛对阵图</h2>
-        <span class="match-count-badge">${filteredMatches.length} 场对决</span>
+        <h2><i class="fa-solid fa-diagram-project"></i> 2026年世界杯淘汰赛对战表</h2>
+        <span class="match-count-badge">晋级对阵图</span>
       </div>
       
-      <div class="knockout-sub-tabs animate-fade-in">
-        ${subNavHtml}
-      </div>
-      
-      <div class="match-grid" id="knockout-match-list" style="margin-top: 1.5rem;">
-        ${matchesHtml}
-      </div>
+      ${toggleBarHtml}
+      ${contentHtml}
     `;
     
-    panel.querySelectorAll(".sub-tab-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        state.activeKnockoutRound = btn.dataset.round;
-        renderKnockoutTab();
-      });
+    panel.querySelector("#btn-view-bracket").addEventListener("click", () => {
+      state.knockoutViewMode = "bracket";
+      renderKnockoutTab();
     });
+    
+    panel.querySelector("#btn-view-list").addEventListener("click", () => {
+      state.knockoutViewMode = "list";
+      renderKnockoutTab();
+    });
+    
+    if (state.knockoutViewMode === "list") {
+      panel.querySelectorAll(".sub-tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          state.activeKnockoutRound = btn.dataset.round;
+          renderKnockoutTab();
+        });
+      });
+    }
   }
 
   // ==========================================
