@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 00:13:59
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 14:01:18
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-30 00:13:59",
+  "lastUpdated": "2026-06-30 14:01:18",
   "currentDate": "2026-06-30",
   "currentMatchday": 20,
   "teams": {
@@ -3815,7 +3815,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "NED",
       "away": "MAR",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Estadio BBVA (Guadalupe)",
       "odds": {
         "moneyline": {
@@ -3833,6 +3833,39 @@ const WORLDCUP_DATA = {
           "overOdds": 115,
           "underOdds": -145
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 1,
+        "penalties": {
+          "home": 2,
+          "away": 3
+        }
+      },
+      "analysis": "在本场淘汰赛的激烈较量中，荷兰 与 摩洛哥 展开了高水平的战术对决。双方在常规时间和加时赛中战成 1 比 1 平。最终在残酷的点球大战中，摩洛哥 凭借更稳定的表现以点球比分 2-3 战胜对手，成功晋级下一轮。双方球员拼尽全力，为球迷贡献了一场经典的世界杯大战。",
+      "stats": {
+        "possession": [
+          30,
+          70
+        ],
+        "shots": [
+          6,
+          11
+        ],
+        "target": [
+          2,
+          5
+        ],
+        "fouls": [
+          18,
+          15
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (荷兰)",
+        "team": "NED",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3846,14 +3879,14 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 265,
+          "home": 255,
           "away": 110,
           "draw": 245
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -130,
-          "awayOdds": 100
+          "homeOdds": -135,
+          "awayOdds": 105
         },
         "total": {
           "line": 2.5,
@@ -3873,19 +3906,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -330,
-          "away": 850,
-          "draw": 500
+          "home": -340,
+          "away": 900,
+          "draw": 475
         },
         "pointSpread": {
           "line": -1.5,
           "homeOdds": -125,
-          "awayOdds": 100
+          "awayOdds": -105
         },
         "total": {
           "line": 3.5,
-          "overOdds": 115,
-          "underOdds": -145
+          "overOdds": 105,
+          "underOdds": -130
         }
       }
     },
@@ -3900,19 +3933,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 120,
-          "away": 310,
+          "home": 125,
+          "away": 295,
           "draw": 190
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 110,
-          "awayOdds": -140
+          "homeOdds": 115,
+          "awayOdds": -150
         },
         "total": {
           "line": 1.5,
-          "overOdds": -170,
-          "underOdds": 135
+          "overOdds": -160,
+          "underOdds": 130
         }
       }
     },
@@ -3927,8 +3960,8 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -350,
-          "away": 1100,
+          "home": -360,
+          "away": 1200,
           "draw": 450
         },
         "pointSpread": {
@@ -3938,7 +3971,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
+          "overOdds": -110,
           "underOdds": -115
         }
       }
@@ -4008,14 +4041,14 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -320,
-          "away": 950,
+          "home": -300,
+          "away": 900,
           "draw": 425
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -110,
-          "awayOdds": -115
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
@@ -4062,9 +4095,9 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 105,
-          "away": 300,
-          "draw": 235
+          "home": 110,
+          "away": 290,
+          "draw": 230
         },
         "pointSpread": {
           "line": -0.5,
@@ -4116,14 +4149,14 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": -575,
-          "away": 1600,
+          "home": -600,
+          "away": 1800,
           "draw": 650
         },
         "pointSpread": {
           "line": -1.5,
           "homeOdds": -175,
-          "awayOdds": 135
+          "awayOdds": 140
         },
         "total": {
           "line": 2.5,
@@ -4165,9 +4198,26 @@ const WORLDCUP_DATA = {
       "time": "01:00",
       "group": "淘汰赛",
       "home": "CAN",
-      "away": "RD32",
+      "away": "MAR",
       "status": "Scheduled",
-      "stadium": "NRG Stadium (Houston, Texas)"
+      "stadium": "NRG Stadium (Houston, Texas)",
+      "odds": {
+        "moneyline": {
+          "home": 370,
+          "away": -125,
+          "draw": 265
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": 105,
+          "awayOdds": -135
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 125,
+          "underOdds": -155
+        }
+      }
     },
     {
       "id": 760510,
@@ -4431,7 +4481,7 @@ const WORLDCUP_DATA = {
     },
     "2026-06-30": {
       "title": "第20比赛日战况汇总",
-      "content": "在第20比赛日中，完成了多场强强对话，具体赛果为：巴西 2-1 日本；德国 1-1 巴拉圭。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第20比赛日中，完成了多场强强对话，具体赛果为：巴西 2-1 日本；德国 1-1 巴拉圭；荷兰 1-1 摩洛哥。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760487,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
