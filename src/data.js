@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 18:04:46
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 20:26:55
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-30 18:04:46",
+  "lastUpdated": "2026-06-30 20:26:55",
   "currentDate": "2026-06-30",
   "currentMatchday": 20,
   "teams": {
@@ -3879,19 +3879,19 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 245,
+          "home": 255,
           "away": 115,
-          "draw": 245
+          "draw": 240
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -140,
+          "homeOdds": -135,
           "awayOdds": 110
         },
         "total": {
           "line": 2.5,
           "overOdds": -115,
-          "underOdds": -105
+          "underOdds": -110
         }
       }
     },
@@ -3918,7 +3918,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 3.5,
           "overOdds": 115,
-          "underOdds": -145
+          "underOdds": -140
         }
       }
     },
@@ -3944,8 +3944,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 1.5,
-          "overOdds": -175,
-          "underOdds": 140
+          "overOdds": -170,
+          "underOdds": 135
         }
       }
     },
@@ -3972,7 +3972,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": -110,
-          "underOdds": -115
+          "underOdds": -110
         }
       }
     },
@@ -4020,8 +4020,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 110,
+          "awayOdds": -140
         },
         "total": {
           "line": 2.5,
@@ -4203,8 +4203,8 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 370,
-          "away": -125,
+          "home": 390,
+          "away": -130,
           "draw": 265
         },
         "pointSpread": {
