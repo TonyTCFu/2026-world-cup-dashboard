@@ -616,11 +616,19 @@ document.addEventListener("DOMContentLoaded", () => {
       let statusText = match.time;
 
       if (match.status === "FT") {
-        scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
+        let scoreStr = `${match.score.home} - ${match.score.away}`;
+        if (match.score.penalties) {
+          scoreStr += ` <span class="penalty-score-badge">(点球 ${match.score.penalties.home}-${match.score.penalties.away})</span>`;
+        }
+        scoreDisplay = `<span class="match-score">${scoreStr}</span>`;
         statusClass = "ft";
         statusText = "已结束 FT";
       } else if (match.status !== "Scheduled") {
-        scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
+        let scoreStr = `${match.score.home} - ${match.score.away}`;
+        if (match.score.penalties) {
+          scoreStr += ` <span class="penalty-score-badge live">(点球 ${match.score.penalties.home}-${match.score.penalties.away})</span>`;
+        }
+        scoreDisplay = `<span class="match-score live">${scoreStr}</span>`;
         statusClass = "live";
         statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
       }
@@ -705,8 +713,25 @@ document.addEventListener("DOMContentLoaded", () => {
       awayScore = match.score.away;
     }
     
-    const homeWinner = match.status === "FT" && match.score.home > match.score.away ? "winner" : "";
-    const awayWinner = match.status === "FT" && match.score.away > match.score.home ? "winner" : "";
+    let homeScoreStr = homeScore;
+    let awayScoreStr = awayScore;
+    if (match.status === "FT" && match.score.penalties) {
+      homeScoreStr = `${match.score.home}<span class="bracket-penalty-num">(${match.score.penalties.home})</span>`;
+      awayScoreStr = `${match.score.away}<span class="bracket-penalty-num">(${match.score.penalties.away})</span>`;
+    }
+    
+    let isHomeWinner = false;
+    if (match.status === "FT") {
+      if (match.score.home > match.score.away) {
+        isHomeWinner = true;
+      } else if (match.score.home < match.score.away) {
+        isHomeWinner = false;
+      } else if (match.score.penalties) {
+        isHomeWinner = match.score.penalties.home > match.score.penalties.away;
+      }
+    }
+    const homeWinner = isHomeWinner ? "winner" : "";
+    const awayWinner = (match.status === "FT" && !isHomeWinner) ? "winner" : "";
     
     const dateText = `${match.date.slice(5)} ${match.time}`;
     const statusClass = match.status === "FT" ? "ft" : (match.status === "Scheduled" ? "scheduled" : "live");
@@ -720,12 +745,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="bracket-team-row ${homeWinner}">
           <span class="bracket-team-flag">${homeTeam.flag}</span>
           <span class="bracket-team-name" title="${homeTeam.name}">${homeTeam.name}</span>
-          <span class="bracket-team-score">${homeScore}</span>
+          <span class="bracket-team-score">${homeScoreStr}</span>
         </div>
         <div class="bracket-team-row ${awayWinner}">
           <span class="bracket-team-flag">${awayTeam.flag}</span>
           <span class="bracket-team-name" title="${awayTeam.name}">${awayTeam.name}</span>
-          <span class="bracket-team-score">${awayScore}</span>
+          <span class="bracket-team-score">${awayScoreStr}</span>
         </div>
         <div class="bracket-node-footer">
           <span>${dateText}</span>
@@ -788,11 +813,19 @@ document.addEventListener("DOMContentLoaded", () => {
           let statusText = `${match.date.slice(5)} ${match.time}`;
     
           if (match.status === "FT") {
-            scoreDisplay = `<span class="match-score">${match.score.home} - ${match.score.away}</span>`;
+            let scoreStr = `${match.score.home} - ${match.score.away}`;
+            if (match.score.penalties) {
+              scoreStr += ` <span class="penalty-score-badge">(点球 ${match.score.penalties.home}-${match.score.penalties.away})</span>`;
+            }
+            scoreDisplay = `<span class="match-score">${scoreStr}</span>`;
             statusClass = "ft";
             statusText = "已结束 FT";
           } else if (match.status !== "Scheduled") {
-            scoreDisplay = `<span class="match-score live">${match.score.home} - ${match.score.away}</span>`;
+            let scoreStr = `${match.score.home} - ${match.score.away}`;
+            if (match.score.penalties) {
+              scoreStr += ` <span class="penalty-score-badge live">(点球 ${match.score.penalties.home}-${match.score.penalties.away})</span>`;
+            }
+            scoreDisplay = `<span class="match-score live">${scoreStr}</span>`;
             statusClass = "live";
             statusText = `<i class="fa-solid fa-tower-broadcast animate-pulse"></i> ${match.status}`;
           }
@@ -1002,7 +1035,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <span>${homeTeam.name}</span>
             <span style="font-size: 2.2rem;">${homeTeam.flag}</span>
           </div>
-          <div class="score-banner-display">${match.score.home} - ${match.score.away}</div>
+          <div class="score-banner-display" style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+            <div>${match.score.home} - ${match.score.away}</div>
+            ${match.score.penalties ? `<div style="font-size: 0.82rem; color: var(--accent-yellow); font-weight: 600; filter: drop-shadow(0 0 4px rgba(245,158,11,0.25)); margin-top: 0.2rem;">(点球大战: ${match.score.penalties.home}-${match.score.penalties.away})</div>` : ''}
+          </div>
           <div class="score-banner-team away">
             <span style="font-size: 2.2rem;">${awayTeam.flag}</span>
             <span>${awayTeam.name}</span>

@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 00:14:57
+// 本数据由 GitHub Actions 自动化抓取于 2026-06-30 00:13:59
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-06-30 00:14:57",
-  "currentDate": "2026-06-29",
-  "currentMatchday": 19,
+  "lastUpdated": "2026-06-30 00:13:59",
+  "currentDate": "2026-06-30",
+  "currentMatchday": 20,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -3699,7 +3699,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BRA",
       "away": "JPN",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
@@ -3717,6 +3717,35 @@ const WORLDCUP_DATA = {
           "overOdds": 120,
           "underOdds": -150
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，巴西 与 日本 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          69,
+          31
+        ],
+        "shots": [
+          19,
+          5
+        ],
+        "target": [
+          7,
+          2
+        ],
+        "fouls": [
+          4,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (巴西)",
+        "team": "BRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3726,7 +3755,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "GER",
       "away": "PAR",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
@@ -3744,6 +3773,39 @@ const WORLDCUP_DATA = {
           "overOdds": -140,
           "underOdds": 110
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 1,
+        "penalties": {
+          "home": 3,
+          "away": 4
+        }
+      },
+      "analysis": "在本场淘汰赛的激烈较量中，德国 与 巴拉圭 展开了高水平的战术对决。双方在常规时间和加时赛中战成 1 比 1 平。最终在残酷的点球大战中，巴拉圭 凭借更稳定的表现以点球比分 3-4 战胜对手，成功晋级下一轮。双方球员拼尽全力，为球迷贡献了一场经典的世界杯大战。",
+      "stats": {
+        "possession": [
+          75,
+          25
+        ],
+        "shots": [
+          21,
+          7
+        ],
+        "target": [
+          6,
+          3
+        ],
+        "fouls": [
+          18,
+          12
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (德国)",
+        "team": "GER",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -3757,14 +3819,14 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio BBVA (Guadalupe)",
       "odds": {
         "moneyline": {
-          "home": 130,
-          "away": 250,
+          "home": 145,
+          "away": 230,
           "draw": 210
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 125,
-          "awayOdds": -160
+          "homeOdds": 135,
+          "awayOdds": -170
         },
         "total": {
           "line": 2.5,
@@ -3785,8 +3847,8 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 265,
-          "away": 105,
-          "draw": 255
+          "away": 110,
+          "draw": 245
         },
         "pointSpread": {
           "line": 0.5,
@@ -3811,19 +3873,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -370,
-          "away": 950,
+          "home": -330,
+          "away": 850,
           "draw": 500
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -140,
-          "awayOdds": 110
+          "homeOdds": -125,
+          "awayOdds": 100
         },
         "total": {
           "line": 3.5,
-          "overOdds": 120,
-          "underOdds": -150
+          "overOdds": 115,
+          "underOdds": -145
         }
       }
     },
@@ -3838,19 +3900,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 125,
-          "away": 290,
-          "draw": 195
+          "home": 120,
+          "away": 310,
+          "draw": 190
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 120,
-          "awayOdds": -150
+          "homeOdds": 110,
+          "awayOdds": -140
         },
         "total": {
           "line": 1.5,
-          "overOdds": -165,
-          "underOdds": 130
+          "overOdds": -170,
+          "underOdds": 135
         }
       }
     },
@@ -3876,7 +3938,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -110,
+          "overOdds": -105,
           "underOdds": -115
         }
       }
@@ -3904,7 +3966,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 115,
-          "underOdds": -145
+          "underOdds": -140
         }
       }
     },
@@ -3919,7 +3981,7 @@ const WORLDCUP_DATA = {
       "stadium": "Levi's Stadium (Santa Clara, California)",
       "odds": {
         "moneyline": {
-          "home": -260,
+          "home": -265,
           "away": 800,
           "draw": 390
         },
@@ -3958,7 +4020,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": -120,
-          "underOdds": 100
+          "underOdds": -105
         }
       }
     },
@@ -3973,14 +4035,14 @@ const WORLDCUP_DATA = {
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
-          "home": -125,
-          "away": 370,
+          "home": -130,
+          "away": 400,
           "draw": 265
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -135,
-          "awayOdds": 105
+          "homeOdds": -140,
+          "awayOdds": 110
         },
         "total": {
           "line": 2.5,
@@ -4006,12 +4068,12 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -105,
-          "awayOdds": -125
+          "homeOdds": 100,
+          "awayOdds": -130
         },
         "total": {
           "line": 2.5,
-          "overOdds": 110,
+          "overOdds": 115,
           "underOdds": -140
         }
       }
@@ -4061,7 +4123,7 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -1.5,
           "homeOdds": -175,
-          "awayOdds": 140
+          "awayOdds": 135
         },
         "total": {
           "line": 2.5,
@@ -4152,7 +4214,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-05",
       "time": "05:00",
       "group": "淘汰赛",
-      "home": "RD32",
+      "home": "PAR",
       "away": "RD32",
       "status": "Scheduled",
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)"
@@ -4162,7 +4224,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-06",
       "time": "04:00",
       "group": "淘汰赛",
-      "home": "RD32",
+      "home": "BRA",
       "away": "RD32",
       "status": "Scheduled",
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)"
@@ -4365,6 +4427,12 @@ const WORLDCUP_DATA = {
       "title": "第19比赛日战况汇总",
       "content": "在第19比赛日中，完成了多场强强对话，具体赛果为：南非 0-1 加拿大。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760486,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-06-30": {
+      "title": "第20比赛日战况汇总",
+      "content": "在第20比赛日中，完成了多场强强对话，具体赛果为：巴西 2-1 日本；德国 1-1 巴拉圭。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760487,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },

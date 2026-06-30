@@ -246,16 +246,32 @@ async function run() {
 
       if (isCompleted) {
         // 更新为已完赛状态
-        const scoreChanged = !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore;
+        const homeShootout = homeCompetitor.shootoutScore !== undefined && homeCompetitor.shootoutScore !== null ? parseInt(homeCompetitor.shootoutScore) : null;
+        const awayShootout = awayCompetitor.shootoutScore !== undefined && awayCompetitor.shootoutScore !== null ? parseInt(awayCompetitor.shootoutScore) : null;
+        const actualHomeShootout = isHome ? homeShootout : awayShootout;
+        const actualAwayShootout = isHome ? awayShootout : homeShootout;
+        
+        const hasPenalties = actualHomeShootout !== null && actualAwayShootout !== null && !isNaN(actualHomeShootout) && !isNaN(actualAwayShootout);
+        const scoreChanged = !match.score || match.score.home !== actualHomeScore || match.score.away !== actualAwayScore ||
+          (hasPenalties && (!match.score.penalties || match.score.penalties.home !== actualHomeShootout || match.score.penalties.away !== actualAwayShootout));
         
         if (match.status !== "FT" || scoreChanged) {
           match.status = "FT";
           match.score = { home: actualHomeScore, away: actualAwayScore };
+          if (hasPenalties) {
+            match.score.penalties = { home: actualHomeShootout, away: actualAwayShootout };
+          }
           
           // 重新生成战术分析
           const homeName = WORLDCUP_DATA.teams[match.home] ? WORLDCUP_DATA.teams[match.home].name : match.home;
           const awayName = WORLDCUP_DATA.teams[match.away] ? WORLDCUP_DATA.teams[match.away].name : match.away;
-          match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
+          
+          if (hasPenalties) {
+            const shootWinner = actualHomeShootout > actualAwayShootout ? homeName : awayName;
+            match.analysis = `在本场淘汰赛的激烈较量中，${homeName} 与 ${awayName} 展开了高水平的战术对决。双方在常规时间和加时赛中战成 ${actualHomeScore} 比 ${actualAwayScore} 平。最终在残酷的点球大战中，${shootWinner} 凭借更稳定的表现以点球比分 ${actualHomeShootout}-${actualAwayShootout} 战胜对手，成功晋级下一轮。双方球员拼尽全力，为球迷贡献了一场经典的世界杯大战。`;
+          } else {
+            match.analysis = `在本场 ${match.group} 组的激烈较量中，${homeName} 与 ${awayName} 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 ${actualHomeScore} 比 ${actualAwayScore}。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。`;
+          }
 
           // 重新填充统计数据 (使用真实统计，没有则降级为默认估算值)
           const liveStats = extractLiveStats(homeCompetitor, awayCompetitor, isHome);
