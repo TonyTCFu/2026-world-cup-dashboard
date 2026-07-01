@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 00:04:40
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 02:19:58
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 00:04:40",
+  "lastUpdated": "2026-07-02 02:19:58",
   "currentDate": "2026-07-01",
   "currentMatchday": 21,
   "teams": {
@@ -4043,7 +4043,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ENG",
       "away": "COD",
-      "status": "4'",
+      "status": "43'",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
@@ -4064,24 +4064,24 @@ const WORLDCUP_DATA = {
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "stats": {
         "possession": [
-          20,
-          80
+          58,
+          42
         ],
         "shots": [
-          0,
-          0
+          6,
+          2
         ],
         "target": [
-          0,
-          0
+          2,
+          1
         ],
         "fouls": [
-          1,
-          0
+          7,
+          4
         ]
       }
     },
