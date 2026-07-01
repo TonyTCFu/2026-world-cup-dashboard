@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 02:19:58
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 04:19:57
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 02:19:58",
-  "currentDate": "2026-07-01",
-  "currentMatchday": 21,
+  "lastUpdated": "2026-07-02 04:19:57",
+  "currentDate": "2026-07-02",
+  "currentMatchday": 22,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4043,7 +4043,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ENG",
       "away": "COD",
-      "status": "43'",
+      "status": "FT",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
@@ -4063,26 +4063,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 1
       },
       "stats": {
         "possession": [
-          58,
-          42
+          60,
+          40
         ],
         "shots": [
-          6,
-          2
+          16,
+          7
         ],
         "target": [
-          2,
-          1
+          7,
+          2
         ],
         "fouls": [
-          7,
-          4
+          10,
+          12
         ]
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，英格兰 与 刚果(金) 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (英格兰)",
+        "team": "ENG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4092,24 +4099,46 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BEL",
       "away": "SEN",
-      "status": "Scheduled",
+      "status": "19'",
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 115,
-          "away": 265,
-          "draw": 230
+          "home": -105,
+          "away": 310,
+          "draw": 245
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 105,
-          "awayOdds": -135
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -135,
+          "underOdds": 110
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          39,
+          61
+        ],
+        "shots": [
+          2,
+          3
+        ],
+        "target": [
+          1,
+          1
+        ],
+        "fouls": [
+          3,
+          0
+        ]
       }
     },
     {
@@ -4123,14 +4152,14 @@ const WORLDCUP_DATA = {
       "stadium": "Levi's Stadium (Santa Clara, California)",
       "odds": {
         "moneyline": {
-          "home": -275,
+          "home": -265,
           "away": 800,
           "draw": 400
         },
         "pointSpread": {
           "line": -1.5,
           "homeOdds": 100,
-          "awayOdds": -130
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
@@ -4156,13 +4185,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 100,
-          "awayOdds": -125
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
-          "underOdds": -105
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
@@ -4312,9 +4341,9 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 380,
+          "home": 390,
           "away": -120,
-          "draw": 255
+          "draw": 250
         },
         "pointSpread": {
           "line": 0.5,
@@ -4323,8 +4352,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 130,
+          "underOdds": -160
         }
       }
     },
@@ -4390,8 +4419,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -170,
-          "underOdds": 135
+          "overOdds": -160,
+          "underOdds": 130
         }
       }
     },
@@ -4417,8 +4446,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -110,
-          "underOdds": -115
+          "overOdds": -120,
+          "underOdds": -105
         }
       }
     },
@@ -4428,9 +4457,26 @@ const WORLDCUP_DATA = {
       "time": "08:00",
       "group": "淘汰赛",
       "home": "MEX",
-      "away": "RD32",
+      "away": "ENG",
       "status": "Scheduled",
-      "stadium": "Estadio Banorte (Mexico City)"
+      "stadium": "Estadio Banorte (Mexico City)",
+      "odds": {
+        "moneyline": {
+          "home": 245,
+          "away": 125,
+          "draw": 220
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -150,
+          "awayOdds": 120
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 145,
+          "underOdds": -180
+        }
+      }
     },
     {
       "id": 760506,
@@ -4632,6 +4678,12 @@ const WORLDCUP_DATA = {
       "title": "第21比赛日战况汇总",
       "content": "在第21比赛日中，完成了多场强强对话，具体赛果为：科特迪瓦 1-2 挪威；法国 3-0 瑞典；墨西哥 2-0 厄瓜多尔。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760490,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-02": {
+      "title": "第22比赛日战况汇总",
+      "content": "在第22比赛日中，完成了多场强强对话，具体赛果为：英格兰 2-1 刚果(金)。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760495,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
