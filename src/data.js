@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-01 10:01:22
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 00:04:40
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-01 10:01:22",
+  "lastUpdated": "2026-07-02 00:04:40",
   "currentDate": "2026-07-01",
   "currentMatchday": 21,
   "teams": {
@@ -3987,7 +3987,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "MEX",
       "away": "ECU",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
@@ -4005,6 +4005,35 @@ const WORLDCUP_DATA = {
           "overOdds": -145,
           "underOdds": 115
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，墨西哥 与 厄瓜多尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          43,
+          57
+        ],
+        "shots": [
+          15,
+          7
+        ],
+        "target": [
+          3,
+          1
+        ],
+        "fouls": [
+          10,
+          14
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (墨西哥)",
+        "team": "MEX",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4014,24 +4043,46 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ENG",
       "away": "COD",
-      "status": "Scheduled",
+      "status": "4'",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -350,
+          "home": -330,
           "away": 1200,
-          "draw": 425
+          "draw": 400
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -115,
-          "awayOdds": -115
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": -110,
+          "underOdds": -110
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          20,
+          80
+        ],
+        "shots": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "fouls": [
+          1,
+          0
+        ]
       }
     },
     {
@@ -4051,13 +4102,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 110,
+          "homeOdds": 105,
           "awayOdds": -135
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
-          "underOdds": -120
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
@@ -4072,19 +4123,19 @@ const WORLDCUP_DATA = {
       "stadium": "Levi's Stadium (Santa Clara, California)",
       "odds": {
         "moneyline": {
-          "home": -265,
+          "home": -275,
           "away": 800,
           "draw": 400
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 105,
-          "awayOdds": -135
+          "homeOdds": 100,
+          "awayOdds": -130
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 110
+          "overOdds": -155,
+          "underOdds": 125
         }
       }
     },
@@ -4137,8 +4188,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 110,
-          "underOdds": -135
+          "overOdds": 105,
+          "underOdds": -130
         }
       }
     },
@@ -4207,19 +4258,19 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": -575,
-          "away": 1700,
-          "draw": 650
+          "home": -600,
+          "away": 1800,
+          "draw": 700
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -170,
-          "awayOdds": 135
+          "homeOdds": -180,
+          "awayOdds": 140
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
-          "underOdds": 120
+          "overOdds": -155,
+          "underOdds": 125
         }
       }
     },
@@ -4268,7 +4319,7 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": 0.5,
           "homeOdds": 100,
-          "awayOdds": -125
+          "awayOdds": -130
         },
         "total": {
           "line": 2.5,
@@ -4328,14 +4379,14 @@ const WORLDCUP_DATA = {
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": 1400,
-          "away": -500,
+          "home": 1700,
+          "away": -550,
           "draw": 600
         },
         "pointSpread": {
           "line": 1.5,
           "homeOdds": 130,
-          "awayOdds": -165
+          "awayOdds": -170
         },
         "total": {
           "line": 2.5,
@@ -4355,8 +4406,8 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -110,
-          "away": 310,
+          "home": -105,
+          "away": 300,
           "draw": 260
         },
         "pointSpread": {
@@ -4366,8 +4417,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
-          "underOdds": -120
+          "overOdds": -110,
+          "underOdds": -115
         }
       }
     },
@@ -4376,7 +4427,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-06",
       "time": "08:00",
       "group": "淘汰赛",
-      "home": "RD32",
+      "home": "MEX",
       "away": "RD32",
       "status": "Scheduled",
       "stadium": "Estadio Banorte (Mexico City)"
@@ -4579,7 +4630,7 @@ const WORLDCUP_DATA = {
     },
     "2026-07-01": {
       "title": "第21比赛日战况汇总",
-      "content": "在第21比赛日中，完成了多场强强对话，具体赛果为：科特迪瓦 1-2 挪威；法国 3-0 瑞典。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第21比赛日中，完成了多场强强对话，具体赛果为：科特迪瓦 1-2 挪威；法国 3-0 瑞典；墨西哥 2-0 厄瓜多尔。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760490,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
