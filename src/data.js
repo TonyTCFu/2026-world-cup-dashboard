@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 04:19:57
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 05:55:10
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 04:19:57",
+  "lastUpdated": "2026-07-02 05:55:10",
   "currentDate": "2026-07-02",
   "currentMatchday": 22,
   "teams": {
@@ -4099,46 +4099,24 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BEL",
       "away": "SEN",
-      "status": "19'",
+      "status": "Scheduled",
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": -105,
-          "away": 310,
-          "draw": 245
+          "home": 110,
+          "away": 265,
+          "draw": 235
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -110,
-          "awayOdds": -115
+          "homeOdds": 110,
+          "awayOdds": -140
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 110
+          "overOdds": -120,
+          "underOdds": -105
         }
-      },
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "stats": {
-        "possession": [
-          39,
-          61
-        ],
-        "shots": [
-          2,
-          3
-        ],
-        "target": [
-          1,
-          1
-        ],
-        "fouls": [
-          3,
-          0
-        ]
       }
     },
     {
@@ -4159,11 +4137,11 @@ const WORLDCUP_DATA = {
         "pointSpread": {
           "line": -1.5,
           "homeOdds": 100,
-          "awayOdds": -125
+          "awayOdds": -130
         },
         "total": {
           "line": 2.5,
-          "overOdds": -155,
+          "overOdds": -160,
           "underOdds": 125
         }
       }
@@ -4185,13 +4163,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": 100,
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -120,
+          "underOdds": -105
         }
       }
     },
@@ -4341,9 +4319,9 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 390,
+          "home": 380,
           "away": -120,
-          "draw": 250
+          "draw": 255
         },
         "pointSpread": {
           "line": 0.5,
@@ -4352,8 +4330,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 130,
-          "underOdds": -160
+          "overOdds": 125,
+          "underOdds": -155
         }
       }
     },
@@ -4419,8 +4397,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -160,
-          "underOdds": 130
+          "overOdds": -170,
+          "underOdds": 135
         }
       }
     },
@@ -4446,8 +4424,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
-          "underOdds": -105
+          "overOdds": -110,
+          "underOdds": -110
         }
       }
     },
