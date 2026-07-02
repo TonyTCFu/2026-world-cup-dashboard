@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 18:33:18
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 23:01:43
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 18:33:18",
+  "lastUpdated": "2026-07-02 23:01:43",
   "currentDate": "2026-07-02",
   "currentMatchday": 22,
   "teams": {
@@ -4215,19 +4215,19 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -310,
-          "away": 950,
-          "draw": 425
+          "home": -360,
+          "away": 1100,
+          "draw": 475
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -110,
-          "awayOdds": -115
+          "homeOdds": -120,
+          "awayOdds": -105
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
-          "underOdds": 115
+          "overOdds": -150,
+          "underOdds": 120
         }
       }
     },
@@ -4248,13 +4248,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -145,
-          "awayOdds": 115
+          "homeOdds": -150,
+          "awayOdds": 120
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 110
+          "overOdds": -140,
+          "underOdds": 115
         }
       }
     },
@@ -4269,19 +4269,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 100,
-          "away": 320,
+          "home": -105,
+          "away": 340,
           "draw": 225
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
           "overOdds": 120,
-          "underOdds": -145
+          "underOdds": -150
         }
       }
     },
@@ -4334,7 +4334,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -150,
+          "overOdds": -155,
           "underOdds": 125
         }
       }
@@ -4498,19 +4498,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 205,
-          "away": 155,
+          "home": 220,
+          "away": 140,
           "draw": 215
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -180,
-          "awayOdds": 140
+          "homeOdds": -170,
+          "awayOdds": 135
         },
         "total": {
           "line": 2.5,
           "overOdds": 150,
-          "underOdds": -190
+          "underOdds": -185
         }
       }
     },
