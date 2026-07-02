@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 12:35:36
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 18:33:18
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 12:35:36",
+  "lastUpdated": "2026-07-02 18:33:18",
   "currentDate": "2026-07-02",
   "currentMatchday": 22,
   "teams": {
@@ -4215,19 +4215,19 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -300,
-          "away": 900,
+          "home": -310,
+          "away": 950,
           "draw": 425
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 105
+          "overOdds": -145,
+          "underOdds": 115
         }
       }
     },
@@ -4242,19 +4242,19 @@ const WORLDCUP_DATA = {
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
-          "home": -135,
-          "away": 390,
-          "draw": 275
+          "home": -140,
+          "away": 400,
+          "draw": 280
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -140,
-          "awayOdds": 110
+          "homeOdds": -145,
+          "awayOdds": 115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -135,
+          "underOdds": 110
         }
       }
     },
@@ -4269,19 +4269,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 110,
-          "away": 290,
+          "home": 100,
+          "away": 320,
           "draw": 225
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 105,
-          "awayOdds": -130
+          "homeOdds": -105,
+          "awayOdds": -120
         },
         "total": {
           "line": 2.5,
-          "overOdds": 115,
-          "underOdds": -140
+          "overOdds": 120,
+          "underOdds": -145
         }
       }
     },
@@ -4307,8 +4307,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 1.5,
-          "overOdds": -175,
-          "underOdds": 140
+          "overOdds": -170,
+          "underOdds": 135
         }
       }
     },
@@ -4334,7 +4334,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -155,
+          "overOdds": -150,
           "underOdds": 125
         }
       }
@@ -4356,8 +4356,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 155,
-          "awayOdds": -195
+          "homeOdds": 150,
+          "awayOdds": -190
         },
         "total": {
           "line": 2.5,
@@ -4377,8 +4377,8 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 390,
-          "away": -120,
+          "home": 400,
+          "away": -125,
           "draw": 250
         },
         "pointSpread": {
@@ -4477,8 +4477,8 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -115,
-          "awayOdds": -110
+          "homeOdds": -120,
+          "awayOdds": -105
         },
         "total": {
           "line": 2.5,
@@ -4499,8 +4499,8 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 205,
-          "away": 150,
-          "draw": 220
+          "away": 155,
+          "draw": 215
         },
         "pointSpread": {
           "line": 0.5,
@@ -4510,7 +4510,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 150,
-          "underOdds": -185
+          "underOdds": -190
         }
       }
     },
@@ -4535,9 +4535,9 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 155,
+          "home": 150,
           "away": 180,
-          "draw": 245
+          "draw": 250
         },
         "pointSpread": {
           "line": -0.5,
