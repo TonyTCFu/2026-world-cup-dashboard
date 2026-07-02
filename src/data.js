@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 08:04:38
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 12:35:36
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 08:04:38",
+  "lastUpdated": "2026-07-02 12:35:36",
   "currentDate": "2026-07-02",
   "currentMatchday": 22,
   "teams": {
@@ -4099,7 +4099,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BEL",
       "away": "SEN",
-      "status": "90'+3'",
+      "status": "FT",
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
@@ -4119,26 +4119,33 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "stats": {
         "possession": [
-          54,
-          46
+          52,
+          48
         ],
         "shots": [
-          15,
-          12
+          19,
+          19
         ],
         "target": [
-          4,
-          4
+          5,
+          5
         ],
         "fouls": [
-          13,
-          10
+          22,
+          12
         ]
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，比利时 与 塞内加尔 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (比利时)",
+        "team": "BEL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4148,7 +4155,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "USA",
       "away": "BIH",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Levi's Stadium (Santa Clara, California)",
       "odds": {
         "moneyline": {
@@ -4166,6 +4173,35 @@ const WORLDCUP_DATA = {
           "overOdds": -155,
           "underOdds": 125
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，美国 与 波黑 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          8,
+          10
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "fouls": [
+          7,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (美国)",
+        "team": "USA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4190,8 +4226,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -135,
+          "underOdds": 105
         }
       }
     },
@@ -4206,9 +4242,9 @@ const WORLDCUP_DATA = {
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
-          "home": -130,
-          "away": 400,
-          "draw": 270
+          "home": -135,
+          "away": 390,
+          "draw": 275
         },
         "pointSpread": {
           "line": -0.5,
@@ -4217,8 +4253,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
@@ -4233,14 +4269,14 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 105,
-          "away": 300,
-          "draw": 230
+          "home": 110,
+          "away": 290,
+          "draw": 225
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 100,
-          "awayOdds": -125
+          "homeOdds": 105,
+          "awayOdds": -130
         },
         "total": {
           "line": 2.5,
@@ -4266,13 +4302,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -175,
+          "homeOdds": -180,
           "awayOdds": 140
         },
         "total": {
           "line": 1.5,
-          "overOdds": -170,
-          "underOdds": 135
+          "overOdds": -175,
+          "underOdds": 140
         }
       }
     },
@@ -4326,7 +4362,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 125,
-          "underOdds": -155
+          "underOdds": -150
         }
       }
     },
@@ -4347,7 +4383,7 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 100,
+          "homeOdds": 105,
           "awayOdds": -130
         },
         "total": {
@@ -4408,13 +4444,13 @@ const WORLDCUP_DATA = {
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": 1700,
-          "away": -550,
+          "home": 1800,
+          "away": -575,
           "draw": 600
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": 130,
+          "homeOdds": 135,
           "awayOdds": -170
         },
         "total": {
@@ -4435,9 +4471,9 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -105,
+          "home": -110,
           "away": 300,
-          "draw": 260
+          "draw": 270
         },
         "pointSpread": {
           "line": -0.5,
@@ -4446,8 +4482,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -120,
-          "underOdds": -105
+          "overOdds": -130,
+          "underOdds": 105
         }
       }
     },
@@ -4462,19 +4498,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 240,
-          "away": 130,
+          "home": 205,
+          "away": 150,
           "draw": 220
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -155,
-          "awayOdds": 125
+          "homeOdds": -180,
+          "awayOdds": 140
         },
         "total": {
           "line": 2.5,
-          "overOdds": 145,
-          "underOdds": -180
+          "overOdds": 150,
+          "underOdds": -185
         }
       }
     },
@@ -4493,10 +4529,27 @@ const WORLDCUP_DATA = {
       "date": "2026-07-07",
       "time": "08:00",
       "group": "淘汰赛",
-      "home": "RD32",
-      "away": "RD32",
+      "home": "USA",
+      "away": "BEL",
       "status": "Scheduled",
-      "stadium": "Lumen Field (Seattle, Washington)"
+      "stadium": "Lumen Field (Seattle, Washington)",
+      "odds": {
+        "moneyline": {
+          "home": 155,
+          "away": 180,
+          "draw": 245
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": 145,
+          "awayOdds": -185
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -130,
+          "underOdds": 105
+        }
+      }
     },
     {
       "id": 760509,
@@ -4682,7 +4735,7 @@ const WORLDCUP_DATA = {
     },
     "2026-07-02": {
       "title": "第22比赛日战况汇总",
-      "content": "在第22比赛日中，完成了多场强强对话，具体赛果为：英格兰 2-1 刚果(金)。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第22比赛日中，完成了多场强强对话，具体赛果为：英格兰 2-1 刚果(金)；比利时 3-2 塞内加尔；美国 2-0 波黑。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760495,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
