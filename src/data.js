@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-02 23:01:43
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-03 02:53:18
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-02 23:01:43",
+  "lastUpdated": "2026-07-03 02:53:18",
   "currentDate": "2026-07-02",
   "currentMatchday": 22,
   "teams": {
@@ -4215,19 +4215,19 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -360,
-          "away": 1100,
-          "draw": 475
+          "home": -330,
+          "away": 1000,
+          "draw": 450
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": -120,
-          "awayOdds": -105
+          "homeOdds": -110,
+          "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -150,
-          "underOdds": 120
+          "overOdds": -145,
+          "underOdds": 115
         }
       }
     },
@@ -4242,18 +4242,18 @@ const WORLDCUP_DATA = {
       "stadium": "BMO Field (Toronto)",
       "odds": {
         "moneyline": {
-          "home": -140,
-          "away": 400,
+          "home": -150,
+          "away": 450,
           "draw": 280
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -150,
-          "awayOdds": 120
+          "homeOdds": -160,
+          "awayOdds": 125
         },
         "total": {
           "line": 2.5,
-          "overOdds": -140,
+          "overOdds": -145,
           "underOdds": 115
         }
       }
@@ -4269,9 +4269,9 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": -105,
-          "away": 340,
-          "draw": 225
+          "home": -110,
+          "away": 350,
+          "draw": 230
         },
         "pointSpread": {
           "line": -0.5,
@@ -4281,7 +4281,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 120,
-          "underOdds": -150
+          "underOdds": -145
         }
       }
     },
@@ -4302,13 +4302,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -180,
-          "awayOdds": 140
+          "homeOdds": -185,
+          "awayOdds": 145
         },
         "total": {
           "line": 1.5,
-          "overOdds": -170,
-          "underOdds": 135
+          "overOdds": -160,
+          "underOdds": 130
         }
       }
     },
@@ -4323,14 +4323,14 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": -600,
-          "away": 1800,
+          "home": -650,
+          "away": 1900,
           "draw": 700
         },
         "pointSpread": {
-          "line": -1.5,
-          "homeOdds": -180,
-          "awayOdds": 140
+          "line": -2.5,
+          "homeOdds": 140,
+          "awayOdds": -180
         },
         "total": {
           "line": 2.5,
@@ -4350,18 +4350,18 @@ const WORLDCUP_DATA = {
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
-          "home": -190,
-          "away": 600,
+          "home": -200,
+          "away": 650,
           "draw": 310
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 150,
-          "awayOdds": -190
+          "homeOdds": 145,
+          "awayOdds": -185
         },
         "total": {
           "line": 2.5,
-          "overOdds": 125,
+          "overOdds": 120,
           "underOdds": -150
         }
       }
@@ -4471,9 +4471,9 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -110,
-          "away": 300,
-          "draw": 270
+          "home": -115,
+          "away": 310,
+          "draw": 280
         },
         "pointSpread": {
           "line": -0.5,
@@ -4535,19 +4535,19 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 150,
+          "home": 155,
           "away": 180,
-          "draw": 250
+          "draw": 245
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 145,
-          "awayOdds": -185
+          "homeOdds": 150,
+          "awayOdds": -190
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
