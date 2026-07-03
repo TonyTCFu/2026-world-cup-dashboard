@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-03 21:17:37
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-04 01:07:45
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-03 21:17:37",
+  "lastUpdated": "2026-07-04 01:07:45",
   "currentDate": "2026-07-03",
   "currentMatchday": 23,
   "teams": {
@@ -4383,9 +4383,9 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 265,
-          "away": 135,
-          "draw": 195
+          "home": 260,
+          "away": 140,
+          "draw": 190
         },
         "pointSpread": {
           "line": 0.5,
@@ -4411,7 +4411,7 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": -650,
-          "away": 1900,
+          "away": 1800,
           "draw": 700
         },
         "pointSpread": {
@@ -4448,8 +4448,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 105,
-          "underOdds": -130
+          "overOdds": 100,
+          "underOdds": -125
         }
       }
     },
@@ -4531,8 +4531,8 @@ const WORLDCUP_DATA = {
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
-          "home": 1700,
-          "away": -550,
+          "home": 1800,
+          "away": -525,
           "draw": 600
         },
         "pointSpread": {
@@ -4542,8 +4542,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
-          "underOdds": 120
+          "overOdds": -140,
+          "underOdds": 115
         }
       }
     },
@@ -4558,14 +4558,14 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -115,
-          "away": 310,
+          "home": -120,
+          "away": 320,
           "draw": 280
         },
         "pointSpread": {
           "line": -0.5,
           "homeOdds": -125,
-          "awayOdds": -105
+          "awayOdds": 100
         },
         "total": {
           "line": 2.5,
@@ -4623,7 +4623,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -110,
+          "overOdds": -115,
           "underOdds": -110
         }
       }
@@ -4650,7 +4650,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
+          "overOdds": -130,
           "underOdds": 105
         }
       }
