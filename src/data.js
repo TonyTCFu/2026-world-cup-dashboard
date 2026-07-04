@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-04 20:38:28
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-05 04:01:37
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-04 20:38:28",
-  "currentDate": "2026-07-04",
-  "currentMatchday": 24,
+  "lastUpdated": "2026-07-05 04:01:37",
+  "currentDate": "2026-07-05",
+  "currentMatchday": 25,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4551,7 +4551,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "CAN",
       "away": "MAR",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
@@ -4569,6 +4569,35 @@ const WORLDCUP_DATA = {
           "overOdds": 120,
           "underOdds": -145
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，加拿大 与 摩洛哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          45,
+          55
+        ],
+        "shots": [
+          10,
+          5
+        ],
+        "target": [
+          3,
+          4
+        ],
+        "fouls": [
+          24,
+          14
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (摩洛哥)",
+        "team": "MAR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4577,7 +4606,7 @@ const WORLDCUP_DATA = {
       "time": "04:00",
       "group": "淘汰赛",
       "home": "RD16 W1",
-      "away": "RD16 W2",
+      "away": "MAR",
       "status": "Scheduled",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
     },
@@ -4628,13 +4657,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": 130,
-          "awayOdds": -165
+          "homeOdds": 125,
+          "awayOdds": -155
         },
         "total": {
           "line": 2.5,
-          "overOdds": -160,
-          "underOdds": 130
+          "overOdds": -150,
+          "underOdds": 120
         }
       }
     },
@@ -4649,19 +4678,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -125,
-          "away": 320,
-          "draw": 285
+          "home": -120,
+          "away": 310,
+          "draw": 275
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -130,
+          "homeOdds": -125,
           "awayOdds": 100
         },
         "total": {
           "line": 2.5,
           "overOdds": -135,
-          "underOdds": 110
+          "underOdds": 105
         }
       }
     },
@@ -4682,13 +4711,13 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -170,
-          "awayOdds": 135
+          "homeOdds": -165,
+          "awayOdds": 130
         },
         "total": {
           "line": 2.5,
           "overOdds": 135,
-          "underOdds": -165
+          "underOdds": -170
         }
       }
     },
@@ -4730,8 +4759,8 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 160,
-          "away": 165,
+          "home": 155,
+          "away": 170,
           "draw": 240
         },
         "pointSpread": {
@@ -4741,7 +4770,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
+          "overOdds": -130,
           "underOdds": 105
         }
       }
@@ -4796,7 +4825,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 130,
-          "underOdds": -165
+          "underOdds": -160
         }
       }
     },
@@ -4978,6 +5007,12 @@ const WORLDCUP_DATA = {
       "title": "第24比赛日战况汇总",
       "content": "在第24比赛日中，完成了多场强强对话，具体赛果为：澳大利亚 1-1 埃及；阿根廷 3-2 佛得角；哥伦比亚 1-0 加纳。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760499,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-05": {
+      "title": "第25比赛日战况汇总",
+      "content": "在第25比赛日中，完成了多场强强对话，具体赛果为：加拿大 0-3 摩洛哥。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760502,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
