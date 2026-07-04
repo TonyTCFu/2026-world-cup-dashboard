@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-04 01:07:45
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-04 20:38:28
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-04 01:07:45",
-  "currentDate": "2026-07-03",
-  "currentMatchday": 23,
+  "lastUpdated": "2026-07-04 20:38:28",
+  "currentDate": "2026-07-04",
+  "currentMatchday": 24,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4379,7 +4379,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "AUS",
       "away": "EGY",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
@@ -4397,6 +4397,39 @@ const WORLDCUP_DATA = {
           "overOdds": -180,
           "underOdds": 145
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 1,
+        "penalties": {
+          "home": 2,
+          "away": 4
+        }
+      },
+      "analysis": "在本场淘汰赛的激烈较量中，澳大利亚 与 埃及 展开了高水平的战术对决。双方在常规时间和加时赛中战成 1 比 1 平。最终在残酷的点球大战中，埃及 凭借更稳定的表现以点球比分 2-4 战胜对手，成功晋级下一轮。双方球员拼尽全力，为球迷贡献了一场经典的世界杯大战。",
+      "stats": {
+        "possession": [
+          42,
+          58
+        ],
+        "shots": [
+          16,
+          14
+        ],
+        "target": [
+          1,
+          3
+        ],
+        "fouls": [
+          12,
+          14
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (澳大利亚)",
+        "team": "AUS",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4406,7 +4439,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ARG",
       "away": "CPV",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
@@ -4424,6 +4457,35 @@ const WORLDCUP_DATA = {
           "overOdds": -160,
           "underOdds": 130
         }
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，阿根廷 与 佛得角 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          64,
+          36
+        ],
+        "shots": [
+          22,
+          16
+        ],
+        "target": [
+          10,
+          5
+        ],
+        "fouls": [
+          13,
+          12
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4433,7 +4495,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "COL",
       "away": "GHA",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
@@ -4451,6 +4513,35 @@ const WORLDCUP_DATA = {
           "overOdds": 100,
           "underOdds": -125
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，哥伦比亚 与 加纳 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          61,
+          39
+        ],
+        "shots": [
+          20,
+          8
+        ],
+        "target": [
+          8,
+          0
+        ],
+        "fouls": [
+          14,
+          10
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (哥伦比亚)",
+        "team": "COL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4464,19 +4555,19 @@ const WORLDCUP_DATA = {
       "stadium": "NRG Stadium (Houston, Texas)",
       "odds": {
         "moneyline": {
-          "home": 400,
-          "away": -125,
+          "home": 450,
+          "away": -140,
           "draw": 250
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": 105,
-          "awayOdds": -135
+          "homeOdds": 110,
+          "awayOdds": -140
         },
         "total": {
           "line": 2.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 120,
+          "underOdds": -145
         }
       }
     },
@@ -4532,18 +4623,18 @@ const WORLDCUP_DATA = {
       "odds": {
         "moneyline": {
           "home": 1800,
-          "away": -525,
-          "draw": 600
+          "away": -575,
+          "draw": 550
         },
         "pointSpread": {
           "line": 1.5,
-          "homeOdds": 125,
-          "awayOdds": -160
+          "homeOdds": 130,
+          "awayOdds": -165
         },
         "total": {
           "line": 2.5,
-          "overOdds": -140,
-          "underOdds": 115
+          "overOdds": -160,
+          "underOdds": 130
         }
       }
     },
@@ -4558,13 +4649,13 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -120,
+          "home": -125,
           "away": 320,
-          "draw": 280
+          "draw": 285
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -125,
+          "homeOdds": -130,
           "awayOdds": 100
         },
         "total": {
@@ -4585,19 +4676,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 220,
+          "home": 205,
           "away": 140,
-          "draw": 215
+          "draw": 220
         },
         "pointSpread": {
           "line": 0.5,
           "homeOdds": -170,
-          "awayOdds": 130
+          "awayOdds": 135
         },
         "total": {
           "line": 2.5,
-          "overOdds": 140,
-          "underOdds": -175
+          "overOdds": 135,
+          "underOdds": -165
         }
       }
     },
@@ -4612,9 +4703,9 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 300,
-          "away": -105,
-          "draw": 260
+          "home": 295,
+          "away": -110,
+          "draw": 265
         },
         "pointSpread": {
           "line": 0.5,
@@ -4623,8 +4714,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -115,
-          "underOdds": -110
+          "overOdds": -125,
+          "underOdds": 100
         }
       }
     },
@@ -4639,18 +4730,18 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 155,
-          "away": 180,
+          "home": 160,
+          "away": 165,
           "draw": 240
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": 150,
-          "awayOdds": -190
+          "homeOdds": 155,
+          "awayOdds": -200
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
+          "overOdds": -135,
           "underOdds": 105
         }
       }
@@ -4660,10 +4751,27 @@ const WORLDCUP_DATA = {
       "date": "2026-07-08",
       "time": "00:00",
       "group": "淘汰赛",
-      "home": "RD32",
-      "away": "RD32",
+      "home": "ARG",
+      "away": "EGY",
       "status": "Scheduled",
-      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)"
+      "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
+      "odds": {
+        "moneyline": {
+          "home": -285,
+          "away": 850,
+          "draw": 380
+        },
+        "pointSpread": {
+          "line": -1.5,
+          "homeOdds": 110,
+          "awayOdds": -140
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 100,
+          "underOdds": -120
+        }
+      }
     },
     {
       "id": 760508,
@@ -4671,9 +4779,26 @@ const WORLDCUP_DATA = {
       "time": "04:00",
       "group": "淘汰赛",
       "home": "SUI",
-      "away": "RD32",
+      "away": "COL",
       "status": "Scheduled",
-      "stadium": "BC Place (Vancouver)"
+      "stadium": "BC Place (Vancouver)",
+      "odds": {
+        "moneyline": {
+          "home": 245,
+          "away": 120,
+          "draw": 220
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -150,
+          "awayOdds": 120
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 130,
+          "underOdds": -165
+        }
+      }
     },
     {
       "id": 760514,
@@ -4847,6 +4972,12 @@ const WORLDCUP_DATA = {
       "title": "第23比赛日战况汇总",
       "content": "在第23比赛日中，完成了多场强强对话，具体赛果为：西班牙 3-0 奥地利；葡萄牙 2-1 克罗地亚；瑞士 2-0 阿尔及利亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760497,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-04": {
+      "title": "第24比赛日战况汇总",
+      "content": "在第24比赛日中，完成了多场强强对话，具体赛果为：澳大利亚 1-1 埃及；阿根廷 3-2 佛得角；哥伦比亚 1-0 加纳。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760499,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
