@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-05 23:41:25
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 04:04:03
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-05 23:41:25",
+  "lastUpdated": "2026-07-06 04:04:03",
   "currentDate": "2026-07-05",
   "currentMatchday": 25,
   "teams": {
@@ -4611,7 +4611,7 @@ const WORLDCUP_DATA = {
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
-          "home": -175,
+          "home": -170,
           "away": 500,
           "draw": 285
         },
@@ -4622,7 +4622,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
+          "overOdds": 100,
           "underOdds": -120
         }
       }
@@ -4720,24 +4720,46 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BRA",
       "away": "NOR",
-      "status": "Scheduled",
+      "status": "4'",
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -130,
-          "away": 350,
-          "draw": 275
+          "home": -135,
+          "away": 370,
+          "draw": 270
         },
         "pointSpread": {
           "line": -0.5,
           "homeOdds": -135,
-          "awayOdds": 105
+          "awayOdds": 110
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
-          "underOdds": 120
+          "overOdds": -135,
+          "underOdds": 110
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "stats": {
+        "possession": [
+          32,
+          68
+        ],
+        "shots": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "fouls": [
+          0,
+          0
+        ]
       }
     },
     {
@@ -4751,19 +4773,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 210,
-          "away": 145,
-          "draw": 215
+          "home": 200,
+          "away": 155,
+          "draw": 210
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -175,
-          "awayOdds": 135
+          "homeOdds": -185,
+          "awayOdds": 145
         },
         "total": {
           "line": 2.5,
-          "overOdds": 135,
-          "underOdds": -165
+          "overOdds": 140,
+          "underOdds": -175
         }
       }
     },
@@ -4778,19 +4800,19 @@ const WORLDCUP_DATA = {
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
-          "home": 295,
-          "away": -110,
+          "home": 280,
+          "away": -105,
           "draw": 265
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -110,
+          "homeOdds": -115,
           "awayOdds": -115
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -135,
+          "underOdds": 110
         }
       }
     },
@@ -4807,7 +4829,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": 160,
           "away": 170,
-          "draw": 230
+          "draw": 240
         },
         "pointSpread": {
           "line": -0.5,
@@ -4816,7 +4838,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -145,
+          "overOdds": -150,
           "underOdds": 120
         }
       }
@@ -4834,7 +4856,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": -260,
           "away": 750,
-          "draw": 360
+          "draw": 370
         },
         "pointSpread": {
           "line": -1.5,
