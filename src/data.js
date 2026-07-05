@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 06:44:43
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 07:51:41
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-06 06:44:43",
-  "currentDate": "2026-07-05",
-  "currentMatchday": 25,
+  "lastUpdated": "2026-07-06 07:51:41",
+  "currentDate": "2026-07-06",
+  "currentMatchday": 26,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4623,7 +4623,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": 100,
-          "underOdds": -120
+          "underOdds": -125
         }
       }
     },
@@ -4642,7 +4642,7 @@ const WORLDCUP_DATA = {
       "date": "2026-07-12",
       "time": "05:00",
       "group": "淘汰赛",
-      "home": "RD16 W3",
+      "home": "NOR",
       "away": "RD16 W4",
       "status": "Scheduled",
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
@@ -4720,7 +4720,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BRA",
       "away": "NOR",
-      "status": "4'",
+      "status": "FT",
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
@@ -4740,32 +4740,39 @@ const WORLDCUP_DATA = {
         }
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       },
       "stats": {
         "possession": [
-          32,
-          68
+          34,
+          66
         ],
         "shots": [
-          0,
-          0
+          14,
+          9
         ],
         "target": [
-          0,
-          0
+          4,
+          5
         ],
         "fouls": [
-          0,
-          0
+          7,
+          6
         ]
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，巴西 与 挪威 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "mvp": {
+        "name": "核心球员 (挪威)",
+        "team": "NOR",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
       "id": 760505,
       "date": "2026-07-06",
-      "time": "08:00",
+      "time": "09:00",
       "group": "淘汰赛",
       "home": "MEX",
       "away": "ENG",
@@ -4773,9 +4780,9 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 200,
+          "home": 205,
           "away": 155,
-          "draw": 210
+          "draw": 200
         },
         "pointSpread": {
           "line": 0.5,
@@ -4784,8 +4791,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 140,
-          "underOdds": -175
+          "overOdds": 145,
+          "underOdds": -180
         }
       }
     },
@@ -4827,9 +4834,9 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 160,
-          "away": 170,
-          "draw": 240
+          "home": 165,
+          "away": 160,
+          "draw": 245
         },
         "pointSpread": {
           "line": -0.5,
@@ -4839,7 +4846,7 @@ const WORLDCUP_DATA = {
         "total": {
           "line": 2.5,
           "overOdds": -150,
-          "underOdds": 120
+          "underOdds": 125
         }
       }
     },
@@ -4854,9 +4861,9 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -260,
+          "home": -255,
           "away": 750,
-          "draw": 370
+          "draw": 360
         },
         "pointSpread": {
           "line": -1.5,
@@ -4865,7 +4872,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
+          "overOdds": 105,
           "underOdds": -125
         }
       }
@@ -5081,6 +5088,12 @@ const WORLDCUP_DATA = {
       "title": "第25比赛日战况汇总",
       "content": "在第25比赛日中，完成了多场强强对话，具体赛果为：加拿大 0-3 摩洛哥；巴拉圭 0-1 法国。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760502,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-06": {
+      "title": "第26比赛日战况汇总",
+      "content": "在第26比赛日中，完成了多场强强对话，具体赛果为：巴西 1-2 挪威。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760504,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
