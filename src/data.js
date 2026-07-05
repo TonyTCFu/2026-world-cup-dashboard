@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 05:30:59
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 06:44:43
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-06 05:30:59",
+  "lastUpdated": "2026-07-06 06:44:43",
   "currentDate": "2026-07-05",
   "currentMatchday": 25,
   "teams": {
@@ -4720,7 +4720,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "BRA",
       "away": "NOR",
-      "status": "68'",
+      "status": "4'",
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
@@ -4749,16 +4749,16 @@ const WORLDCUP_DATA = {
           68
         ],
         "shots": [
-          11,
-          6
+          0,
+          0
         ],
         "target": [
-          3,
-          2
+          0,
+          0
         ],
         "fouls": [
-          5,
-          3
+          0,
+          0
         ]
       }
     },
@@ -4827,14 +4827,14 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 165,
-          "away": 165,
-          "draw": 235
+          "home": 160,
+          "away": 170,
+          "draw": 240
         },
         "pointSpread": {
-          "line": 0.5,
-          "homeOdds": -195,
-          "awayOdds": 150
+          "line": -0.5,
+          "homeOdds": 155,
+          "awayOdds": -200
         },
         "total": {
           "line": 2.5,
@@ -4856,7 +4856,7 @@ const WORLDCUP_DATA = {
         "moneyline": {
           "home": -260,
           "away": 750,
-          "draw": 360
+          "draw": 370
         },
         "pointSpread": {
           "line": -1.5,
