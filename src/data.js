@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-05 04:01:37
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-05 23:41:25
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-05 04:01:37",
+  "lastUpdated": "2026-07-05 23:41:25",
   "currentDate": "2026-07-05",
   "currentMatchday": 25,
   "teams": {
@@ -4605,10 +4605,27 @@ const WORLDCUP_DATA = {
       "date": "2026-07-10",
       "time": "04:00",
       "group": "淘汰赛",
-      "home": "RD16 W1",
+      "home": "FRA",
       "away": "MAR",
       "status": "Scheduled",
-      "stadium": "Gillette Stadium (Foxborough, Massachusetts)"
+      "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
+      "odds": {
+        "moneyline": {
+          "home": -175,
+          "away": 500,
+          "draw": 285
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -180,
+          "awayOdds": 140
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -105,
+          "underOdds": -120
+        }
+      }
     },
     {
       "id": 760511,
@@ -4647,7 +4664,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "PAR",
       "away": "FRA",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Lincoln Financial Field (Philadelphia, Pennsylvania)",
       "odds": {
         "moneyline": {
@@ -4665,6 +4682,35 @@ const WORLDCUP_DATA = {
           "overOdds": -150,
           "underOdds": 120
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，巴拉圭 与 法国 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          24,
+          76
+        ],
+        "shots": [
+          5,
+          15
+        ],
+        "target": [
+          1,
+          5
+        ],
+        "fouls": [
+          13,
+          11
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4678,19 +4724,19 @@ const WORLDCUP_DATA = {
       "stadium": "MetLife Stadium (East Rutherford, New Jersey)",
       "odds": {
         "moneyline": {
-          "home": -120,
-          "away": 310,
+          "home": -130,
+          "away": 350,
           "draw": 275
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -125,
-          "awayOdds": 100
+          "homeOdds": -135,
+          "awayOdds": 105
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 105
+          "overOdds": -145,
+          "underOdds": 120
         }
       }
     },
@@ -4705,19 +4751,19 @@ const WORLDCUP_DATA = {
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
-          "home": 205,
-          "away": 140,
-          "draw": 220
+          "home": 210,
+          "away": 145,
+          "draw": 215
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -165,
-          "awayOdds": 130
+          "homeOdds": -175,
+          "awayOdds": 135
         },
         "total": {
           "line": 2.5,
           "overOdds": 135,
-          "underOdds": -170
+          "underOdds": -165
         }
       }
     },
@@ -4743,8 +4789,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -130,
+          "underOdds": 105
         }
       }
     },
@@ -4759,9 +4805,9 @@ const WORLDCUP_DATA = {
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
-          "home": 155,
+          "home": 160,
           "away": 170,
-          "draw": 240
+          "draw": 230
         },
         "pointSpread": {
           "line": -0.5,
@@ -4770,8 +4816,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -145,
+          "underOdds": 120
         }
       }
     },
@@ -4786,19 +4832,19 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -285,
-          "away": 850,
-          "draw": 380
+          "home": -260,
+          "away": 750,
+          "draw": 360
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 110,
-          "awayOdds": -140
+          "homeOdds": 115,
+          "awayOdds": -145
         },
         "total": {
           "line": 2.5,
           "overOdds": 100,
-          "underOdds": -120
+          "underOdds": -125
         }
       }
     },
@@ -4813,19 +4859,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 245,
-          "away": 120,
-          "draw": 220
+          "home": 240,
+          "away": 130,
+          "draw": 210
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -150,
-          "awayOdds": 120
+          "homeOdds": -155,
+          "awayOdds": 125
         },
         "total": {
           "line": 2.5,
-          "overOdds": 130,
-          "underOdds": -160
+          "overOdds": 135,
+          "underOdds": -170
         }
       }
     },
@@ -5011,7 +5057,7 @@ const WORLDCUP_DATA = {
     },
     "2026-07-05": {
       "title": "第25比赛日战况汇总",
-      "content": "在第25比赛日中，完成了多场强强对话，具体赛果为：加拿大 0-3 摩洛哥。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第25比赛日中，完成了多场强强对话，具体赛果为：加拿大 0-3 摩洛哥；巴拉圭 0-1 法国。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760502,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
