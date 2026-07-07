@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-06 07:51:41
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-07 19:48:16
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-06 07:51:41",
-  "currentDate": "2026-07-06",
-  "currentMatchday": 26,
+  "lastUpdated": "2026-07-07 19:48:16",
+  "currentDate": "2026-07-07",
+  "currentMatchday": 27,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4622,8 +4622,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 100,
-          "underOdds": -125
+          "overOdds": -105,
+          "underOdds": -120
         }
       }
     },
@@ -4632,10 +4632,27 @@ const WORLDCUP_DATA = {
       "date": "2026-07-11",
       "time": "03:00",
       "group": "淘汰赛",
-      "home": "RD16 W5",
-      "away": "RD16 W6",
+      "home": "ESP",
+      "away": "BEL",
       "status": "Scheduled",
-      "stadium": "SoFi Stadium (Inglewood, California)"
+      "stadium": "SoFi Stadium (Inglewood, California)",
+      "odds": {
+        "moneyline": {
+          "home": -160,
+          "away": 450,
+          "draw": 290
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -170,
+          "awayOdds": 135
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -125,
+          "underOdds": 100
+        }
+      }
     },
     {
       "id": 760512,
@@ -4643,9 +4660,26 @@ const WORLDCUP_DATA = {
       "time": "05:00",
       "group": "淘汰赛",
       "home": "NOR",
-      "away": "RD16 W4",
+      "away": "ENG",
       "status": "Scheduled",
-      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)"
+      "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
+      "odds": {
+        "moneyline": {
+          "home": 295,
+          "away": -115,
+          "draw": 270
+        },
+        "pointSpread": {
+          "line": 0.5,
+          "homeOdds": -105,
+          "awayOdds": -120
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": -130,
+          "underOdds": 105
+        }
+      }
     },
     {
       "id": 760513,
@@ -4776,7 +4810,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "MEX",
       "away": "ENG",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Estadio Banorte (Mexico City)",
       "odds": {
         "moneyline": {
@@ -4794,6 +4828,35 @@ const WORLDCUP_DATA = {
           "overOdds": 145,
           "underOdds": -180
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，墨西哥 与 英格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 3。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          67,
+          33
+        ],
+        "shots": [
+          20,
+          6
+        ],
+        "target": [
+          5,
+          5
+        ],
+        "fouls": [
+          14,
+          7
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (英格兰)",
+        "team": "ENG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4803,7 +4866,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "POR",
       "away": "ESP",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "AT&T Stadium (Arlington, Texas)",
       "odds": {
         "moneyline": {
@@ -4821,6 +4884,35 @@ const WORLDCUP_DATA = {
           "overOdds": -135,
           "underOdds": 110
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，葡萄牙 与 西班牙 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 0 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          45,
+          55
+        ],
+        "shots": [
+          10,
+          15
+        ],
+        "target": [
+          2,
+          6
+        ],
+        "fouls": [
+          9,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (西班牙)",
+        "team": "ESP",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4830,7 +4922,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "USA",
       "away": "BEL",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Lumen Field (Seattle, Washington)",
       "odds": {
         "moneyline": {
@@ -4848,6 +4940,35 @@ const WORLDCUP_DATA = {
           "overOdds": -150,
           "underOdds": 125
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，美国 与 比利时 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 4。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          56,
+          44
+        ],
+        "shots": [
+          7,
+          15
+        ],
+        "target": [
+          2,
+          7
+        ],
+        "fouls": [
+          11,
+          9
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (比利时)",
+        "team": "BEL",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4861,19 +4982,19 @@ const WORLDCUP_DATA = {
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
-          "home": -255,
-          "away": 750,
-          "draw": 360
+          "home": -310,
+          "away": 950,
+          "draw": 390
         },
         "pointSpread": {
           "line": -1.5,
-          "homeOdds": 115,
-          "awayOdds": -145
+          "homeOdds": 100,
+          "awayOdds": -125
         },
         "total": {
           "line": 2.5,
-          "overOdds": 105,
-          "underOdds": -125
+          "overOdds": -105,
+          "underOdds": -115
         }
       }
     },
@@ -4888,19 +5009,19 @@ const WORLDCUP_DATA = {
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
-          "home": 240,
-          "away": 130,
+          "home": 245,
+          "away": 125,
           "draw": 210
         },
         "pointSpread": {
           "line": 0.5,
           "homeOdds": -155,
-          "awayOdds": 125
+          "awayOdds": 120
         },
         "total": {
           "line": 2.5,
-          "overOdds": 135,
-          "underOdds": -170
+          "overOdds": 125,
+          "underOdds": -160
         }
       }
     },
@@ -5092,8 +5213,14 @@ const WORLDCUP_DATA = {
     },
     "2026-07-06": {
       "title": "第26比赛日战况汇总",
-      "content": "在第26比赛日中，完成了多场强强对话，具体赛果为：巴西 1-2 挪威。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "content": "在第26比赛日中，完成了多场强强对话，具体赛果为：巴西 1-2 挪威；墨西哥 2-3 英格兰。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760504,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-07": {
+      "title": "第27比赛日战况汇总",
+      "content": "在第27比赛日中，完成了多场强强对话，具体赛果为：葡萄牙 0-1 西班牙；美国 1-4 比利时。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760506,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
