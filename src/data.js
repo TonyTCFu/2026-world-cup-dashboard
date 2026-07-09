@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-09 14:01:34
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-09 19:52:13
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-09 14:01:34",
+  "lastUpdated": "2026-07-09 19:52:13",
   "currentDate": "2026-07-08",
   "currentMatchday": 28,
   "teams": {
@@ -4611,9 +4611,9 @@ const WORLDCUP_DATA = {
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
-          "home": -170,
-          "away": 500,
-          "draw": 285
+          "home": -175,
+          "away": 550,
+          "draw": 280
         },
         "pointSpread": {
           "line": -0.5,
@@ -4649,8 +4649,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -125,
-          "underOdds": 100
+          "overOdds": -130,
+          "underOdds": 105
         }
       }
     },
@@ -4703,8 +4703,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": 125,
-          "underOdds": -155
+          "overOdds": 120,
+          "underOdds": -150
         }
       }
     },
