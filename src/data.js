@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-07 19:48:16
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-09 14:01:34
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-07 19:48:16",
-  "currentDate": "2026-07-07",
-  "currentMatchday": 27,
+  "lastUpdated": "2026-07-09 14:01:34",
+  "currentDate": "2026-07-08",
+  "currentMatchday": 28,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4622,8 +4622,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -105,
-          "underOdds": -120
+          "overOdds": 100,
+          "underOdds": -125
         }
       }
     },
@@ -4638,14 +4638,14 @@ const WORLDCUP_DATA = {
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
-          "home": -160,
-          "away": 450,
+          "home": -155,
+          "away": 425,
           "draw": 290
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -170,
-          "awayOdds": 135
+          "homeOdds": -160,
+          "awayOdds": 130
         },
         "total": {
           "line": 2.5,
@@ -4665,7 +4665,7 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 295,
+          "home": 310,
           "away": -115,
           "draw": 270
         },
@@ -4686,10 +4686,27 @@ const WORLDCUP_DATA = {
       "date": "2026-07-12",
       "time": "09:00",
       "group": "淘汰赛",
-      "home": "RD16 W7",
-      "away": "RD16 W8",
+      "home": "ARG",
+      "away": "SUI",
       "status": "Scheduled",
-      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)"
+      "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
+      "odds": {
+        "moneyline": {
+          "home": -145,
+          "away": 450,
+          "draw": 255
+        },
+        "pointSpread": {
+          "line": -0.5,
+          "homeOdds": -150,
+          "awayOdds": 120
+        },
+        "total": {
+          "line": 2.5,
+          "overOdds": 125,
+          "underOdds": -155
+        }
+      }
     },
     {
       "id": 760503,
@@ -4978,7 +4995,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ARG",
       "away": "EGY",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Mercedes-Benz Stadium (Atlanta, Georgia)",
       "odds": {
         "moneyline": {
@@ -4996,6 +5013,35 @@ const WORLDCUP_DATA = {
           "overOdds": -105,
           "underOdds": -115
         }
+      },
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，阿根廷 与 埃及 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          64,
+          36
+        ],
+        "shots": [
+          19,
+          5
+        ],
+        "target": [
+          7,
+          2
+        ],
+        "fouls": [
+          13,
+          11
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -5005,7 +5051,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "SUI",
       "away": "COL",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "BC Place (Vancouver)",
       "odds": {
         "moneyline": {
@@ -5023,6 +5069,39 @@ const WORLDCUP_DATA = {
           "overOdds": 125,
           "underOdds": -160
         }
+      },
+      "score": {
+        "home": 0,
+        "away": 0,
+        "penalties": {
+          "home": 4,
+          "away": 3
+        }
+      },
+      "analysis": "在本场淘汰赛的激烈较量中，瑞士 与 哥伦比亚 展开了高水平的战术对决。双方在常规时间和加时赛中战成 0 比 0 平。最终在残酷的点球大战中，瑞士 凭借更稳定的表现以点球比分 4-3 战胜对手，成功晋级下一轮。双方球员拼尽全力，为球迷贡献了一场经典的世界杯大战。",
+      "stats": {
+        "possession": [
+          53,
+          47
+        ],
+        "shots": [
+          7,
+          15
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "fouls": [
+          22,
+          21
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (瑞士)",
+        "team": "SUI",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -5221,6 +5300,12 @@ const WORLDCUP_DATA = {
       "title": "第27比赛日战况汇总",
       "content": "在第27比赛日中，完成了多场强强对话，具体赛果为：葡萄牙 0-1 西班牙；美国 1-4 比利时。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760506,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-08": {
+      "title": "第28比赛日战况汇总",
+      "content": "在第28比赛日中，完成了多场强强对话，具体赛果为：阿根廷 3-2 埃及；瑞士 0-0 哥伦比亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760509,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
