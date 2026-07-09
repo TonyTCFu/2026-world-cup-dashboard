@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-09 19:52:13
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-10 07:03:15
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-09 19:52:13",
-  "currentDate": "2026-07-08",
-  "currentMatchday": 28,
+  "lastUpdated": "2026-07-10 07:03:15",
+  "currentDate": "2026-07-10",
+  "currentMatchday": 30,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4607,7 +4607,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "FRA",
       "away": "MAR",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Gillette Stadium (Foxborough, Massachusetts)",
       "odds": {
         "moneyline": {
@@ -4625,6 +4625,35 @@ const WORLDCUP_DATA = {
           "overOdds": 100,
           "underOdds": -125
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，法国 与 摩洛哥 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 0。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          22,
+          5
+        ],
+        "target": [
+          8,
+          1
+        ],
+        "fouls": [
+          10,
+          13
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (法国)",
+        "team": "FRA",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4644,12 +4673,12 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -160,
+          "homeOdds": -165,
           "awayOdds": 130
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
+          "overOdds": -125,
           "underOdds": 105
         }
       }
@@ -4676,8 +4705,8 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -130,
-          "underOdds": 105
+          "overOdds": -135,
+          "underOdds": 110
         }
       }
     },
@@ -5306,6 +5335,12 @@ const WORLDCUP_DATA = {
       "title": "第28比赛日战况汇总",
       "content": "在第28比赛日中，完成了多场强强对话，具体赛果为：阿根廷 3-2 埃及；瑞士 0-0 哥伦比亚。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760509,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-10": {
+      "title": "第30比赛日战况汇总",
+      "content": "在第30比赛日中，完成了多场强强对话，具体赛果为：法国 2-0 摩洛哥。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760510,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
