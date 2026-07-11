@@ -1,8 +1,8 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-11 15:02:31
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-11 17:02:21
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-11 15:02:31",
+  "lastUpdated": "2026-07-11 17:02:21",
   "currentDate": "2026-07-11",
   "currentMatchday": 31,
   "teams": {
@@ -4734,7 +4734,7 @@ const WORLDCUP_DATA = {
         },
         "total": {
           "line": 2.5,
-          "overOdds": -140,
+          "overOdds": -145,
           "underOdds": 115
         }
       }
