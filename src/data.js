@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-10 09:04:29
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-11 15:02:31
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-10 09:04:29",
-  "currentDate": "2026-07-10",
-  "currentMatchday": 30,
+  "lastUpdated": "2026-07-11 15:02:31",
+  "currentDate": "2026-07-11",
+  "currentMatchday": 31,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4663,7 +4663,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ESP",
       "away": "BEL",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "SoFi Stadium (Inglewood, California)",
       "odds": {
         "moneyline": {
@@ -4681,6 +4681,35 @@ const WORLDCUP_DATA = {
           "overOdds": -125,
           "underOdds": 100
         }
+      },
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，西班牙 与 比利时 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 2 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          68,
+          32
+        ],
+        "shots": [
+          17,
+          5
+        ],
+        "target": [
+          8,
+          2
+        ],
+        "fouls": [
+          13,
+          18
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (西班牙)",
+        "team": "ESP",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4694,19 +4723,19 @@ const WORLDCUP_DATA = {
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
-          "home": 310,
-          "away": -115,
-          "draw": 270
+          "home": 280,
+          "away": -105,
+          "draw": 265
         },
         "pointSpread": {
           "line": 0.5,
-          "homeOdds": -105,
-          "awayOdds": -120
+          "homeOdds": -115,
+          "awayOdds": -110
         },
         "total": {
           "line": 2.5,
-          "overOdds": -135,
-          "underOdds": 110
+          "overOdds": -140,
+          "underOdds": 115
         }
       }
     },
@@ -4727,7 +4756,7 @@ const WORLDCUP_DATA = {
         },
         "pointSpread": {
           "line": -0.5,
-          "homeOdds": -150,
+          "homeOdds": -155,
           "awayOdds": 120
         },
         "total": {
@@ -5341,6 +5370,12 @@ const WORLDCUP_DATA = {
       "title": "第30比赛日战况汇总",
       "content": "在第30比赛日中，完成了多场强强对话，具体赛果为：法国 2-0 摩洛哥。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760510,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-11": {
+      "title": "第31比赛日战况汇总",
+      "content": "在第31比赛日中，完成了多场强强对话，具体赛果为：西班牙 2-1 比利时。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760511,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
