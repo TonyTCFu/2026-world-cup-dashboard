@@ -1,10 +1,10 @@
 // 2026年世界杯核心数据文件
-// 本数据由 GitHub Actions 自动化抓取于 2026-07-12 00:14:41
+// 本数据由 GitHub Actions 自动化抓取于 2026-07-14 00:01:22
 
 const WORLDCUP_DATA = {
-  "lastUpdated": "2026-07-12 00:14:41",
-  "currentDate": "2026-07-11",
-  "currentMatchday": 31,
+  "lastUpdated": "2026-07-14 00:01:22",
+  "currentDate": "2026-07-12",
+  "currentMatchday": 32,
   "teams": {
     "MEX": {
       "name": "墨西哥",
@@ -4719,7 +4719,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "NOR",
       "away": "ENG",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "Hard Rock Stadium (Miami Gardens, Florida)",
       "odds": {
         "moneyline": {
@@ -4737,6 +4737,35 @@ const WORLDCUP_DATA = {
           "overOdds": -145,
           "underOdds": 120
         }
+      },
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，挪威 与 英格兰 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 1 比 2。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          48,
+          52
+        ],
+        "shots": [
+          13,
+          14
+        ],
+        "target": [
+          4,
+          8
+        ],
+        "fouls": [
+          10,
+          8
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (英格兰)",
+        "team": "ENG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -4746,7 +4775,7 @@ const WORLDCUP_DATA = {
       "group": "淘汰赛",
       "home": "ARG",
       "away": "SUI",
-      "status": "Scheduled",
+      "status": "FT",
       "stadium": "GEHA Field at Arrowhead Stadium (Kansas City, Missouri)",
       "odds": {
         "moneyline": {
@@ -4764,6 +4793,35 @@ const WORLDCUP_DATA = {
           "overOdds": 130,
           "underOdds": -160
         }
+      },
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "analysis": "在本场 淘汰赛 组的激烈较量中，阿根廷 与 瑞士 展开了高水平 of 战术对决。比赛打得充满张力，最终比分定格在 3 比 1。双方球员在攻防两端都拼尽全力，为球迷贡献了一场精彩的世界杯博弈。",
+      "stats": {
+        "possession": [
+          59,
+          41
+        ],
+        "shots": [
+          22,
+          11
+        ],
+        "target": [
+          7,
+          5
+        ],
+        "fouls": [
+          14,
+          18
+        ]
+      },
+      "mvp": {
+        "name": "核心球员 (阿根廷)",
+        "team": "ARG",
+        "rating": 8.2,
+        "reason": "在整场比赛中展现了卓越的战术执行力，在攻防转换中起到了不可替代的枢纽作用。"
       }
     },
     {
@@ -5376,6 +5434,12 @@ const WORLDCUP_DATA = {
       "title": "第31比赛日战况汇总",
       "content": "在第31比赛日中，完成了多场强强对话，具体赛果为：西班牙 2-1 比利时。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
       "keyMatch": 760511,
+      "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
+    },
+    "2026-07-12": {
+      "title": "第32比赛日战况汇总",
+      "content": "在第32比赛日中，完成了多场强强对话，具体赛果为：挪威 1-2 英格兰；阿根廷 3-1 瑞士。各组出线形势逐渐明朗，比赛竞争进入白热化阶段。",
+      "keyMatch": 760512,
       "statOfTheDay": "今日比赛全部顺利完赛，各支代表队展现了精彩的攻防表现。"
     }
   },
